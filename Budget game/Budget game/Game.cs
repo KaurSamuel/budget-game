@@ -14,9 +14,12 @@ namespace Budget_game
     {
         int count = 0;
         private int quick = 120;
+
         public Game()
         {
             InitializeComponent();
+
+            Terrain.GenerateTerrain(this);
         }
 
         private void Game_Load(object sender, EventArgs e)

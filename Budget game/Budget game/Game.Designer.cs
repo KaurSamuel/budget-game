@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.lblHitpointsName = new System.Windows.Forms.Label();
-            this.pctMapTerrain = new System.Windows.Forms.PictureBox();
             this.lblGoldName = new System.Windows.Forms.Label();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.lblEnemiesLeftName = new System.Windows.Forms.Label();
@@ -59,7 +58,6 @@
             this.lblTimerName = new System.Windows.Forms.Label();
             this.btnStart = new System.Windows.Forms.Button();
             this.lblTimer = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pctMapTerrain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -74,14 +72,6 @@
             this.lblHitpointsName.Size = new System.Drawing.Size(25, 13);
             this.lblHitpointsName.TabIndex = 0;
             this.lblHitpointsName.Text = "HP:";
-            // 
-            // pctMapTerrain
-            // 
-            this.pctMapTerrain.Location = new System.Drawing.Point(26, 24);
-            this.pctMapTerrain.Name = "pctMapTerrain";
-            this.pctMapTerrain.Size = new System.Drawing.Size(1000, 500);
-            this.pctMapTerrain.TabIndex = 1;
-            this.pctMapTerrain.TabStop = false;
             // 
             // lblGoldName
             // 
@@ -354,12 +344,10 @@
             this.Controls.Add(this.lblHitpoints);
             this.Controls.Add(this.lblEnemiesLeftName);
             this.Controls.Add(this.lblGoldName);
-            this.Controls.Add(this.pctMapTerrain);
             this.Controls.Add(this.lblHitpointsName);
             this.Name = "Game";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Game_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pctMapTerrain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -372,7 +360,6 @@
         #endregion
 
         private System.Windows.Forms.Label lblHitpointsName;
-        private System.Windows.Forms.PictureBox pctMapTerrain;
         private System.Windows.Forms.Label lblGoldName;
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.Label lblEnemiesLeftName;

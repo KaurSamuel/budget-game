@@ -12,7 +12,7 @@ namespace Budget_game
     {
         static int TileSize = 32;
 
-        static int MapWidth = 16;
+        static int MapWidth = 32;
         static int MapHeight = 16;
 
         private static void GenerateRoad(Form form)

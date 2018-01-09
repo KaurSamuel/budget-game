@@ -53,17 +53,13 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-<<<<<<< HEAD
+
     <Compile Include="Terrain.cs" />
     <Compile Include="Tile.cs">
       <SubType>Component</SubType>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-=======
     <EmbeddedResource Include="Game.resx">
       <DependentUpon>Game.cs</DependentUpon>
->>>>>>> UI
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
