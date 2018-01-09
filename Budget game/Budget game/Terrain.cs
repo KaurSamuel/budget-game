@@ -21,7 +21,6 @@ namespace Budget_game
             Point curPoint = new Point(0, MapHeight / 2);
             int tileCount = 0;
             bool isPrevVertical = false;
-            bool spawnTwo = false;
             int prevSide = 0;
 
 
@@ -58,9 +57,8 @@ namespace Budget_game
                     if (curPoint.Y >= 0)
                     {
                         if(prevSide == 2)
-                        {
                             continue;
-                        }
+
                         curPoint = new Point(curPoint.X, curPoint.Y + 1);
                         isPrevVertical = true;
                         prevSide = 1;
@@ -73,9 +71,7 @@ namespace Budget_game
                     if (curPoint.Y <= MapHeight)
                     {
                         if(prevSide == 1)
-                        {
                             continue;
-                        }
 
                         curPoint = new Point(curPoint.X, curPoint.Y - 1);
                         isPrevVertical = true;
