@@ -27,9 +27,14 @@ namespace Budget_game
             engineTimer = new Timer();
             engineTimer.Enabled = true;
             engineTimer.Interval = 30;
-            engineTimer.Tick += new EventHandler(engine.Update(this));
+            engineTimer.Tick += new EventHandler(Frame);
 
             Terrain.GenerateTerrain(this);
+        }
+
+        void Frame(object sender, EventArgs e)
+        {
+            engine.Update();
         }
 
         private void Game_Load(object sender, EventArgs e)
