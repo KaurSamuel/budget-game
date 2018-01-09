@@ -1,0 +1,2 @@
+sprited 32x32
+mängu resulutsioon on 1280x720
