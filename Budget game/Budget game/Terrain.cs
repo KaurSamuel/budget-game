@@ -23,7 +23,6 @@ namespace Budget_game
             bool isPrevVertical = false;
             int prevSide = 0;
 
-
             while (true)
             {
                 int side = rnd.Next(0, 101);

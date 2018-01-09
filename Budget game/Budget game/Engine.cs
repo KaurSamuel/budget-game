@@ -11,8 +11,6 @@ namespace Budget_game
     {
         List<Monster> monsters = new List<Monster>();
         int numMonsters = 10;
-        Stopwatch stopwatch = new Stopwatch();
-        
 
         public Engine(Form1 form)
         {
@@ -24,15 +22,21 @@ namespace Budget_game
 
                 monsters.Add(monster);
             }
+
         }
 
         private void UpdateMonsters()
         {
+            bool restart = false;
+
             foreach(Monster monster in monsters)
             {
-                if(Stopwatch.GetTimestamp() >= 1000)
-                monster.MoveMonster();
+
+                    monster.MoveMonster();
+
+                
             }
+
         }
 
         public void Update()

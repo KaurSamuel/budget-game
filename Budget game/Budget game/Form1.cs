@@ -13,6 +13,7 @@ namespace Budget_game
     public partial class Form1 : Form
     {
         Engine game;
+        Timer gameTime;
 
         public Form1()
         {
@@ -21,8 +22,13 @@ namespace Budget_game
             game = new Engine(this);
 
             Terrain.GenerateTerrain(this);
-            
-            Application.Idle += new EventHandler(Frame);
+
+            gameTime = new Timer();
+            gameTime.Enabled = true;
+            gameTime.Interval = 50;
+
+            gameTime.Tick += new EventHandler(Frame);
+
         }
 
         void Frame(object sender, EventArgs e)
