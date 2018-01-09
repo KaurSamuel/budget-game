@@ -7,14 +7,14 @@ using System.Diagnostics;
 
 namespace Budget_game
 {
-    class Game
+    class Engine
     {
         List<Monster> monsters = new List<Monster>();
         int numMonsters = 10;
-        Stopwatch stopwatch;
+        Stopwatch stopwatch = new Stopwatch();
         
 
-        public Game(Form1 form)
+        public Engine(Form1 form)
         {
             for (int i = 0; i < numMonsters; i++)
             {
@@ -30,6 +30,7 @@ namespace Budget_game
         {
             foreach(Monster monster in monsters)
             {
+                if(Stopwatch.GetTimestamp() >= 1000)
                 monster.MoveMonster();
             }
         }

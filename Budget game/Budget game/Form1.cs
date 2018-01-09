@@ -12,13 +12,13 @@ namespace Budget_game
 {
     public partial class Form1 : Form
     {
-        Game game;
+        Engine game;
 
         public Form1()
         {
             InitializeComponent();
 
-            game = new Game(this);
+            game = new Engine(this);
 
             Terrain.GenerateTerrain(this);
             
