@@ -23,7 +23,7 @@ namespace Budget_game
             Location = new System.Drawing.Point(Location.X + movementSpeed, Location.Y);
         }
 
-        
+
         public int movementSpeed { get; set; }
         public int MaximumHealth { get; set; }
         public int CurrentHealth { get; set; }

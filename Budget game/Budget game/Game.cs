@@ -14,10 +14,20 @@ namespace Budget_game
     {
         int count = 0;
         private int quick = 120;
+        Engine engine;
+        Timer engineTimer;
+
 
         public Game()
         {
             InitializeComponent();
+
+            engine = new Engine(this);
+
+            engineTimer = new Timer();
+            engineTimer.Enabled = true;
+            engineTimer.Interval = 30;
+            engineTimer.Tick += new EventHandler(engine.Update(this));
 
             Terrain.GenerateTerrain(this);
         }
