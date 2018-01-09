@@ -56,6 +56,9 @@
             this.cmbUpgradesTower2 = new System.Windows.Forms.ComboBox();
             this.cmbUpgradesTower3 = new System.Windows.Forms.ComboBox();
             this.cmbUpgradesTower4 = new System.Windows.Forms.ComboBox();
+            this.lblTimerName = new System.Windows.Forms.Label();
+            this.btnStart = new System.Windows.Forms.Button();
+            this.lblTimer = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pctMapTerrain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -66,7 +69,7 @@
             // lblHitpointsName
             // 
             this.lblHitpointsName.AutoSize = true;
-            this.lblHitpointsName.Location = new System.Drawing.Point(1041, 24);
+            this.lblHitpointsName.Location = new System.Drawing.Point(1044, 37);
             this.lblHitpointsName.Name = "lblHitpointsName";
             this.lblHitpointsName.Size = new System.Drawing.Size(25, 13);
             this.lblHitpointsName.TabIndex = 0;
@@ -83,16 +86,20 @@
             // lblGoldName
             // 
             this.lblGoldName.AutoSize = true;
-            this.lblGoldName.Location = new System.Drawing.Point(1041, 49);
+            this.lblGoldName.Location = new System.Drawing.Point(1044, 62);
             this.lblGoldName.Name = "lblGoldName";
             this.lblGoldName.Size = new System.Drawing.Size(32, 13);
             this.lblGoldName.TabIndex = 2;
             this.lblGoldName.Text = "Gold:";
             // 
+            // timer
+            // 
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            // 
             // lblEnemiesLeftName
             // 
             this.lblEnemiesLeftName.AutoSize = true;
-            this.lblEnemiesLeftName.Location = new System.Drawing.Point(1041, 74);
+            this.lblEnemiesLeftName.Location = new System.Drawing.Point(1044, 87);
             this.lblEnemiesLeftName.Name = "lblEnemiesLeftName";
             this.lblEnemiesLeftName.Size = new System.Drawing.Size(67, 13);
             this.lblEnemiesLeftName.TabIndex = 3;
@@ -101,7 +108,7 @@
             // lblHitpoints
             // 
             this.lblHitpoints.AutoSize = true;
-            this.lblHitpoints.Location = new System.Drawing.Point(1116, 24);
+            this.lblHitpoints.Location = new System.Drawing.Point(1119, 37);
             this.lblHitpoints.Name = "lblHitpoints";
             this.lblHitpoints.Size = new System.Drawing.Size(156, 13);
             this.lblHitpoints.TabIndex = 4;
@@ -110,7 +117,7 @@
             // lblGold
             // 
             this.lblGold.AutoSize = true;
-            this.lblGold.Location = new System.Drawing.Point(1116, 49);
+            this.lblGold.Location = new System.Drawing.Point(1119, 62);
             this.lblGold.Name = "lblGold";
             this.lblGold.Size = new System.Drawing.Size(156, 13);
             this.lblGold.TabIndex = 5;
@@ -119,7 +126,7 @@
             // lblEnemiesLeft
             // 
             this.lblEnemiesLeft.AutoSize = true;
-            this.lblEnemiesLeft.Location = new System.Drawing.Point(1114, 74);
+            this.lblEnemiesLeft.Location = new System.Drawing.Point(1117, 87);
             this.lblEnemiesLeft.Name = "lblEnemiesLeft";
             this.lblEnemiesLeft.Size = new System.Drawing.Size(156, 13);
             this.lblEnemiesLeft.TabIndex = 6;
@@ -128,7 +135,7 @@
             // lblLevelName
             // 
             this.lblLevelName.AutoSize = true;
-            this.lblLevelName.Location = new System.Drawing.Point(1041, 96);
+            this.lblLevelName.Location = new System.Drawing.Point(1044, 109);
             this.lblLevelName.Name = "lblLevelName";
             this.lblLevelName.Size = new System.Drawing.Size(36, 13);
             this.lblLevelName.TabIndex = 7;
@@ -137,7 +144,7 @@
             // lblLevel
             // 
             this.lblLevel.AutoSize = true;
-            this.lblLevel.Location = new System.Drawing.Point(1114, 96);
+            this.lblLevel.Location = new System.Drawing.Point(1117, 109);
             this.lblLevel.Name = "lblLevel";
             this.lblLevel.Size = new System.Drawing.Size(156, 13);
             this.lblLevel.TabIndex = 8;
@@ -288,11 +295,41 @@
             this.cmbUpgradesTower4.Size = new System.Drawing.Size(72, 21);
             this.cmbUpgradesTower4.TabIndex = 25;
             // 
+            // lblTimerName
+            // 
+            this.lblTimerName.AutoSize = true;
+            this.lblTimerName.Location = new System.Drawing.Point(1044, 9);
+            this.lblTimerName.Name = "lblTimerName";
+            this.lblTimerName.Size = new System.Drawing.Size(36, 13);
+            this.lblTimerName.TabIndex = 26;
+            this.lblTimerName.Text = "Timer:";
+            // 
+            // btnStart
+            // 
+            this.btnStart.Location = new System.Drawing.Point(1072, 143);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(75, 23);
+            this.btnStart.TabIndex = 27;
+            this.btnStart.Text = "START";
+            this.btnStart.UseVisualStyleBackColor = true;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
+            // 
+            // lblTimer
+            // 
+            this.lblTimer.AutoSize = true;
+            this.lblTimer.Location = new System.Drawing.Point(1119, 9);
+            this.lblTimer.Name = "lblTimer";
+            this.lblTimer.Size = new System.Drawing.Size(0, 13);
+            this.lblTimer.TabIndex = 28;
+            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.lblTimer);
+            this.Controls.Add(this.btnStart);
+            this.Controls.Add(this.lblTimerName);
             this.Controls.Add(this.cmbUpgradesTower4);
             this.Controls.Add(this.cmbUpgradesTower3);
             this.Controls.Add(this.cmbUpgradesTower2);
@@ -321,6 +358,7 @@
             this.Controls.Add(this.lblHitpointsName);
             this.Name = "Game";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Game_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pctMapTerrain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -360,6 +398,9 @@
         private System.Windows.Forms.ComboBox cmbUpgradesTower2;
         private System.Windows.Forms.ComboBox cmbUpgradesTower3;
         private System.Windows.Forms.ComboBox cmbUpgradesTower4;
+        private System.Windows.Forms.Label lblTimerName;
+        private System.Windows.Forms.Button btnStart;
+        private System.Windows.Forms.Label lblTimer;
     }
 }
 
