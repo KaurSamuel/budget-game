@@ -10,16 +10,16 @@ namespace Budget_game
 {
     class Terrain
     {
-        static int TileSize = 32;
+        public static int TileSize = 32;
+        public static int numRoadTiles = 1;
 
-        static int MapWidth = 32;
-        static int MapHeight = 16;
+        public static int MapWidth = 32;
+        public static int MapHeight = 16;
 
         private static void GenerateRoad(Form form)
         {
             Random rnd = new Random();
             Point curPoint = new Point(0, MapHeight / 2);
-            int tileCount = 0;
             bool isPrevVertical = false;
             int prevSide = 0;
 
@@ -37,11 +37,11 @@ namespace Budget_game
                         sideControl.Size = new Size(TileSize, TileSize);
                         sideControl.Location = new Point(curPoint.X * TileSize, curPoint.Y * TileSize);
                         sideControl.Image = Image.FromFile("../../Sprites/roadUP.png");
-                        sideControl.Name = "Road" + tileCount;
+                        sideControl.Name = "Road" + numRoadTiles;
                         form.Controls.Add(sideControl);
                         sideControl.BringToFront();
 
-                        tileCount++;
+                        numRoadTiles++;
 
                         if (curPoint.X == MapWidth - 1)
                             break;
@@ -84,23 +84,25 @@ namespace Budget_game
                 control.Size = new Size(TileSize, TileSize);
                 control.Location = new Point(curPoint.X * TileSize, curPoint.Y * TileSize);
                 control.Image = Image.FromFile("../../Sprites/roadUP.png");
-                control.Name = "Road" + tileCount;
+                control.Name = "Road" + numRoadTiles;
                 form.Controls.Add(control);
                 control.BringToFront();
 
-                tileCount++;
+                numRoadTiles++;
 
                 if (curPoint.X == MapWidth - 1)
                     break;
             }
-
+            int a = numRoadTiles;
             //Adds first tile
             Tile firstTile = new Tile();
+            firstTile.Name = "road0";
             firstTile.Size = new Size(TileSize, TileSize);
             firstTile.Location = new Point(0, MapHeight * TileSize / 2);
             firstTile.Image = Image.FromFile("../../Sprites/roadUP.png");
             form.Controls.Add(firstTile);
             firstTile.BringToFront();
+            numRoadTiles++;
         }
 
         private static void GenerateMap(Form form)

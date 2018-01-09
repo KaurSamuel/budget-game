@@ -22,6 +22,8 @@ namespace Budget_game
         {
             InitializeComponent();
 
+            Terrain.GenerateTerrain(this);
+
             engine = new Engine(this);
 
             engineTimer = new Timer();
@@ -29,12 +31,12 @@ namespace Budget_game
             engineTimer.Interval = 30;
             engineTimer.Tick += new EventHandler(Frame);
 
-            Terrain.GenerateTerrain(this);
+            
         }
 
         void Frame(object sender, EventArgs e)
         {
-            engine.Update();
+            engine.Update(this);
         }
 
         private void Game_Load(object sender, EventArgs e)

@@ -26,22 +26,22 @@ namespace Budget_game
 
         }
 
-        private void UpdateMonsters()
+        private void UpdateMonsters(Form form)
         {
 
             foreach(Monster monster in monsters)
             {
 
-                    monster.MoveMonster();
+                    monster.MoveMonster(form);
 
                 
             }
 
         }
 
-        public void Update()
+        public void Update(Form form)
         {
-            UpdateMonsters();
+            UpdateMonsters(form);
         }
 
     }
