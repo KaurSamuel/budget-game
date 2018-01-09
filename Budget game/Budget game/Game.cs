@@ -32,6 +32,8 @@ namespace Budget_game
             quick--;
             lblTimer.Text = quick / 60 + ":" + ((quick % 60) >= 10 ? (quick % 60).ToString() : "0" + (quick % 60));
 
+            if(lblTimer.Text == "0:00")
+                timer.Stop();
         }
 
         private void btnStart_Click(object sender, EventArgs e)
