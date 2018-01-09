@@ -11,11 +11,11 @@ namespace Budget_game
         List<Monster> monsters = new List<Monster>();
         int numMonsters = 10;
 
-        public Game()
+        public Game(Form1 form)
         {
             for (int i = 0; i < numMonsters; i++)
             {
-                Monster monster = new Monster();
+                Monster monster = new Monster(form);
 
                 monster.movementSpeed = 1;
 
