@@ -12,13 +12,21 @@ namespace Budget_game
 {
     public partial class Form1 : Form
     {
-        
+        Game game = new Game();
 
         public Form1()
         {
             InitializeComponent();
 
             Terrain.GenerateTerrain(this);
+            
+
+            Application.Idle += new EventHandler(Frame);
+        }
+
+        void Frame(object sender, EventArgs e)
+        {
+            game.Update();
         }
     }
 }
