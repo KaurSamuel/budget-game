@@ -31,8 +31,8 @@ namespace Budget_game
             {
                 curTile++;
                 TargetPos = form.Controls.Find("road" + curTile, false)[0].Location;
+                //IndexOutOfRangeException kui jõuab viimase tileni.
             }
-
             
             System.Drawing.Point delta = new System.Drawing.Point();
             delta.X = Location.X - TargetPos.X;
