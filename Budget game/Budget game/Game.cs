@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace Budget_game
 {
@@ -10,6 +11,8 @@ namespace Budget_game
     {
         List<Monster> monsters = new List<Monster>();
         int numMonsters = 10;
+        Stopwatch stopwatch;
+        
 
         public Game(Form1 form)
         {

@@ -12,8 +12,8 @@ namespace Budget_game
     {
         public Monster(Form form)
         {
-            this.Image = System.Drawing.Image.FromFile("../../Sprites/Tower1.png");
-            this.BringToFront();
+            Image = System.Drawing.Image.FromFile("../../Sprites/Monster1.png");
+            BringToFront();
             Size = new System.Drawing.Size(32, 32);
             form.Controls.Add(this);
         }
