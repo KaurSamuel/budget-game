@@ -1,2 +1,8 @@
 # budget-game
-Jaan on
+terrain
+ui
+vaenlased
+turrets
+economy
+tower range
+
