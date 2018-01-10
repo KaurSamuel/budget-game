@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
 using System.Windows.Forms;
+using Budget_game;
+using Budget_game.Properties;
 
 namespace Budget_game
 {
@@ -47,7 +49,8 @@ namespace Budget_game
 
         private void UpdateTurrets(Form form)
         {
-            turrets turret = new turrets();
+            
+            turretsclass turret = new turretsclass();
             turret.Turret_spawn(form);
             turret.Turret_shoot(form, monsters);
         }
