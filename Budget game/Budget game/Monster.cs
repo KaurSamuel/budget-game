@@ -10,6 +10,8 @@ namespace Budget_game
 {
     class Monster : PictureBox
     {
+        public static int NumMonsters { get; set; }
+
         public Monster(Form form)
         {
             Image = System.Drawing.Image.FromFile("../../Sprites/Monster1.png");
@@ -21,6 +23,11 @@ namespace Budget_game
             BackColor = System.Drawing.Color.Transparent;
             BringToFront();
             TargetPos = form.Controls.Find("road0", false)[0].Location;
+        }
+
+        public static void UpdateLabel(Form form)
+        {
+            form.Controls["lblEnemiesLeft"].Text = NumMonsters.ToString();
         }
 
         public void Attack(Form form)
@@ -35,6 +42,10 @@ namespace Budget_game
 
             form.Controls.Remove(this);
             IsAlive = false;
+
+            NumMonsters--;
+
+            UpdateLabel(form);
 
             if (Player.PlayerLivesLeft <= 0)
             {

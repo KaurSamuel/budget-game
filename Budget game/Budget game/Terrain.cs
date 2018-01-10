@@ -13,6 +13,8 @@ namespace Budget_game
         public static int TileSize = 32;
         public static int numRoadTiles = 1;
 
+        public static int CurLevel { get; set; }
+
         public static int MapWidth = 32;
         public static int MapHeight = 16;
 
@@ -137,6 +139,9 @@ namespace Budget_game
         {
             GenerateMap(form);
             GenerateRoad(form);
+
+            CurLevel++;
+            form.Controls["lblLevel"].Text = CurLevel.ToString();
         }
     }
 }

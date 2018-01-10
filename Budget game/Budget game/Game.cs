@@ -21,6 +21,7 @@ namespace Budget_game
         {
             Player.Reset();
             Controls["lblHitpoints"].Text = Player.PlayerLivesLeft.ToString();
+            Controls["lblEnemiesLeft"].Text = 10.ToString();
         }
 
         public Game()

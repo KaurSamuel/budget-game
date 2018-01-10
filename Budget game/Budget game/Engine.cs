@@ -54,6 +54,9 @@ namespace Budget_game
 
             curMonsters++;
 
+
+            Monster.NumMonsters++;
+
             if(curMonsters >= numMonsters)
                 monsterTimer.Stop();
         }
