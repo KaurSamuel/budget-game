@@ -59,6 +59,7 @@ namespace Budget_game
             {
                 lblGameOver.Text = "GAME OVER";
                 lblGameOver.BringToFront();
+                timer.Stop();
             }
         }
 
