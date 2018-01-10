@@ -285,6 +285,7 @@
             this.cmbUpgradesTower4.Name = "cmbUpgradesTower4";
             this.cmbUpgradesTower4.Size = new System.Drawing.Size(72, 21);
             this.cmbUpgradesTower4.TabIndex = 25;
+            this.cmbUpgradesTower4.SelectedIndexChanged += new System.EventHandler(this.cmbUpgradesTower4_SelectedIndexChanged);
             // 
             // lblTimerName
             // 

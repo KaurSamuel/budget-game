@@ -43,6 +43,7 @@ namespace Budget_game
             monsterTimer.Interval = 2000;
             monsterTimer.Tick += new EventHandler(SpawnMobs);
         }
+<<<<<<< HEAD
 
         public void SpawnMobs(object sender, EventArgs e)
         {
@@ -59,7 +60,20 @@ namespace Budget_game
 
             if(curMonsters >= numMonsters)
                 monsterTimer.Stop();
+=======
+        
+        public void Update(Form form)
+        {
+            UpdateMonsters(form);
+            UpdateTurrets(form);
+>>>>>>> combat-turrets
         }
 
+        private void UpdateTurrets(Form form)
+        {
+            turrets turret = new turrets();
+            turret.Turret_spawn(form);
+            turret.Turret_shoot(form, monsters);
+        }
     }
 }

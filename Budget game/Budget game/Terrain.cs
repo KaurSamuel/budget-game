@@ -42,7 +42,7 @@ namespace Budget_game
                         sideControl.Name = "Road" + numRoadTiles;
                         form.Controls.Add(sideControl);
                         sideControl.BringToFront();
-
+                            
                         numRoadTiles++;
 
                         if (curPoint.X == MapWidth - 1)
