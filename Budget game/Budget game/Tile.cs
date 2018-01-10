@@ -19,7 +19,7 @@ namespace Budget_game
     class Turrets : PictureBox
     {
         public int Turret_shooting_speed;
-        public string Turret_Name;
+        public string Turret_Name = "Tower";
         public int Turret_range;        
         public Turrets()
         {

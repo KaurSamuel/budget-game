@@ -69,10 +69,13 @@ namespace Budget_game
                 curControl.Location = newPos;
                 curControl.BringToFront();
 
-                PictureBox newTurret = new PictureBox();
+                Turrets newTurret = new Turrets();
                 newTurret.Image = curControl.Image;
                 newTurret.Location = curControl.Location;
                 newTurret.Size = curControl.Size;
+                newTurret.Turret_range = 150;
+                newTurret.Name = "Tower";
+                newTurret.Turret_shooting_speed = 150;
 
                 form.Controls.Add(newTurret);
                 newTurret.BringToFront();
@@ -90,8 +93,6 @@ namespace Budget_game
         public static void UpdateTurretBought(Form form)
         {
             System.Drawing.Point newPos = new System.Drawing.Point();
-
-            
 
             if (curControl.Visible)
             {
