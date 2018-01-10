@@ -60,6 +60,7 @@
             this.StoreTurret2 = new System.Windows.Forms.PictureBox();
             this.StoreTurret1 = new System.Windows.Forms.PictureBox();
             this.BoughtTurret = new Budget_game.Turrets();
+            this.directoryEntry1 = new System.DirectoryServices.DirectoryEntry();
             ((System.ComponentModel.ISupportInitialize)(this.StoreTurret4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StoreTurret3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StoreTurret2)).BeginInit();
@@ -427,7 +428,8 @@
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Label lblTimer;
         private System.Windows.Forms.Label lblGameOver;
-        private Turrets BoughtTurret;
+        private Budget_game.Turrets BoughtTurret;
+        private System.DirectoryServices.DirectoryEntry directoryEntry1;
     }
 }
 

@@ -36,32 +36,17 @@ namespace Budget_game
                 
                 foreach (Turrets turret in form.Controls.Find("Tower", true))
                 {
-                    if (monster.Location.X > turret.Location.X)
+                    if(monster.IsAlive)
                     {
-                        form.Controls.Remove(monster);
-                        if (monster.Location.X - turret.Location.X < 100)
+                        if (turret.Location.X - monster.Location.X < 150 &&
+                            monster.Location.X - turret.Location.X > -150 &&
+                            turret.Location.Y - monster.Location.Y < 150 &&
+                            monster.Location.Y - turret.Location.Y > -150)
                         {
-
-                            form.Controls.Remove(monster);
-                            if (monster.Location.Y -turret.Location.Y < 100)
-                            {
-                                form.Controls.Remove(monster);
-                            }
-
+                            monster.TakeDamage(form, 30);
                         }
                     }
-                    else
-                    {
-                        if (turret.Location.X - monster.Location.X < 100)
-                        {
 
-                            form.Controls.Remove(monster);
-                            if (turret.Location.Y - monster.Location.Y < 100)
-                            {
-                                form.Controls.Remove(monster);
-                            }
-                        }
-                    }
                 }
             }
        

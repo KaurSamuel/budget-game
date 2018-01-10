@@ -11,6 +11,14 @@ namespace Budget_game
     class Monster : PictureBox
     {
         public static int NumMonsters { get; set; }
+        System.Drawing.Point TargetPos { get; set; }
+        public int movementSpeed { get; set; }
+        public int MaximumHealth { get; set; }
+        public int CurrentHealth { get; set; } = 50;
+        public int Gold { get; set; } = 10;
+        public int curTile { get; set; }
+        public bool IsAlive { get; set; } = true;
+        
 
         public Monster(Form form)
         {
@@ -48,6 +56,20 @@ namespace Budget_game
             UpdateLabel(form);
         }
 
+        public void TakeDamage(Form form, int damage)
+        {
+            CurrentHealth -= damage;
+
+            if (CurrentHealth <= 0)
+            {
+                IsAlive = false;
+                form.Controls.Remove(this);
+                Player.Gold += Gold;
+                Engine.curMonsters--;
+            }
+            
+        }
+
         public void MoveMonster(Form form)
         {
             if (curTile + 2 >= Terrain.numRoadTiles)
@@ -78,12 +100,6 @@ namespace Budget_game
 
         }
 
-        System.Drawing.Point TargetPos { get; set; }
-        public int movementSpeed { get; set; }
-        public int MaximumHealth { get; set; }
-        public int CurrentHealth { get; set; }
-        public int Gold { get; set; }
-        public int curTile { get; set; }
-        public bool IsAlive { get; set; } = true;
+
     }
 }

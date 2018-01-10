@@ -15,7 +15,7 @@ namespace Budget_game
         List<Monster> monsters = new List<Monster>();
         int numMonsters = 10;
         Timer monsterTimer;
-        int curMonsters = 0;
+        public static int curMonsters = 0;
         Form form;
 
         public Engine(Form _form)
