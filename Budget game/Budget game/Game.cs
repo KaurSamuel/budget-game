@@ -14,12 +14,29 @@ namespace Budget_game
     {
         int count = 0;
         private int quick = 120;
+        Engine engine;
+        Timer engineTimer;
+
 
         public Game()
         {
             InitializeComponent();
 
             Terrain.GenerateTerrain(this);
+
+            engine = new Engine(this);
+
+            engineTimer = new Timer();
+            engineTimer.Enabled = true;
+            engineTimer.Interval = 10;
+            engineTimer.Tick += new EventHandler(Frame);
+
+            
+        }
+
+        void Frame(object sender, EventArgs e)
+        {
+            engine.Update();
         }
 
         private void Game_Load(object sender, EventArgs e)
@@ -58,6 +75,8 @@ namespace Budget_game
             {
                 btnStart.Enabled = false;
             }
+
+            engine.StartRound();
         }
     }
 }
