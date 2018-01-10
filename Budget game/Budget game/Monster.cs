@@ -31,7 +31,7 @@ namespace Budget_game
         {
 
             int a = Terrain.numRoadTiles;
-            if (curTile + 1 >= Terrain.numRoadTiles)
+            if (curTile + 2 >= Terrain.numRoadTiles)
             {
                 Attack();
                 return;
