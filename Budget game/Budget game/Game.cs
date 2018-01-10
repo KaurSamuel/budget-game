@@ -53,7 +53,7 @@ namespace Budget_game
             timer = new Timer();
             timer.Tick += (timer_Tick);
             timer.Enabled = true;
-            timer.Interval = 10;
+            timer.Interval = 1000;
             if (count >= 1)
             {
                 btnStart.Enabled = false;
