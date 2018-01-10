@@ -43,6 +43,13 @@ namespace Budget_game
         {
 
         }
+        private void Game_Over()
+        {
+            if (Player.PlayerLivesLeft == 0)
+            {
+                lblGameOver.Text = "GAME OVER";
+            }
+        }
 
         private void timer_Tick(object sender, EventArgs e)
         {
@@ -53,7 +60,7 @@ namespace Budget_game
             {
                 timer.Stop();
                 if (count <= 1)
-                    {
+                   {
                     //Transparency ei tööta Windows Formsil.
                     //Road on Game Overi peal.
 
