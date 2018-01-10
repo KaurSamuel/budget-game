@@ -18,6 +18,7 @@ namespace Budget_game
             form.Controls.Add(this);
             Name = "monster";
             Location = new System.Drawing.Point(0, Terrain.MapHeight * Terrain.TileSize / 2);
+            BackColor = System.Drawing.Color.Transparent;
             BringToFront();
             TargetPos = form.Controls.Find("road0", false)[0].Location;
         }
