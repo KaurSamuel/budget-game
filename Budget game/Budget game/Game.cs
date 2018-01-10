@@ -98,6 +98,7 @@ namespace Budget_game
             engine.StartRound();
         }
 
+
         private void pictureBox5_Click(object sender, EventArgs e)
         {
 
@@ -105,6 +106,31 @@ namespace Budget_game
 
         private void cmbUpgradesTower4_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+        }
+        private void StoreTurret1_Click(object sender, EventArgs e)
+        {
+            Store.Buy(this, "StoreTurret1");
+        }
+
+        private void StoreTurret2_Click(object sender, EventArgs e)
+        {
+            Store.Buy(this, "StoreTurret2");
+        }
+
+        private void StoreTurret3_Click(object sender, EventArgs e)
+        {
+            Store.Buy(this, "StoreTurret3");
+        }
+
+        private void StoreTurret4_Click(object sender, EventArgs e)
+        {
+            Store.Buy(this, "StoreTurret4");
+        }
+
+        private void BoughtTurret_Click(object sender, EventArgs e)
+        {
+            Store.Place(this);
 
         }
     }

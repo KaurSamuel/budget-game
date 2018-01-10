@@ -19,7 +19,13 @@ namespace Budget_game
         {
             PlayerLivesLeft = MaxLives;
         }
-    }
 
+
+
+        public static void UpdateCoins(Form form)
+        {
+            form.Controls["lblGold"].Text = Gold.ToString();
+        }
+    }
 
 }
