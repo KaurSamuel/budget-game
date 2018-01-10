@@ -10,7 +10,7 @@ namespace Budget_game
 {
     class turretsclass
     {
-        public void Turret_spawn(Form form)
+        public void Turret_spawn(Form form, Point location,)
         {
             bool Has_spawned = false;
             if (Has_spawned == false)
@@ -21,7 +21,7 @@ namespace Budget_game
                 cannon.Size = new Size(Tilesize, Tilesize);
                 cannon.Location = new Point(curpoint.X, curpoint.Y);
                 cannon.Image = Image.FromFile("../../Sprites/Tower1.png");
-                cannon.Name = "Tower1";
+                cannon.Name = "Tower";
                 cannon.Turret_shooting_speed = 10;
                 cannon.Turret_range = 150;
                 form.Controls.Add(cannon);
@@ -30,12 +30,12 @@ namespace Budget_game
             }
         }
 
-        public void Turret_shoot(Form form, List<Monster> monsters)
+        public static void Turret_shoot(Form form, List<Monster> monsters)
         {
             foreach (Monster monster in monsters)
             {
                 
-                foreach (Turrets turret in form.Controls.Find("Tower1", true))
+                foreach (Turrets turret in form.Controls.Find("Tower", true))
                 {
                     if (monster.Location.X > turret.Location.X)
                     {

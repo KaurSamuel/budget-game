@@ -10,7 +10,7 @@ namespace Budget_game
 {
     class Store
     {
-        public static PictureBox curControl = new PictureBox();
+        public static Turrets curControl = new Turrets();
 
         public Store()
         {
@@ -40,12 +40,13 @@ namespace Budget_game
             var money = form.Controls[controlName + "Price"].Text;
             if (Int32.Parse(money.Substring(0, 3)) <= Player.Gold)
             {
-                curControl = form.Controls["BoughtTurret"] as PictureBox;
+                curControl = form.Controls["BoughtTurret"] as Turrets;
 
-                 Player.Gold -= Int32.Parse(money.Substring(0, 3));
+                Player.Gold -= Int32.Parse(money.Substring(0, 3));
                 
                 curControl.Image = (form.Controls[controlName] as PictureBox).Image;
                 curControl.Show();
+                curControl.Enabled = true;
             }
         }
 
@@ -101,8 +102,6 @@ namespace Budget_game
 
                 curControl.Location = newPos;
                 curControl.BringToFront();
-
-                //if()
             }
         }
     }

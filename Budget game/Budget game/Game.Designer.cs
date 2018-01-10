@@ -59,7 +59,7 @@
             this.StoreTurret3 = new System.Windows.Forms.PictureBox();
             this.StoreTurret2 = new System.Windows.Forms.PictureBox();
             this.StoreTurret1 = new System.Windows.Forms.PictureBox();
-            this.BoughtTurret = new System.Windows.Forms.PictureBox();
+            this.BoughtTurret = new Budget_game.Turrets();
             ((System.ComponentModel.ISupportInitialize)(this.StoreTurret4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StoreTurret3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StoreTurret2)).BeginInit();
@@ -339,10 +339,10 @@
             // 
             // BoughtTurret
             // 
-            this.BoughtTurret.Location = new System.Drawing.Point(1072, 490);
+            this.BoughtTurret.Location = new System.Drawing.Point(1019, 421);
             this.BoughtTurret.Name = "BoughtTurret";
             this.BoughtTurret.Size = new System.Drawing.Size(32, 32);
-            this.BoughtTurret.TabIndex = 30;
+            this.BoughtTurret.TabIndex = 31;
             this.BoughtTurret.TabStop = false;
             this.BoughtTurret.Click += new System.EventHandler(this.BoughtTurret_Click);
             // 
@@ -352,8 +352,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1264, 681);
-            this.Controls.Add(this.lblGameOver);
             this.Controls.Add(this.BoughtTurret);
+            this.Controls.Add(this.lblGameOver);
             this.Controls.Add(this.lblTimer);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.lblTimerName);
@@ -427,7 +427,7 @@
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Label lblTimer;
         private System.Windows.Forms.Label lblGameOver;
-        private System.Windows.Forms.PictureBox BoughtTurret;
+        private Turrets BoughtTurret;
     }
 }
 

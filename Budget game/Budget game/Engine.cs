@@ -73,10 +73,7 @@ namespace Budget_game
 
         private void UpdateTurrets(Form form)
         {
-            
-            turretsclass turret = new turretsclass();
-            turret.Turret_spawn(form);
-            turret.Turret_shoot(form, monsters);
+            turretsclass.Turret_shoot(form, monsters);
         }
     }
 }
