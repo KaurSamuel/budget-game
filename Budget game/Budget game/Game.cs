@@ -75,5 +75,25 @@ namespace Budget_game
 
             engine.StartRound();
         }
+
+        private void StoreTurret1_Click(object sender, EventArgs e)
+        {
+            Store.Buy(this, "StoreTurret1");
+        }
+
+        private void StoreTurret2_Click(object sender, EventArgs e)
+        {
+            Store.Buy(this, "StoreTurret2");
+        }
+
+        private void StoreTurret3_Click(object sender, EventArgs e)
+        {
+            Store.Buy(this, "StoreTurret3");
+        }
+
+        private void StoreTurret4_Click(object sender, EventArgs e)
+        {
+            Store.Buy(this, "StoreTurret4");
+        }
     }
 }

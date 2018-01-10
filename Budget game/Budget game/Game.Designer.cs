@@ -58,10 +58,12 @@
             this.StoreTurret3 = new System.Windows.Forms.PictureBox();
             this.StoreTurret2 = new System.Windows.Forms.PictureBox();
             this.StoreTurret1 = new System.Windows.Forms.PictureBox();
+            this.BoughtTurret = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.StoreTurret4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StoreTurret3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StoreTurret2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StoreTurret1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BoughtTurret)).BeginInit();
             this.SuspendLayout();
             // 
             // lblHitpointsName
@@ -154,36 +156,36 @@
             this.StoreTurret1Price.AutoSize = true;
             this.StoreTurret1Price.Location = new System.Drawing.Point(73, 562);
             this.StoreTurret1Price.Name = "StoreTurret1Price";
-            this.StoreTurret1Price.Size = new System.Drawing.Size(34, 13);
+            this.StoreTurret1Price.Size = new System.Drawing.Size(40, 13);
             this.StoreTurret1Price.TabIndex = 14;
-            this.StoreTurret1Price.Text = "100 $";
+            this.StoreTurret1Price.Text = "100 gp";
             // 
             // StoreTurret2Price
             // 
             this.StoreTurret2Price.AutoSize = true;
             this.StoreTurret2Price.Location = new System.Drawing.Point(294, 562);
             this.StoreTurret2Price.Name = "StoreTurret2Price";
-            this.StoreTurret2Price.Size = new System.Drawing.Size(34, 13);
+            this.StoreTurret2Price.Size = new System.Drawing.Size(40, 13);
             this.StoreTurret2Price.TabIndex = 15;
-            this.StoreTurret2Price.Text = "300 $";
+            this.StoreTurret2Price.Text = "300 gp";
             // 
             // StoreTurret3Price
             // 
             this.StoreTurret3Price.AutoSize = true;
             this.StoreTurret3Price.Location = new System.Drawing.Point(506, 562);
             this.StoreTurret3Price.Name = "StoreTurret3Price";
-            this.StoreTurret3Price.Size = new System.Drawing.Size(34, 13);
+            this.StoreTurret3Price.Size = new System.Drawing.Size(40, 13);
             this.StoreTurret3Price.TabIndex = 16;
-            this.StoreTurret3Price.Text = "500 $";
+            this.StoreTurret3Price.Text = "500 gp";
             // 
             // StoreTurret4Price
             // 
             this.StoreTurret4Price.AutoSize = true;
             this.StoreTurret4Price.Location = new System.Drawing.Point(712, 562);
             this.StoreTurret4Price.Name = "StoreTurret4Price";
-            this.StoreTurret4Price.Size = new System.Drawing.Size(34, 13);
+            this.StoreTurret4Price.Size = new System.Drawing.Size(40, 13);
             this.StoreTurret4Price.TabIndex = 17;
-            this.StoreTurret4Price.Text = "200 $";
+            this.StoreTurret4Price.Text = "200 gp";
             // 
             // lblUpgradesName1
             // 
@@ -287,6 +289,7 @@
             this.StoreTurret4.Size = new System.Drawing.Size(32, 32);
             this.StoreTurret4.TabIndex = 13;
             this.StoreTurret4.TabStop = false;
+            this.StoreTurret4.Click += new System.EventHandler(this.StoreTurret4_Click);
             // 
             // StoreTurret3
             // 
@@ -296,6 +299,7 @@
             this.StoreTurret3.Size = new System.Drawing.Size(32, 32);
             this.StoreTurret3.TabIndex = 12;
             this.StoreTurret3.TabStop = false;
+            this.StoreTurret3.Click += new System.EventHandler(this.StoreTurret3_Click);
             // 
             // StoreTurret2
             // 
@@ -305,6 +309,7 @@
             this.StoreTurret2.Size = new System.Drawing.Size(32, 32);
             this.StoreTurret2.TabIndex = 11;
             this.StoreTurret2.TabStop = false;
+            this.StoreTurret2.Click += new System.EventHandler(this.StoreTurret2_Click);
             // 
             // StoreTurret1
             // 
@@ -314,12 +319,23 @@
             this.StoreTurret1.Size = new System.Drawing.Size(32, 32);
             this.StoreTurret1.TabIndex = 10;
             this.StoreTurret1.TabStop = false;
+            this.StoreTurret1.Click += new System.EventHandler(this.StoreTurret1_Click);
+            // 
+            // BoughtTurret
+            // 
+            this.BoughtTurret.Location = new System.Drawing.Point(1072, 490);
+            this.BoughtTurret.Name = "BoughtTurret";
+            this.BoughtTurret.Size = new System.Drawing.Size(32, 32);
+            this.BoughtTurret.TabIndex = 30;
+            this.BoughtTurret.TabStop = false;
+            this.BoughtTurret.Visible = false;
             // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.BoughtTurret);
             this.Controls.Add(this.lblTimer);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.lblTimerName);
@@ -355,6 +371,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.StoreTurret3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StoreTurret2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StoreTurret1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BoughtTurret)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -391,6 +408,7 @@
         private System.Windows.Forms.Label lblTimerName;
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Label lblTimer;
+        private System.Windows.Forms.PictureBox BoughtTurret;
     }
 }
 
