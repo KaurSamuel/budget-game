@@ -45,6 +45,7 @@ namespace Budget_game
         void Frame(object sender, EventArgs e)
         {
             engine.Update();
+            Game_Over();
         }
 
         private void Game_Load(object sender, EventArgs e)
@@ -57,6 +58,7 @@ namespace Budget_game
             if (Player.PlayerLivesLeft == 0)
             {
                 lblGameOver.Text = "GAME OVER";
+                lblGameOver.BringToFront();
             }
         }
 
@@ -86,7 +88,7 @@ namespace Budget_game
             timer = new Timer();
             timer.Tick += (timer_Tick);
             timer.Enabled = true;
-            timer.Interval = 100;
+            timer.Interval = 1000;
             if (count >= 1)
             {
                 btnStart.Enabled = false;
