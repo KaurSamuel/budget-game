@@ -36,6 +36,7 @@ namespace Budget_game
         public void Update()
         {
             UpdateMonsters();
+            UpdateTurrets(form);
         }
 
         public void StartRound()
@@ -62,12 +63,6 @@ namespace Budget_game
 
             if (curMonsters >= numMonsters)
                 monsterTimer.Stop();
-        }
-        
-        public void Update(Form form)
-        {
-            UpdateMonsters();
-            UpdateTurrets(form);
         }
 
         private void UpdateTurrets(Form form)
