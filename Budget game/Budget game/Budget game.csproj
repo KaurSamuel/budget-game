@@ -62,6 +62,7 @@
     <Compile Include="Tile.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="turrets.cs" />
     <EmbeddedResource Include="Game.resx">
       <DependentUpon>Game.cs</DependentUpon>
     </EmbeddedResource>

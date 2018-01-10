@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace Budget_game
 {
@@ -12,6 +13,17 @@ namespace Budget_game
         public Tile()
         {
             
+        }
+    }
+
+    class Turrets : PictureBox
+    {
+        public int Turret_shooting_speed;
+        public string Turret_Name;
+        public int Turret_range;        
+        public Turrets()
+        {
+
         }
     }
 }

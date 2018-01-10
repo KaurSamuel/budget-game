@@ -96,5 +96,15 @@ namespace Budget_game
 
             engine.StartRound();
         }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbUpgradesTower4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
