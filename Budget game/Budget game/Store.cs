@@ -75,6 +75,9 @@ namespace Budget_game
 
                 form.Controls.Add(newTurret);
                 newTurret.BringToFront();
+
+                curControl.Enabled = false;
+                curControl.Visible = false;
             }
         }
 
