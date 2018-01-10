@@ -8,9 +8,12 @@ namespace Budget_game
 {
     class Player
     {
-        public float PlayerLives = 10;
-        public float PlayerLivesLeft { get; set; }
+        public int PlayerLives = 10;
+        public int PlayerLivesLeft { get; set; }
         public int Gold { get; set; }
         public int Level { get; set; }
+
+
+        
     }
 }
