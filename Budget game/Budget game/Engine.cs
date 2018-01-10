@@ -52,6 +52,8 @@ namespace Budget_game
 
             monsters.Add(monster);
 
+            curMonsters++;
+
             if(curMonsters >= numMonsters)
             {
                 monsterTimer.Stop();
