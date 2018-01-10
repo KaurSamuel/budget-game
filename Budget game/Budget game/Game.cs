@@ -52,13 +52,32 @@ namespace Budget_game
 
         }
 
+        private void Game_Over()
+        {
+            if (Player.PlayerLivesLeft == 0)
+            {
+                lblGameOver.Text = "GAME OVER";
+            }
+        }
+
         private void timer_Tick(object sender, EventArgs e)
         {
             quick--;
             lblTimer.Text = quick / 60 + ":" + ((quick % 60) >= 10 ? (quick % 60).ToString() : "0" + (quick % 60));
 
             if(lblTimer.Text == "0:00")
+            {
                 timer.Stop();
+                if (count <= 1)
+                   {
+                    //Transparency ei tööta Windows Formsil.
+                    //Road on Game Overi peal.
+
+                    //lblGameOver.BackColor = Color.Transparent;
+                    //lblGameOver.BackColor = SystemColors.Control;
+                    lblGameOver.Text = "GAME OVER";
+                    }
+            }
         }
 
         private void btnStart_Click(object sender, EventArgs e)
@@ -67,7 +86,7 @@ namespace Budget_game
             timer = new Timer();
             timer.Tick += (timer_Tick);
             timer.Enabled = true;
-            timer.Interval = 1000;
+            timer.Interval = 100;
             if (count >= 1)
             {
                 btnStart.Enabled = false;

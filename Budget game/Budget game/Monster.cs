@@ -46,11 +46,6 @@ namespace Budget_game
             NumMonsters--;
 
             UpdateLabel(form);
-
-            if (Player.PlayerLivesLeft <= 0)
-            {
-                Player.Died(form);
-            }
         }
 
         public void MoveMonster(Form form)

@@ -58,6 +58,7 @@
             this.lblTimerName = new System.Windows.Forms.Label();
             this.btnStart = new System.Windows.Forms.Button();
             this.lblTimer = new System.Windows.Forms.Label();
+            this.lblGameOver = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -312,11 +313,21 @@
             this.lblTimer.Size = new System.Drawing.Size(0, 13);
             this.lblTimer.TabIndex = 28;
             // 
+            // lblGameOver
+            // 
+            this.lblGameOver.AutoSize = true;
+            this.lblGameOver.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F, System.Drawing.FontStyle.Bold);
+            this.lblGameOver.Location = new System.Drawing.Point(784, 527);
+            this.lblGameOver.Name = "lblGameOver";
+            this.lblGameOver.Size = new System.Drawing.Size(0, 51);
+            this.lblGameOver.TabIndex = 29;
+            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.lblGameOver);
             this.Controls.Add(this.lblTimer);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.lblTimerName);
@@ -388,6 +399,7 @@
         private System.Windows.Forms.Label lblTimerName;
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Label lblTimer;
+        private System.Windows.Forms.Label lblGameOver;
     }
 }
 
