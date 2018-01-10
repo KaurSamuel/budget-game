@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
+using System.Windows.Forms;
 
 namespace Budget_game
 {
@@ -11,30 +12,21 @@ namespace Budget_game
     {
         List<Monster> monsters = new List<Monster>();
         int numMonsters = 10;
+        Timer monsterTimer;
+        int curMonsters = 0;
+        Form form;
 
-        public Engine(Form1 form)
+        public Engine(Form _form)
         {
-            for (int i = 0; i < numMonsters; i++)
-            {
-                Monster monster = new Monster(form);
-
-                monster.movementSpeed = 1;
-
-                monsters.Add(monster);
-            }
-
+            form = _form;
         }
 
         private void UpdateMonsters()
         {
-            bool restart = false;
 
             foreach(Monster monster in monsters)
             {
-
-                    monster.MoveMonster();
-
-                
+                monster.MoveMonster(form);
             }
 
         }
@@ -42,6 +34,30 @@ namespace Budget_game
         public void Update()
         {
             UpdateMonsters();
+        }
+
+        public void StartRound()
+        {
+            monsterTimer = new Timer();
+            monsterTimer.Enabled = true;
+            monsterTimer.Interval = 1000;
+            monsterTimer.Tick += new EventHandler(SpawnMobs);
+        }
+
+        public void SpawnMobs(object sender, EventArgs e)
+        {
+            Monster monster = new Monster(form);
+
+            monster.movementSpeed = 1;
+
+            monsters.Add(monster);
+
+            curMonsters++;
+
+            if(curMonsters >= numMonsters)
+            {
+                monsterTimer.Stop();
+            }
         }
 
     }
