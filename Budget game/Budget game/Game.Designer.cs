@@ -316,10 +316,10 @@
             // lblGameOver
             // 
             this.lblGameOver.AutoSize = true;
-            this.lblGameOver.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.lblGameOver.Location = new System.Drawing.Point(186, 187);
+            this.lblGameOver.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F, System.Drawing.FontStyle.Bold);
+            this.lblGameOver.Location = new System.Drawing.Point(784, 527);
             this.lblGameOver.Name = "lblGameOver";
-            this.lblGameOver.Size = new System.Drawing.Size(0, 108);
+            this.lblGameOver.Size = new System.Drawing.Size(0, 51);
             this.lblGameOver.TabIndex = 29;
             // 
             // Game
