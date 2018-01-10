@@ -34,6 +34,8 @@ namespace Budget_game
         public void Update()
         {
             UpdateMonsters();
+            Player.UpdateCoins(form);
+            Store.UpdateBuyable(form);
         }
 
         public void StartRound()

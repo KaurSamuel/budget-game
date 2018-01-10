@@ -39,14 +39,10 @@
             this.lblLevelName = new System.Windows.Forms.Label();
             this.lblLevel = new System.Windows.Forms.Label();
             this.lblShopName = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.lblTower1Price = new System.Windows.Forms.Label();
-            this.lblTower2Price = new System.Windows.Forms.Label();
-            this.lblTower3Price = new System.Windows.Forms.Label();
-            this.lblTower4Price = new System.Windows.Forms.Label();
+            this.StoreTurret1Price = new System.Windows.Forms.Label();
+            this.StoreTurret2Price = new System.Windows.Forms.Label();
+            this.StoreTurret3Price = new System.Windows.Forms.Label();
+            this.StoreTurret4Price = new System.Windows.Forms.Label();
             this.lblUpgradesName1 = new System.Windows.Forms.Label();
             this.lblUpgradesName2 = new System.Windows.Forms.Label();
             this.lblUpgradesName3 = new System.Windows.Forms.Label();
@@ -58,10 +54,14 @@
             this.lblTimerName = new System.Windows.Forms.Label();
             this.btnStart = new System.Windows.Forms.Button();
             this.lblTimer = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.StoreTurret4 = new System.Windows.Forms.PictureBox();
+            this.StoreTurret3 = new System.Windows.Forms.PictureBox();
+            this.StoreTurret2 = new System.Windows.Forms.PictureBox();
+            this.StoreTurret1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.StoreTurret4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StoreTurret3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StoreTurret2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StoreTurret1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblHitpointsName
@@ -149,73 +149,41 @@
             this.lblShopName.TabIndex = 9;
             this.lblShopName.Text = "Shop:";
             // 
-            // pictureBox1
+            // StoreTurret1Price
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(64, 527);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox1.TabIndex = 10;
-            this.pictureBox1.TabStop = false;
+            this.StoreTurret1Price.AutoSize = true;
+            this.StoreTurret1Price.Location = new System.Drawing.Point(73, 562);
+            this.StoreTurret1Price.Name = "StoreTurret1Price";
+            this.StoreTurret1Price.Size = new System.Drawing.Size(34, 13);
+            this.StoreTurret1Price.TabIndex = 14;
+            this.StoreTurret1Price.Text = "100 $";
             // 
-            // pictureBox2
+            // StoreTurret2Price
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(278, 527);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox2.TabIndex = 11;
-            this.pictureBox2.TabStop = false;
+            this.StoreTurret2Price.AutoSize = true;
+            this.StoreTurret2Price.Location = new System.Drawing.Point(294, 562);
+            this.StoreTurret2Price.Name = "StoreTurret2Price";
+            this.StoreTurret2Price.Size = new System.Drawing.Size(34, 13);
+            this.StoreTurret2Price.TabIndex = 15;
+            this.StoreTurret2Price.Text = "300 $";
             // 
-            // pictureBox3
+            // StoreTurret3Price
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(491, 527);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox3.TabIndex = 12;
-            this.pictureBox3.TabStop = false;
+            this.StoreTurret3Price.AutoSize = true;
+            this.StoreTurret3Price.Location = new System.Drawing.Point(506, 562);
+            this.StoreTurret3Price.Name = "StoreTurret3Price";
+            this.StoreTurret3Price.Size = new System.Drawing.Size(34, 13);
+            this.StoreTurret3Price.TabIndex = 16;
+            this.StoreTurret3Price.Text = "500 $";
             // 
-            // pictureBox4
+            // StoreTurret4Price
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(697, 527);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox4.TabIndex = 13;
-            this.pictureBox4.TabStop = false;
-            // 
-            // lblTower1Price
-            // 
-            this.lblTower1Price.AutoSize = true;
-            this.lblTower1Price.Location = new System.Drawing.Point(61, 562);
-            this.lblTower1Price.Name = "lblTower1Price";
-            this.lblTower1Price.Size = new System.Drawing.Size(75, 13);
-            this.lblTower1Price.TabIndex = 14;
-            this.lblTower1Price.Text = "add price here";
-            // 
-            // lblTower2Price
-            // 
-            this.lblTower2Price.AutoSize = true;
-            this.lblTower2Price.Location = new System.Drawing.Point(275, 562);
-            this.lblTower2Price.Name = "lblTower2Price";
-            this.lblTower2Price.Size = new System.Drawing.Size(75, 13);
-            this.lblTower2Price.TabIndex = 15;
-            this.lblTower2Price.Text = "add price here";
-            // 
-            // lblTower3Price
-            // 
-            this.lblTower3Price.AutoSize = true;
-            this.lblTower3Price.Location = new System.Drawing.Point(488, 562);
-            this.lblTower3Price.Name = "lblTower3Price";
-            this.lblTower3Price.Size = new System.Drawing.Size(75, 13);
-            this.lblTower3Price.TabIndex = 16;
-            this.lblTower3Price.Text = "add price here";
-            // 
-            // lblTower4Price
-            // 
-            this.lblTower4Price.AutoSize = true;
-            this.lblTower4Price.Location = new System.Drawing.Point(694, 562);
-            this.lblTower4Price.Name = "lblTower4Price";
-            this.lblTower4Price.Size = new System.Drawing.Size(75, 13);
-            this.lblTower4Price.TabIndex = 17;
-            this.lblTower4Price.Text = "add price here";
+            this.StoreTurret4Price.AutoSize = true;
+            this.StoreTurret4Price.Location = new System.Drawing.Point(712, 562);
+            this.StoreTurret4Price.Name = "StoreTurret4Price";
+            this.StoreTurret4Price.Size = new System.Drawing.Size(34, 13);
+            this.StoreTurret4Price.TabIndex = 17;
+            this.StoreTurret4Price.Text = "200 $";
             // 
             // lblUpgradesName1
             // 
@@ -312,6 +280,41 @@
             this.lblTimer.Size = new System.Drawing.Size(0, 13);
             this.lblTimer.TabIndex = 28;
             // 
+            // StoreTurret4
+            // 
+            this.StoreTurret4.Location = new System.Drawing.Point(715, 527);
+            this.StoreTurret4.Name = "StoreTurret4";
+            this.StoreTurret4.Size = new System.Drawing.Size(32, 32);
+            this.StoreTurret4.TabIndex = 13;
+            this.StoreTurret4.TabStop = false;
+            // 
+            // StoreTurret3
+            // 
+            this.StoreTurret3.Image = global::Budget_game.Properties.Resources.Tower3;
+            this.StoreTurret3.Location = new System.Drawing.Point(509, 527);
+            this.StoreTurret3.Name = "StoreTurret3";
+            this.StoreTurret3.Size = new System.Drawing.Size(32, 32);
+            this.StoreTurret3.TabIndex = 12;
+            this.StoreTurret3.TabStop = false;
+            // 
+            // StoreTurret2
+            // 
+            this.StoreTurret2.Image = global::Budget_game.Properties.Resources.tower2;
+            this.StoreTurret2.Location = new System.Drawing.Point(297, 527);
+            this.StoreTurret2.Name = "StoreTurret2";
+            this.StoreTurret2.Size = new System.Drawing.Size(32, 32);
+            this.StoreTurret2.TabIndex = 11;
+            this.StoreTurret2.TabStop = false;
+            // 
+            // StoreTurret1
+            // 
+            this.StoreTurret1.Image = global::Budget_game.Properties.Resources.Tower1;
+            this.StoreTurret1.Location = new System.Drawing.Point(76, 527);
+            this.StoreTurret1.Name = "StoreTurret1";
+            this.StoreTurret1.Size = new System.Drawing.Size(32, 32);
+            this.StoreTurret1.TabIndex = 10;
+            this.StoreTurret1.TabStop = false;
+            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -328,14 +331,14 @@
             this.Controls.Add(this.lblUpgradesName3);
             this.Controls.Add(this.lblUpgradesName2);
             this.Controls.Add(this.lblUpgradesName1);
-            this.Controls.Add(this.lblTower4Price);
-            this.Controls.Add(this.lblTower3Price);
-            this.Controls.Add(this.lblTower2Price);
-            this.Controls.Add(this.lblTower1Price);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.StoreTurret4Price);
+            this.Controls.Add(this.StoreTurret3Price);
+            this.Controls.Add(this.StoreTurret2Price);
+            this.Controls.Add(this.StoreTurret1Price);
+            this.Controls.Add(this.StoreTurret4);
+            this.Controls.Add(this.StoreTurret3);
+            this.Controls.Add(this.StoreTurret2);
+            this.Controls.Add(this.StoreTurret1);
             this.Controls.Add(this.lblShopName);
             this.Controls.Add(this.lblLevel);
             this.Controls.Add(this.lblLevelName);
@@ -348,10 +351,10 @@
             this.Name = "Game";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Game_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StoreTurret4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StoreTurret3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StoreTurret2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StoreTurret1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -369,14 +372,14 @@
         private System.Windows.Forms.Label lblLevelName;
         private System.Windows.Forms.Label lblLevel;
         private System.Windows.Forms.Label lblShopName;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Label lblTower1Price;
-        private System.Windows.Forms.Label lblTower2Price;
-        private System.Windows.Forms.Label lblTower3Price;
-        private System.Windows.Forms.Label lblTower4Price;
+        private System.Windows.Forms.PictureBox StoreTurret1;
+        private System.Windows.Forms.PictureBox StoreTurret2;
+        private System.Windows.Forms.PictureBox StoreTurret3;
+        private System.Windows.Forms.PictureBox StoreTurret4;
+        private System.Windows.Forms.Label StoreTurret1Price;
+        private System.Windows.Forms.Label StoreTurret2Price;
+        private System.Windows.Forms.Label StoreTurret3Price;
+        private System.Windows.Forms.Label StoreTurret4Price;
         private System.Windows.Forms.Label lblUpgradesName1;
         private System.Windows.Forms.Label lblUpgradesName2;
         private System.Windows.Forms.Label lblUpgradesName3;
