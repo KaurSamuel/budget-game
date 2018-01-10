@@ -29,22 +29,18 @@ namespace Budget_game
 
         public void MoveMonster(Form form)
         {
-            //Console.WriteLine("CURTILE: " + curTile);
+
             int a = Terrain.numRoadTiles;
             if (curTile + 1 >= Terrain.numRoadTiles)
             {
                 Attack();
                 return;
             }
-                 
-
 
             if (TargetPos == Location)
             {
                 curTile++;
                 TargetPos = form.Controls.Find("road" + curTile, false)[0].Location;
-
-                //IndexOutOfRangeException kui jõuab viimase tileni.
             }
             
             System.Drawing.Point delta = new System.Drawing.Point();

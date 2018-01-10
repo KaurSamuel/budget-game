@@ -36,7 +36,7 @@ namespace Budget_game
 
         void Frame(object sender, EventArgs e)
         {
-            engine.Update(this);
+            engine.Update();
         }
 
         private void Game_Load(object sender, EventArgs e)
@@ -64,6 +64,8 @@ namespace Budget_game
             {
                 btnStart.Enabled = false;
             }
+
+            engine.StartRound();
         }
     }
 }

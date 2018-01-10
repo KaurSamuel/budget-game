@@ -12,36 +12,50 @@ namespace Budget_game
     {
         List<Monster> monsters = new List<Monster>();
         int numMonsters = 10;
+        Timer monsterTimer;
+        int curMonsters = 0;
+        Form form;
 
-        public Engine(Form form)
+        public Engine(Form _form)
         {
-            for (int i = 0; i < numMonsters; i++)
-            {
-                Monster monster = new Monster(form);
-
-                monster.movementSpeed = 1;
-
-                monsters.Add(monster);
-            }
-
+            form = _form;
         }
 
-        private void UpdateMonsters(Form form)
+        private void UpdateMonsters()
         {
 
             foreach(Monster monster in monsters)
             {
-
-                    monster.MoveMonster(form);
-
-                
+                monster.MoveMonster(form);
             }
 
         }
 
-        public void Update(Form form)
+        public void Update()
         {
-            UpdateMonsters(form);
+            UpdateMonsters();
+        }
+
+        public void StartRound()
+        {
+            monsterTimer = new Timer();
+            monsterTimer.Enabled = true;
+            monsterTimer.Interval = 1000;
+            monsterTimer.Tick += new EventHandler(SpawnMobs);
+        }
+
+        public void SpawnMobs(object sender, EventArgs e)
+        {
+            Monster monster = new Monster(form);
+
+            monster.movementSpeed = 1;
+
+            monsters.Add(monster);
+
+            if(curMonsters >= numMonsters)
+            {
+                monsterTimer.Stop();
+            }
         }
 
     }
