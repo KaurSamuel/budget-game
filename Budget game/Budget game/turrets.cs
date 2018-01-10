@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace Budget_game
 {
-    class turrets
+    class turretsclass
     {
         public void Turret_spawn(Form form)
         {
