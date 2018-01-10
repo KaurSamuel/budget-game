@@ -65,5 +65,10 @@ namespace Budget_game
                 btnStart.Enabled = false;
             }
         }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
