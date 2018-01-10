@@ -16,24 +16,36 @@ namespace Budget_game
             Size = new System.Drawing.Size(32, 32);
             curTile = 0;
             form.Controls.Add(this);
+            Name = "monster";
             Location = new System.Drawing.Point(0, Terrain.MapHeight * Terrain.TileSize / 2);
             BringToFront();
             TargetPos = form.Controls.Find("road0", false)[0].Location;
-            
         }
 
-        public void Attack()
+        public void Attack(Form form)
         {
+            if(!IsAlive)
+            {
+                return;
+            }
 
+            Player.PlayerLivesLeft--;
+            form.Controls["lblHitpoints"].Text = Player.PlayerLivesLeft.ToString();
+
+            form.Controls.Remove(this);
+            IsAlive = false;
+
+            if (Player.PlayerLivesLeft <= 0)
+            {
+                Player.Died(form);
+            }
         }
 
         public void MoveMonster(Form form)
         {
-
-            int a = Terrain.numRoadTiles;
             if (curTile + 2 >= Terrain.numRoadTiles)
             {
-                Attack();
+                Attack(form);
                 return;
             }
 
@@ -65,5 +77,6 @@ namespace Budget_game
         public int CurrentHealth { get; set; }
         public int Gold { get; set; }
         public int curTile { get; set; }
+        public bool IsAlive { get; set; } = true;
     }
 }

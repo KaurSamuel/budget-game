@@ -17,10 +17,17 @@ namespace Budget_game
         Engine engine;
         Timer engineTimer;
 
+        void InitializeValues()
+        {
+            Player.Reset();
+            Controls["lblHitpoints"].Text = Player.PlayerLivesLeft.ToString();
+        }
 
         public Game()
         {
             InitializeComponent();
+
+            InitializeValues();
 
             Terrain.GenerateTerrain(this);
 
