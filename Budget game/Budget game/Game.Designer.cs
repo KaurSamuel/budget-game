@@ -328,7 +328,7 @@
             this.BoughtTurret.Size = new System.Drawing.Size(32, 32);
             this.BoughtTurret.TabIndex = 30;
             this.BoughtTurret.TabStop = false;
-            this.BoughtTurret.Visible = false;
+            this.BoughtTurret.Click += new System.EventHandler(this.BoughtTurret_Click);
             // 
             // Game
             // 

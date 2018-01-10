@@ -4,12 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Input;
 
 namespace Budget_game
 {
     class Store
     {
-        public static PictureBox curControl;
+        public static PictureBox curControl = new PictureBox();
+
+        public Store()
+        {
+
+        }
 
         public static void UpdateBuyable(Form form)
         {
@@ -36,7 +42,7 @@ namespace Budget_game
             {
                 curControl = form.Controls["BoughtTurret"] as PictureBox;
 
-                Player.Gold -= Int32.Parse(money.Substring(0, 3));
+                 Player.Gold -= Int32.Parse(money.Substring(0, 3));
                 
                 curControl.Image = (form.Controls[controlName] as PictureBox).Image;
                 curControl.Show();
@@ -48,11 +54,52 @@ namespace Budget_game
 
         }
 
-        public static void UpdateTurretBought(Form form)
+        public static void Place(Form form)
         {
+            System.Drawing.Point newPos = new System.Drawing.Point();
+
             if (curControl.Visible)
             {
-                curControl.Location = Cursor.Position;
+                System.Drawing.Point mousePos = form.PointToClient(Cursor.Position);
+
+                newPos.X = (mousePos.X / 32) * 32;
+                newPos.Y = (mousePos.Y / 32) * 32;
+
+                curControl.Location = newPos;
+                curControl.BringToFront();
+
+                PictureBox newTurret = new PictureBox();
+                newTurret.Image = curControl.Image;
+                newTurret.Location = curControl.Location;
+                newTurret.Size = curControl.Size;
+
+                form.Controls.Add(newTurret);
+                newTurret.BringToFront();
+            }
+        }
+
+        private static void Form_MouseClick(object sender, MouseEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static void UpdateTurretBought(Form form)
+        {
+            System.Drawing.Point newPos = new System.Drawing.Point();
+
+            
+
+            if (curControl.Visible)
+            {
+                System.Drawing.Point mousePos = form.PointToClient(Cursor.Position);
+
+                newPos.X = (mousePos.X / 32) * 32;
+                newPos.Y = (mousePos.Y / 32) * 32;
+
+                curControl.Location = newPos;
+                curControl.BringToFront();
+
+                //if()
             }
         }
     }

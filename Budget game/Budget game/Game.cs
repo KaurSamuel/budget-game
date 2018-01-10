@@ -95,5 +95,10 @@ namespace Budget_game
         {
             Store.Buy(this, "StoreTurret4");
         }
+
+        private void BoughtTurret_Click(object sender, EventArgs e)
+        {
+            Store.Place(this);
+        }
     }
 }
