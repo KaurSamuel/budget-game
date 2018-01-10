@@ -50,7 +50,22 @@ namespace Budget_game
 
         private void Game_Load(object sender, EventArgs e)
         {
-
+            cmbUpgradesTower1.Items.Add("Tier 1 Upgrade = 50gp");
+            cmbUpgradesTower1.Items.Add("Tier 2 Upgrade = 100gp");
+            cmbUpgradesTower1.Items.Add("Tier 3 Upgrade = 200gp");
+            cmbUpgradesTower1.Items.Add("Tier 4 Upgrade = 400gp");
+            cmbUpgradesTower2.Items.Add("Tier 1 Upgrade = 50gp");
+            cmbUpgradesTower2.Items.Add("Tier 2 Upgrade = 100gp");
+            cmbUpgradesTower2.Items.Add("Tier 3 Upgrade = 200gp");
+            cmbUpgradesTower2.Items.Add("Tier 4 Upgrade = 400gp");
+            cmbUpgradesTower3.Items.Add("Tier 1 Upgrade = 50gp");
+            cmbUpgradesTower3.Items.Add("Tier 2 Upgrade = 100gp");
+            cmbUpgradesTower3.Items.Add("Tier 3 Upgrade = 200gp");
+            cmbUpgradesTower3.Items.Add("Tier 4 Upgrade = 400gp");
+            cmbUpgradesTower4.Items.Add("Tier 1 Upgrade = 50gp");
+            cmbUpgradesTower4.Items.Add("Tier 2 Upgrade = 100gp");
+            cmbUpgradesTower4.Items.Add("Tier 3 Upgrade = 200gp");
+            cmbUpgradesTower4.Items.Add("Tier 4 Upgrade = 400gp");
         }
 
         private void Game_Over()
@@ -133,5 +148,30 @@ namespace Budget_game
             Store.Place(this);
 
         }
+        private static void DisposeMethod()
+        {
+            var form = new Game();
+            form.Show();
+            form.Close();
+            // the GC calls below will do NOTHING, because you still have a reference to the form!
+            GC.Collect();
+            GC.WaitForPendingFinalizers();
+            GC.Collect();
+            GC.WaitForPendingFinalizers();
+
+            // another thing to not: calling ShowDialog will NOT get Dispose called on your form when you close it
+            var form2 = new Game();
+            DialogResult r = form2.ShowDialog();
+            // you MUST manually call dispose after calling ShowDialog! Otherwise Dispose will never get called.
+            form2.Dispose();
+
+            // as for grids, this will ALSO result in never releasing the form in memory, because the GridControl has a reference to the Form itself (look at the auto-generated designer code)
+            var form3 = new Game();
+            form3.ShowDialog();
+            // note that if you're planning on actually using your datagrid after calling dispose on the form, you're going to have problems, since calling Dipose() on the form will also call dispose on all the child controls
+            form3.Dispose();
+            form3 = null;
+        }
+
     }
 }
