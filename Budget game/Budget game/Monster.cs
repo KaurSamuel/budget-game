@@ -15,6 +15,7 @@ namespace Budget_game
         public int MaximumHealth { get; set; }
         public int CurrentHealth { get; set; } = 50;
         public int Gold { get; set; } = 10;
+        public static int MonstersAlive { get; set; } = Engine.numMonsters;
         public int curTile { get; set; }
         public bool IsAlive { get; set; } = true;
         
@@ -34,7 +35,7 @@ namespace Budget_game
 
         public static void UpdateLabel(Form form)
         {
-            form.Controls["lblEnemiesLeft"].Text = Engine.numMonsters.ToString();
+            form.Controls["lblEnemiesLeft"].Text = MonstersAlive.ToString();
         }
 
         public void Attack(Form form)
@@ -64,8 +65,8 @@ namespace Budget_game
                 IsAlive = false;
                 form.Controls.Remove(this);
                 Player.Gold += Gold;
-               
-                Engine.numMonsters--;
+
+                MonstersAlive--;
             }
             
         }
