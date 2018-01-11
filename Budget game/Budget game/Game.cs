@@ -189,5 +189,10 @@ namespace Budget_game
         {
 
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
