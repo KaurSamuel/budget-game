@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Input;
+using System.Diagnostics;
 
 namespace Budget_game
 {
@@ -75,7 +76,8 @@ namespace Budget_game
                 newTurret.Size = curControl.Size;
                 newTurret.Turret_range = 150;
                 newTurret.Name = "Tower";
-                newTurret.Turret_shooting_speed = 150;
+                newTurret.ShootingTimer = new Stopwatch();
+                newTurret.ShootingTimer.Start();
 
                 form.Controls.Add(newTurret);
                 newTurret.BringToFront();

@@ -5,11 +5,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace Budget_game
 {
     class turretsclass
     {
+
+        public static List<Projectile> Projectiles = new List<Projectile>();
+
+        public static void UpdateProjectiles(Form form)
+        {
+            foreach(Projectile projectile in Projectiles)
+            {
+                projectile.UpdateProjectile(form);
+            }
+        }
+
         public static void Turret_spawn(Form form, Point location)
         {
             bool Has_spawned = false;
@@ -21,12 +33,31 @@ namespace Budget_game
                 cannon.Size = new Size(Tilesize, Tilesize);
                 cannon.Location = new Point(curpoint.X, curpoint.Y);
                 cannon.Image = Image.FromFile("../../Sprites/Tower1.png");
-                cannon.Turret_shooting_speed = 10;
                 cannon.Turret_range = 150;
+
+                cannon.ShootingTimer = new Stopwatch();
+                cannon.ShootingTimer.Start();
+
                 form.Controls.Add(cannon);
                 cannon.BringToFront();
                 Has_spawned = true;
             }
+        }
+
+        public static void CreateProjectile(Form form, Monster enemy, Turrets turret)
+        {
+            Projectile projectile = new Projectile();
+
+            projectile.targetPoint = enemy.Location;
+            projectile.Location = turret.Location;
+
+            form.Controls.Add(projectile);
+
+            projectile.BringToFront();
+
+            Projectiles.Add(projectile);
+
+            turret.ShootingTimer.Start();
         }
 
         public static void Turret_shoot(Form form, List<Monster> monsters)
@@ -38,12 +69,19 @@ namespace Budget_game
                 {
                     if(monster.IsAlive)
                     {
-                        if (turret.Location.X - monster.Location.X < 150 &&
-                            monster.Location.X - turret.Location.X > -150 &&
-                            turret.Location.Y - monster.Location.Y < 150 &&
-                            monster.Location.Y - turret.Location.Y > -150)
+                        if (turret.Location.X - monster.Location.X < turret.Turret_range &&
+                            monster.Location.X - turret.Location.X > -turret.Turret_range &&
+                            turret.Location.Y - monster.Location.Y < turret.Turret_range &&
+                            monster.Location.Y - turret.Location.Y > -turret.Turret_range)
                         {
-                            monster.TakeDamage(form, 30);
+                            if(turret.ShootingTimer.ElapsedMilliseconds <= turret.Turret_shooting_speed)
+                                continue;
+
+                            turret.ShootingTimer.Restart();
+
+                            CreateProjectile(form, monster, turret);
+
+                           // monster.TakeDamage(form, 30);
                         }
                     }
 

@@ -45,7 +45,7 @@ namespace Budget_game
             Player.UpdateCoins(form);
             Store.UpdateBuyable(form);
             Store.UpdateTurretBought(form);
-
+            turretsclass.UpdateProjectiles(form);
         }
 
         public void StartRound()
