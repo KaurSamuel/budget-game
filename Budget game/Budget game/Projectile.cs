@@ -11,7 +11,7 @@ namespace Budget_game
     class Projectile : PictureBox
     {
         public Point targetPoint;
-        public int speed = 3;
+        public int speed = 2;
         
         public Projectile()
         {
@@ -49,6 +49,9 @@ namespace Budget_game
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
+
+            e.Graphics.RotateTransform(30.0F);
+
 
             e.Graphics.FillRectangle(Brushes.Black, 0, 0, 24, 12);
         }
