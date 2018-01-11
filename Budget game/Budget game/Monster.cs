@@ -10,7 +10,6 @@ namespace Budget_game
 {
     class Monster : PictureBox
     {
-        public static int NumMonsters { get; set; }
         System.Drawing.Point TargetPos { get; set; }
         public int movementSpeed { get; set; }
         public int MaximumHealth { get; set; }
@@ -35,7 +34,7 @@ namespace Budget_game
 
         public static void UpdateLabel(Form form)
         {
-            form.Controls["lblEnemiesLeft"].Text = NumMonsters.ToString();
+            form.Controls["lblEnemiesLeft"].Text = Engine.numMonsters.ToString();
         }
 
         public void Attack(Form form)
@@ -51,7 +50,7 @@ namespace Budget_game
             form.Controls.Remove(this);
             IsAlive = false;
 
-            NumMonsters--;
+            Engine.numMonsters--;
 
             UpdateLabel(form);
         }
@@ -65,7 +64,8 @@ namespace Budget_game
                 IsAlive = false;
                 form.Controls.Remove(this);
                 Player.Gold += Gold;
-                Engine.curMonsters--;
+               
+                Engine.numMonsters--;
             }
             
         }

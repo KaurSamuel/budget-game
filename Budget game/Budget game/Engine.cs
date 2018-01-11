@@ -13,7 +13,7 @@ namespace Budget_game
     class Engine
     {
         List<Monster> monsters = new List<Monster>();
-        int numMonsters = 10;
+        public static int numMonsters = 10;
         Timer monsterTimer;
         public static int curMonsters = 0;
         Form form;
@@ -39,6 +39,7 @@ namespace Budget_game
 
             UpdateTurrets(form);
 
+            Monster.UpdateLabel(form);
             Player.UpdateCoins(form);
             Store.UpdateBuyable(form);
             Store.UpdateTurretBought(form);
@@ -63,9 +64,6 @@ namespace Budget_game
             monsters.Add(monster);
 
             curMonsters++;
-
-
-            Monster.NumMonsters++;
 
             if (curMonsters >= numMonsters)
                 monsterTimer.Stop();
