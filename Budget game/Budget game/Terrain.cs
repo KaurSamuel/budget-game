@@ -24,6 +24,17 @@ namespace Budget_game
             Point curPoint = new Point(0, MapHeight / 2);
             bool isPrevVertical = false;
             int prevSide = 0;
+            bool addLastTile = true;
+
+            //Adds first tile
+            Tile firstTile = new Tile();
+            firstTile.Name = "road0";
+            firstTile.Size = new Size(TileSize, TileSize);
+            firstTile.Location = new Point(0, (MapHeight * TileSize) / 2);
+            firstTile.Image = Image.FromFile("../../Sprites/roadUP.png");
+            form.Controls.Add(firstTile);
+            firstTile.BringToFront();
+            numRoadTiles++;
 
             while (true)
             {
@@ -31,8 +42,13 @@ namespace Budget_game
 
                 if (side < 60) // RIGHT 
                 {
-                    if(isPrevVertical)
+                    if (isPrevVertical)
                     {
+                        if (curPoint.X >= MapWidth - 1)
+                        {
+                            break;
+                        }
+
                         curPoint = new Point(curPoint.X + 1, curPoint.Y);
 
                         Tile sideControl = new Tile();
@@ -42,36 +58,35 @@ namespace Budget_game
                         sideControl.Name = "Road" + numRoadTiles;
                         form.Controls.Add(sideControl);
                         sideControl.BringToFront();
-                            
+
                         numRoadTiles++;
 
-                        if (curPoint.X == MapWidth - 1)
-                            break;
+
                     }
                     curPoint = new Point(curPoint.X + 1, curPoint.Y);
                     prevSide = 0;
                     isPrevVertical = false;
                 }
-                    
+
 
                 else if (side < 80) //UP
-                    if (curPoint.Y >= 0)
+                    if (curPoint.Y >= 3)
                     {
-                        if(prevSide == 2)
+                        if (prevSide == 2)
                             continue;
 
                         curPoint = new Point(curPoint.X, curPoint.Y + 1);
                         isPrevVertical = true;
                         prevSide = 1;
                     }
-                        
+
                     else
-                        return;
+                        continue;
 
                 else if (side < 100)//DOWN
-                    if (curPoint.Y <= MapHeight)
+                    if (curPoint.Y <= MapHeight - 8)
                     {
-                        if(prevSide == 1)
+                        if (prevSide == 1)
                             continue;
 
                         curPoint = new Point(curPoint.X, curPoint.Y - 1);
@@ -80,7 +95,7 @@ namespace Budget_game
                     }
 
                     else
-                        return;
+                        continue;
 
                 Tile control = new Tile();
                 control.Size = new Size(TileSize, TileSize);
@@ -97,7 +112,6 @@ namespace Budget_game
                     PictureBox house = new PictureBox();
                     house.Image = System.Drawing.Image.FromFile("../../Sprites/castle.png");
                     house.Location = new Point(curPoint.X * TileSize - 34, curPoint.Y * TileSize - 10);
-
                     form.Controls.Add(house);
                     house.BringToFront();
 
@@ -105,15 +119,7 @@ namespace Budget_game
                 }
             }
             
-            //Adds first tile
-            Tile firstTile = new Tile();
-            firstTile.Name = "road0";
-            firstTile.Size = new Size(TileSize, TileSize);
-            firstTile.Location = new Point(0, (MapHeight * TileSize) / 2);
-            firstTile.Image = Image.FromFile("../../Sprites/roadUP.png");
-            form.Controls.Add(firstTile);
-            firstTile.BringToFront();
-            numRoadTiles++;
+            
         }
 
         private static void GenerateMap(Form form)
