@@ -46,10 +46,6 @@
             this.lblUpgradesName2 = new System.Windows.Forms.Label();
             this.lblUpgradesName3 = new System.Windows.Forms.Label();
             this.lblUpgradesName4 = new System.Windows.Forms.Label();
-            this.cmbUpgradesTower1 = new System.Windows.Forms.ComboBox();
-            this.cmbUpgradesTower2 = new System.Windows.Forms.ComboBox();
-            this.cmbUpgradesTower3 = new System.Windows.Forms.ComboBox();
-            this.cmbUpgradesTower4 = new System.Windows.Forms.ComboBox();
             this.btnStart = new System.Windows.Forms.Button();
             this.lblTimer = new System.Windows.Forms.Label();
             this.lblGameOver = new System.Windows.Forms.Label();
@@ -70,6 +66,10 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.BoughtTurret = new Budget_game.Turrets();
+            this.btnUpgradeTower1 = new System.Windows.Forms.Button();
+            this.btnUpgradeTower2 = new System.Windows.Forms.Button();
+            this.btnUpgradeTower3 = new System.Windows.Forms.Button();
+            this.btnUpgradeTower4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StoreTurret4)).BeginInit();
@@ -110,7 +110,6 @@
             this.lblGold.Size = new System.Drawing.Size(156, 13);
             this.lblGold.TabIndex = 5;
             this.lblGold.Text = "only here to find the label easier";
-            this.lblGold.Click += new System.EventHandler(this.lblGold_Click);
             // 
             // lblEnemiesLeft
             // 
@@ -187,7 +186,7 @@
             // lblUpgradesName1
             // 
             this.lblUpgradesName1.AutoSize = true;
-            this.lblUpgradesName1.Location = new System.Drawing.Point(51, 591);
+            this.lblUpgradesName1.Location = new System.Drawing.Point(41, 575);
             this.lblUpgradesName1.Name = "lblUpgradesName1";
             this.lblUpgradesName1.Size = new System.Drawing.Size(56, 13);
             this.lblUpgradesName1.TabIndex = 18;
@@ -196,7 +195,7 @@
             // lblUpgradesName2
             // 
             this.lblUpgradesName2.AutoSize = true;
-            this.lblUpgradesName2.Location = new System.Drawing.Point(278, 591);
+            this.lblUpgradesName2.Location = new System.Drawing.Point(275, 575);
             this.lblUpgradesName2.Name = "lblUpgradesName2";
             this.lblUpgradesName2.Size = new System.Drawing.Size(56, 13);
             this.lblUpgradesName2.TabIndex = 19;
@@ -205,7 +204,7 @@
             // lblUpgradesName3
             // 
             this.lblUpgradesName3.AutoSize = true;
-            this.lblUpgradesName3.Location = new System.Drawing.Point(490, 591);
+            this.lblUpgradesName3.Location = new System.Drawing.Point(485, 575);
             this.lblUpgradesName3.Name = "lblUpgradesName3";
             this.lblUpgradesName3.Size = new System.Drawing.Size(56, 13);
             this.lblUpgradesName3.TabIndex = 20;
@@ -214,49 +213,11 @@
             // lblUpgradesName4
             // 
             this.lblUpgradesName4.AutoSize = true;
-            this.lblUpgradesName4.Location = new System.Drawing.Point(691, 591);
+            this.lblUpgradesName4.Location = new System.Drawing.Point(691, 575);
             this.lblUpgradesName4.Name = "lblUpgradesName4";
             this.lblUpgradesName4.Size = new System.Drawing.Size(56, 13);
             this.lblUpgradesName4.TabIndex = 21;
             this.lblUpgradesName4.Text = "Upgrades:";
-            // 
-            // cmbUpgradesTower1
-            // 
-            this.cmbUpgradesTower1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbUpgradesTower1.FormattingEnabled = true;
-            this.cmbUpgradesTower1.Location = new System.Drawing.Point(54, 607);
-            this.cmbUpgradesTower1.Name = "cmbUpgradesTower1";
-            this.cmbUpgradesTower1.Size = new System.Drawing.Size(82, 21);
-            this.cmbUpgradesTower1.Sorted = true;
-            this.cmbUpgradesTower1.TabIndex = 22;
-            // 
-            // cmbUpgradesTower2
-            // 
-            this.cmbUpgradesTower2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbUpgradesTower2.FormattingEnabled = true;
-            this.cmbUpgradesTower2.Location = new System.Drawing.Point(278, 607);
-            this.cmbUpgradesTower2.Name = "cmbUpgradesTower2";
-            this.cmbUpgradesTower2.Size = new System.Drawing.Size(94, 21);
-            this.cmbUpgradesTower2.TabIndex = 23;
-            // 
-            // cmbUpgradesTower3
-            // 
-            this.cmbUpgradesTower3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbUpgradesTower3.FormattingEnabled = true;
-            this.cmbUpgradesTower3.Location = new System.Drawing.Point(491, 607);
-            this.cmbUpgradesTower3.Name = "cmbUpgradesTower3";
-            this.cmbUpgradesTower3.Size = new System.Drawing.Size(72, 21);
-            this.cmbUpgradesTower3.TabIndex = 24;
-            // 
-            // cmbUpgradesTower4
-            // 
-            this.cmbUpgradesTower4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbUpgradesTower4.FormattingEnabled = true;
-            this.cmbUpgradesTower4.Location = new System.Drawing.Point(703, 607);
-            this.cmbUpgradesTower4.Name = "cmbUpgradesTower4";
-            this.cmbUpgradesTower4.Size = new System.Drawing.Size(72, 21);
-            this.cmbUpgradesTower4.TabIndex = 25;
-            this.cmbUpgradesTower4.SelectedIndexChanged += new System.EventHandler(this.cmbUpgradesTower4_SelectedIndexChanged);
             // 
             // btnStart
             // 
@@ -288,7 +249,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(103, 591);
+            this.label1.Location = new System.Drawing.Point(103, 575);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 13);
             this.label1.TabIndex = 34;
@@ -297,7 +258,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(542, 591);
+            this.label2.Location = new System.Drawing.Point(547, 575);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 35;
@@ -306,7 +267,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(330, 591);
+            this.label3.Location = new System.Drawing.Point(335, 575);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 13);
             this.label3.TabIndex = 36;
@@ -315,12 +276,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(745, 591);
+            this.label4.Location = new System.Drawing.Point(753, 575);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(39, 13);
             this.label4.TabIndex = 37;
             this.label4.Text = "Range";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // pictureBox2
             // 
@@ -438,12 +398,52 @@
             this.BoughtTurret.TabStop = false;
             this.BoughtTurret.Click += new System.EventHandler(this.BoughtTurret_Click);
             // 
+            // btnUpgradeTower1
+            // 
+            this.btnUpgradeTower1.Location = new System.Drawing.Point(44, 607);
+            this.btnUpgradeTower1.Name = "btnUpgradeTower1";
+            this.btnUpgradeTower1.Size = new System.Drawing.Size(106, 42);
+            this.btnUpgradeTower1.TabIndex = 43;
+            this.btnUpgradeTower1.UseVisualStyleBackColor = true;
+            this.btnUpgradeTower1.Click += new System.EventHandler(this.btnUpgradeTower1_Click);
+            // 
+            // btnUpgradeTower2
+            // 
+            this.btnUpgradeTower2.Location = new System.Drawing.Point(278, 607);
+            this.btnUpgradeTower2.Name = "btnUpgradeTower2";
+            this.btnUpgradeTower2.Size = new System.Drawing.Size(106, 42);
+            this.btnUpgradeTower2.TabIndex = 44;
+            this.btnUpgradeTower2.UseVisualStyleBackColor = true;
+            this.btnUpgradeTower2.Click += new System.EventHandler(this.btnUpgradeTower2_Click);
+            // 
+            // btnUpgradeTower3
+            // 
+            this.btnUpgradeTower3.Location = new System.Drawing.Point(488, 607);
+            this.btnUpgradeTower3.Name = "btnUpgradeTower3";
+            this.btnUpgradeTower3.Size = new System.Drawing.Size(106, 42);
+            this.btnUpgradeTower3.TabIndex = 45;
+            this.btnUpgradeTower3.UseVisualStyleBackColor = true;
+            this.btnUpgradeTower3.Click += new System.EventHandler(this.btnUpgradeTower3_Click);
+            // 
+            // btnUpgradeTower4
+            // 
+            this.btnUpgradeTower4.Location = new System.Drawing.Point(694, 607);
+            this.btnUpgradeTower4.Name = "btnUpgradeTower4";
+            this.btnUpgradeTower4.Size = new System.Drawing.Size(106, 42);
+            this.btnUpgradeTower4.TabIndex = 46;
+            this.btnUpgradeTower4.UseVisualStyleBackColor = true;
+            this.btnUpgradeTower4.Click += new System.EventHandler(this.btnUpgradeTower4_Click);
+            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1318, 681);
+            this.Controls.Add(this.btnUpgradeTower4);
+            this.Controls.Add(this.btnUpgradeTower3);
+            this.Controls.Add(this.btnUpgradeTower2);
+            this.Controls.Add(this.btnUpgradeTower1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -459,10 +459,6 @@
             this.Controls.Add(this.lblGameOver);
             this.Controls.Add(this.lblTimer);
             this.Controls.Add(this.btnStart);
-            this.Controls.Add(this.cmbUpgradesTower4);
-            this.Controls.Add(this.cmbUpgradesTower3);
-            this.Controls.Add(this.cmbUpgradesTower2);
-            this.Controls.Add(this.cmbUpgradesTower1);
             this.Controls.Add(this.lblUpgradesName4);
             this.Controls.Add(this.lblUpgradesName3);
             this.Controls.Add(this.lblUpgradesName2);
@@ -519,10 +515,6 @@
         private System.Windows.Forms.Label lblUpgradesName2;
         private System.Windows.Forms.Label lblUpgradesName3;
         private System.Windows.Forms.Label lblUpgradesName4;
-        private System.Windows.Forms.ComboBox cmbUpgradesTower1;
-        private System.Windows.Forms.ComboBox cmbUpgradesTower2;
-        private System.Windows.Forms.ComboBox cmbUpgradesTower3;
-        private System.Windows.Forms.ComboBox cmbUpgradesTower4;
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Label lblTimer;
         private System.Windows.Forms.Label lblGameOver;
@@ -539,6 +531,10 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnUpgradeTower1;
+        private System.Windows.Forms.Button btnUpgradeTower2;
+        private System.Windows.Forms.Button btnUpgradeTower3;
+        private System.Windows.Forms.Button btnUpgradeTower4;
     }
 }
 

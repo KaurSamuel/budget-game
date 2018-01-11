@@ -37,7 +37,7 @@ namespace Budget_game
 
             engineTimer = new Timer();
             engineTimer.Enabled = true;
-            engineTimer.Interval = 30;
+            engineTimer.Interval = 1;
             engineTimer.Tick += new EventHandler(Frame);
 
             
@@ -121,17 +121,31 @@ namespace Budget_game
 
             engine.StartRound();
         }
+        int counter01 = 0;
+        int counter02 = 0;
+        int counter03 = 0;
+        int counter04 = 0;
+        private void btnUpgradeTower1_Click(object sender, EventArgs e)
+        {
+            
 
+        }
 
-        private void pictureBox5_Click(object sender, EventArgs e)
+        private void btnUpgradeTower2_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void cmbUpgradesTower4_SelectedIndexChanged(object sender, EventArgs e)
+        private void btnUpgradeTower3_Click(object sender, EventArgs e)
         {
 
         }
+
+        private void btnUpgradeTower4_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void StoreTurret1_Click(object sender, EventArgs e)
         {
             Store.Buy(this, "StoreTurret1");
@@ -184,21 +198,6 @@ namespace Budget_game
             // note that if you're planning on actually using your datagrid after calling dispose on the form, you're going to have problems, since calling Dipose() on the form will also call dispose on all the child controls
             form3.Dispose();
             form3 = null;
-        }
-
-        private void lblGold_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
