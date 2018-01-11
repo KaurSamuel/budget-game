@@ -24,6 +24,7 @@ namespace Budget_game
             Controls["lblEnemiesLeft"].Text = 10.ToString();
         }
 
+ 
         public Game()
         {
             InitializeComponent();
@@ -78,8 +79,13 @@ namespace Budget_game
                 lblGameOver.Text = "GAME OVER";
                 lblGameOver.BringToFront();
                 timer.Stop();
+            }   
+            else if (Player.PlayerLivesLeft < 0)
+            {
+                lblHitpoints.Text = "0";
             }
         }
+
 
         private void timer_Tick(object sender, EventArgs e)
         {
