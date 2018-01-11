@@ -381,6 +381,14 @@ namespace Budget_game
         }
 
 
+        //See meetod peaks tegema turreti peale clickides buttoni kust saad turretit upgradeda.
+        private void TurretUpgrade_Click(Form form, EventArgs e, object sender)
+        {
+
+            //this.BoughtTurret
+        }
+
+
 
         //Experimental
         private static void DisposeMethod()
@@ -413,6 +421,7 @@ namespace Budget_game
 
         }
 
+<<<<<<< HEAD
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -421,6 +430,13 @@ namespace Budget_game
         private void label4_Click(object sender, EventArgs e)
         {
 
+=======
+        private void btnCredits_Click(object sender, EventArgs e)
+        {
+            Credits crscreen = new Credits();
+            crscreen.StartPosition = FormStartPosition.CenterParent;
+            crscreen.ShowDialog(this);
+>>>>>>> UI
         }
 
     }
