@@ -192,5 +192,12 @@ namespace Budget_game
         {
 
         }
+
+        private void btnCredits_Click(object sender, EventArgs e)
+        {
+            Credits crscreen = new Credits();
+            crscreen.StartPosition = FormStartPosition.CenterParent;
+            crscreen.ShowDialog(this);
+        }
     }
 }

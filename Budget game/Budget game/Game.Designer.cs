@@ -62,6 +62,7 @@
             this.directoryEntry1 = new System.DirectoryServices.DirectoryEntry();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnCredits = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.StoreTurret4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StoreTurret3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StoreTurret2)).BeginInit();
@@ -259,6 +260,7 @@
             this.lblTimerName.Text = "Timer:";
             // 
             // btnStart
+            // 
             this.btnStart.Location = new System.Drawing.Point(1073, 183);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(75, 23);
@@ -352,12 +354,23 @@
             this.pictureBox2.TabIndex = 33;
             this.pictureBox2.TabStop = false;
             // 
+            // btnCredits
+            // 
+            this.btnCredits.Location = new System.Drawing.Point(1231, 646);
+            this.btnCredits.Name = "btnCredits";
+            this.btnCredits.Size = new System.Drawing.Size(75, 23);
+            this.btnCredits.TabIndex = 34;
+            this.btnCredits.Text = "Credits";
+            this.btnCredits.UseVisualStyleBackColor = true;
+            this.btnCredits.Click += new System.EventHandler(this.btnCredits_Click);
+            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1318, 681);
+            this.Controls.Add(this.btnCredits);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.BoughtTurret);
@@ -436,6 +449,7 @@
         private System.DirectoryServices.DirectoryEntry directoryEntry1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button btnCredits;
     }
 }
 
