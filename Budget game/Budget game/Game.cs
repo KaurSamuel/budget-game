@@ -29,6 +29,11 @@ namespace Budget_game
         {
             InitializeComponent();
 
+            SetStyle(ControlStyles.SupportsTransparentBackColor, true);
+
+            this.BackColor = Color.Transparent;
+            this.TransparencyKey = Color.Transparent;
+
             InitializeValues();
 
             Terrain.GenerateTerrain(this);
@@ -402,5 +407,21 @@ namespace Budget_game
             form3.Dispose();
             form3 = null;
         }
+
+        private void lblGold_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

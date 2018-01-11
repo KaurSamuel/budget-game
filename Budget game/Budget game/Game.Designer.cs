@@ -483,7 +483,7 @@
             this.Controls.Add(this.lblHitpoints);
             this.Controls.Add(this.lblEnemiesLeftName);
             this.Name = "Game";
-            this.Text = "Form1";
+            this.Text = " ";
             this.Load += new System.EventHandler(this.Game_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -31,6 +31,7 @@ namespace Budget_game
             BackColor = System.Drawing.Color.Transparent;
             BringToFront();
             TargetPos = form.Controls.Find("road0", false)[0].Location;
+            //Parent = form.Controls.Find("road0", false)[0];
         }
 
         public static void UpdateLabel(Form form)
