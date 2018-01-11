@@ -27,7 +27,7 @@ namespace Budget_game
         public int Damage = 25;
         public Turrets()
         {
-            
+            string kaur_on_pede_ja_düsleksik;
         }
     }
 }
