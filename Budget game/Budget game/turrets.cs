@@ -43,6 +43,7 @@ namespace Budget_game
                 cannon.Image = Image.FromFile("../../Sprites/Tower1.png");
                 cannon.Turret_range = 150;
 
+
                 cannon.ShootingTimer = new Stopwatch();
                 cannon.ShootingTimer.Start();
 
@@ -59,6 +60,7 @@ namespace Budget_game
             projectile.targetPoint = enemy.Location;
             projectile.Location = turret.Location;
             projectile.targetMonster = enemy;
+            projectile.Damage = turret.Damage;
 
             form.Controls.Add(projectile);
 

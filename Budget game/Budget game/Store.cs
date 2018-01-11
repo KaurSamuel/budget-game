@@ -70,20 +70,24 @@ namespace Budget_game
                 curControl.Location = newPos;
                 curControl.BringToFront();
 
-                Turrets newTurret = new Turrets();
-                newTurret.Image = curControl.Image;
-                newTurret.Location = curControl.Location;
-                newTurret.Size = curControl.Size;
-                newTurret.Turret_range = 150;
-                newTurret.Name = "Tower";
-                newTurret.ShootingTimer = new Stopwatch();
-                newTurret.ShootingTimer.Start();
+                if (curControl.Location.X < 32 * 32 && curControl.Location.Y < (16 * 32))
+                {
+                    Turrets newTurret = new Turrets();
+                    newTurret.Damage = 1;
+                    newTurret.Image = curControl.Image;
+                    newTurret.Location = curControl.Location;
+                    newTurret.Size = curControl.Size;
+                    newTurret.Turret_range = 150;
+                    newTurret.Name = "Tower";
+                    newTurret.ShootingTimer = new Stopwatch();
+                    newTurret.ShootingTimer.Start();
 
-                form.Controls.Add(newTurret);
-                newTurret.BringToFront();
+                    form.Controls.Add(newTurret);
+                    newTurret.BringToFront();
 
-                curControl.Enabled = false;
-                curControl.Visible = false;
+                    curControl.Enabled = false;
+                    curControl.Visible = false;
+                }
             }
         }
 

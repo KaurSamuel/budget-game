@@ -24,6 +24,7 @@ namespace Budget_game
         public int Turret_range;
         public Stopwatch ShootingTimer;
         public Monster targetMonster;
+        public int Damage = 25;
         public Turrets()
         {
             
