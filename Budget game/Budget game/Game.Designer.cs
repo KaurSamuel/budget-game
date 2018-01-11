@@ -273,7 +273,7 @@
             this.lblTimerName.Text = "Timer:";
             // 
             // btnStart
-            // 
+            //
             this.btnStart.Location = new System.Drawing.Point(1072, 143);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(75, 23);

@@ -153,6 +153,14 @@ namespace Budget_game
         }
 
 
+        //See meetod peaks tegema turreti peale clickides buttoni kust saad turretit upgradeda.
+        private void TurretUpgrade_Click(Form form, EventArgs e, object sender)
+        {
+
+            //this.BoughtTurret
+        }
+
+
 
         //Experimental
         private static void DisposeMethod()
