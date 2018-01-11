@@ -36,7 +36,7 @@ namespace Budget_game
 
             engineTimer = new Timer();
             engineTimer.Enabled = true;
-            engineTimer.Interval = 10;
+            engineTimer.Interval = 30;
             engineTimer.Tick += new EventHandler(Frame);
 
             
