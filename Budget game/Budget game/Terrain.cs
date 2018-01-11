@@ -70,7 +70,7 @@ namespace Budget_game
 
 
                 else if (side < 80) //UP
-                    if (curPoint.Y >= 3)
+                    if (curPoint.Y <= MapHeight - 3)
                     {
                         if (prevSide == 2)
                             continue;
@@ -84,7 +84,7 @@ namespace Budget_game
                         continue;
 
                 else if (side < 100)//DOWN
-                    if (curPoint.Y <= MapHeight - 8)
+                    if (curPoint.Y >= 3)
                     {
                         if (prevSide == 1)
                             continue;
