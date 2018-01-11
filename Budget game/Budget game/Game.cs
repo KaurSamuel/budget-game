@@ -135,15 +135,15 @@ namespace Budget_game
                 btnUpgradeTower1.Enabled = false;
                 if (Player.Gold >= 100)
                 {
-                btnUpgradeTower1.Enabled = true;
-                counter01++;
-                btnUpgradeTower1.Text = "Tier 2 Upgrade 300gp";
-                Player.Gold = Player.Gold - 100;
+                    btnUpgradeTower1.Enabled = true;
+                    counter01++;
+                    btnUpgradeTower1.Text = "Tier 2 Upgrade 300gp";
+                    Player.Gold = Player.Gold - 100;
                 if (counter01 >= 2)
                 {
                     //Player.Gold = Player.Gold - 100;
                     btnUpgradeTower1.Enabled = false;
-                    if (Player.Gold >= 200)
+                    if (Player.Gold >= 300)
                     {
                         btnUpgradeTower1.Enabled = true;
                         //counter01++;
@@ -153,7 +153,7 @@ namespace Budget_game
                         {
                             //Player.Gold = Player.Gold - 200;
                             btnUpgradeTower1.Enabled = false;
-                            if (Player.Gold >= 300)
+                            if (Player.Gold >= 600)
                             {
                                 btnUpgradeTower1.Enabled = true;
                                 Player.Gold = Player.Gold - 300;
@@ -163,7 +163,7 @@ namespace Budget_game
                                 {
                                     //Player.Gold = Player.Gold - 300;
                                     btnUpgradeTower1.Enabled = false;
-                                    if (Player.Gold >= 400)
+                                    if (Player.Gold >= 1000)
                                     {
                                         btnUpgradeTower1.Enabled = false;
                                         Player.Gold = Player.Gold - 400;
@@ -186,7 +186,57 @@ namespace Budget_game
 
         private void btnUpgradeTower2_Click(object sender, EventArgs e)
         {
-           
+
+            if (counter02 >= 1)
+                btnUpgradeTower2.Enabled = false;
+            if (Player.Gold >= 150)
+            {
+                btnUpgradeTower2.Enabled = true;
+                counter02++;
+                btnUpgradeTower2.Text = "Tier 2 Upgrade 450gp";
+                Player.Gold = Player.Gold - 150;
+                if (counter02 >= 2)
+                {
+                    //Player.Gold = Player.Gold - 100;
+                    btnUpgradeTower2.Enabled = false;
+                    if (Player.Gold >= 450)
+                    {
+                        btnUpgradeTower2.Enabled = true;
+                        //counter01++;
+                        btnUpgradeTower2.Text = "Tier 3 Upgrade 1100gp";
+                        Player.Gold = Player.Gold - 300;
+                        if (counter02 >= 3)
+                        {
+                            //Player.Gold = Player.Gold - 200;
+                            btnUpgradeTower2.Enabled = false;
+                            if (Player.Gold >= 1100)
+                            {
+                                btnUpgradeTower2.Enabled = true;
+                                Player.Gold = Player.Gold - 450;
+                                //counter01++;
+                                btnUpgradeTower2.Text = "Tier 4 Upgrade 1500gp";
+                                if (counter02 >= 4)
+                                {
+                                    //Player.Gold = Player.Gold - 300;
+                                    btnUpgradeTower2.Enabled = false;
+                                    if (Player.Gold >= 1500)
+                                    {
+                                        btnUpgradeTower2.Enabled = false;
+                                        Player.Gold = Player.Gold - 600;
+                                        //counter01++;
+                                        btnUpgradeTower2.Text = "Fully upgraded";
+                                        if (counter02 >= 5)
+                                        {
+                                            //Player.Gold = Player.Gold - 400;
+                                            btnUpgradeTower2.Enabled = false;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         private void btnUpgradeTower3_Click(object sender, EventArgs e)
