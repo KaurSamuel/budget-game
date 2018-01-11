@@ -12,7 +12,7 @@ namespace Budget_game
     {
         public Point targetPoint;
         public int speed = 3;
-        Monster targetMonster;
+        public Monster targetMonster;
 
         public Projectile()
         {
@@ -32,27 +32,30 @@ namespace Budget_game
                 if(delta.Y <= 3 && delta.Y >= -3)
                 {
                     form.Controls.Remove(this);
+                    targetMonster.TakeDamage(form, 25);
                     return this;
                 }
                     
             }
                 
-            if (delta.X < 300 && delta.X > 0)
+            if (delta.X <= 300 && delta.X > 0)
             {
+                
                 newPoint.X -= speed;
+
             }
 
-            if (delta.X > -300 && delta.X < 0)
+            if (delta.X >= -300 && delta.X < 0)
             {
                 newPoint.X += speed;
             }
 
-            if (delta.Y < 300 && delta.Y > 0)
+            if (delta.Y <= 300 && delta.Y > 0)
             {
                 newPoint.Y -= speed;
             }
 
-            if (delta.Y > -300 && delta.Y < 0)
+            if (delta.Y >= -300 && delta.Y < 0)
             {
                 newPoint.Y += speed;
             }

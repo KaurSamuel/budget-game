@@ -58,6 +58,7 @@ namespace Budget_game
 
             projectile.targetPoint = enemy.Location;
             projectile.Location = turret.Location;
+            projectile.targetMonster = enemy;
 
             form.Controls.Add(projectile);
 

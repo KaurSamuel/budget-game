@@ -23,6 +23,7 @@ namespace Budget_game
         public string Turret_Name = "Tower";
         public int Turret_range;
         public Stopwatch ShootingTimer;
+        public Monster targetMonster;
         public Turrets()
         {
             
