@@ -131,7 +131,7 @@ namespace Budget_game
             for (int i = 0; i < MapWidth; i++)
             {
                 for (int j = 0; j < MapHeight; j++)
-                {
+                { 
 
                     Tile control = new Tile();
                     control.Size = new Size(TileSize, TileSize);
@@ -140,7 +140,7 @@ namespace Budget_game
                     control.Image = Image.FromFile("../../Sprites/grass.png");
 
                     int chance = rnd.Next(0, 101);
-                    if (chance < 70)
+                    if (chance < 80)
                         control.Image = Image.FromFile("../../Sprites/grass.png");
                     else
                         control.Image = Image.FromFile("../../Sprites/water.png");
