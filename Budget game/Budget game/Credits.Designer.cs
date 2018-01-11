@@ -45,20 +45,20 @@
             // lblkaursamuel
             // 
             this.lblkaursamuel.AutoSize = true;
-            this.lblkaursamuel.Location = new System.Drawing.Point(12, 115);
+            this.lblkaursamuel.Location = new System.Drawing.Point(12, 113);
             this.lblkaursamuel.Name = "lblkaursamuel";
-            this.lblkaursamuel.Size = new System.Drawing.Size(229, 13);
+            this.lblkaursamuel.Size = new System.Drawing.Size(252, 13);
             this.lblkaursamuel.TabIndex = 1;
-            this.lblkaursamuel.Text = "KaurSamuel - repository creator, turrets, 1 sprite";
+            this.lblkaursamuel.Text = "Kaur - turrets, 2 sprites, monster HP, Game Designer";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(12, 239);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(153, 13);
+            this.label3.Size = new System.Drawing.Size(191, 13);
             this.label3.TabIndex = 2;
-            this.label3.Text = "JaanJah - all sprites, game´s UI";
+            this.label3.Text = "JaanJah - all sprites exept 2, game´s UI";
             // 
             // Credits
             // 
@@ -70,6 +70,7 @@
             this.Controls.Add(this.lblhindrekhan);
             this.Name = "Credits";
             this.Text = "Credits";
+            this.Load += new System.EventHandler(this.Credits_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

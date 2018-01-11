@@ -16,5 +16,10 @@ namespace Budget_game
         {
             InitializeComponent();
         }
+
+        private void Credits_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
