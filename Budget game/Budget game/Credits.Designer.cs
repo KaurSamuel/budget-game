@@ -56,9 +56,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(12, 239);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(191, 13);
+            this.label3.Size = new System.Drawing.Size(197, 13);
             this.label3.TabIndex = 2;
-            this.label3.Text = "JaanJah - all sprites exept 2, game´s UI";
+            this.label3.Text = "JaanJah - all sprites except 2, game´s UI";
             // 
             // Credits
             // 
