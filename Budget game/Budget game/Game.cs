@@ -83,6 +83,9 @@ namespace Budget_game
             else if (Player.PlayerLivesLeft < 0)
             {
                 lblHitpoints.Text = "0";
+                System.Threading.Thread.Sleep(4000);
+                Application.Exit();
+
             }
         }
 
