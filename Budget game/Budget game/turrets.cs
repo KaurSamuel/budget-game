@@ -16,9 +16,17 @@ namespace Budget_game
 
         public static void UpdateProjectiles(Form form)
         {
+            List<Projectile> projectilesToRemove = new List<Projectile>();
+
             foreach(Projectile projectile in Projectiles)
             {
-                projectile.UpdateProjectile(form);
+                if (projectile.UpdateProjectile(form) != null)
+                    projectilesToRemove.Add(projectile);
+            }
+
+            foreach(Projectile projectile in projectilesToRemove)
+            {
+                form.Controls.Remove(projectile);
             }
         }
 

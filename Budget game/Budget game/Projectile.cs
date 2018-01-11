@@ -8,21 +8,35 @@ using System.Drawing;
 
 namespace Budget_game
 {
-    class Projectile : PictureBox
+    class Projectile : Control
     {
         public Point targetPoint;
-        public int speed = 2;
-        
+        public int speed = 3;
+        Monster targetMonster;
+
         public Projectile()
         {
-            Size = new Size(24, 6);
+            Size = new Size(24, 24);
+            SetStyle(ControlStyles.SupportsTransparentBackColor, true);
+            this.BackColor = Color.Transparent;
+            
         }
 
-        public void UpdateProjectile(Form form)
+        public Projectile UpdateProjectile(Form form)
         {
             Point delta = new Point(Location.X - targetPoint.X, Location.Y - targetPoint.Y);
             Point newPoint = new Point(Location.X, Location.Y);
 
+            if (delta.X <= 3 && delta.X >= -3)
+            {
+                if(delta.Y <= 3 && delta.Y >= -3)
+                {
+                    form.Controls.Remove(this);
+                    return this;
+                }
+                    
+            }
+                
             if (delta.X < 300 && delta.X > 0)
             {
                 newPoint.X -= speed;
@@ -44,16 +58,25 @@ namespace Budget_game
             }
 
             Location = newPoint;
+
+            return null;
+        }
+
+        protected override void OnPaintBackground(PaintEventArgs e)
+        {
+            e.Graphics.FillRectangle(Brushes.Transparent, e.ClipRectangle);
         }
 
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
 
-            e.Graphics.RotateTransform(30.0F);
+            Pen pen = new Pen(Brushes.DeepSkyBlue);
 
+            e.Graphics.FillRectangle(Brushes.Transparent, e.ClipRectangle);
+            e.Graphics.FillEllipse(Brushes.Black, 0, 0, 24, 24);
 
-            e.Graphics.FillRectangle(Brushes.Black, 0, 0, 24, 12);
+           // e.Graphics.FillRectangle(Brushes.Black, 0, 0, 24, 12);
         }
 
     }

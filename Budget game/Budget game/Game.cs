@@ -28,6 +28,11 @@ namespace Budget_game
         {
             InitializeComponent();
 
+            SetStyle(ControlStyles.SupportsTransparentBackColor, true);
+
+            this.BackColor = Color.Transparent;
+            this.TransparencyKey = Color.Transparent;
+
             InitializeValues();
 
             Terrain.GenerateTerrain(this);
@@ -194,5 +199,6 @@ namespace Budget_game
         {
 
         }
+
     }
 }
