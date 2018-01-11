@@ -241,7 +241,57 @@ namespace Budget_game
 
         private void btnUpgradeTower3_Click(object sender, EventArgs e)
         {
-          
+            if (counter03 >= 1)
+                btnUpgradeTower3.Enabled = false;
+            if (Player.Gold >= 200)
+            {
+                btnUpgradeTower2.Enabled = true;
+                counter03++;
+                btnUpgradeTower3.Text = "Tier 2 Upgrade 600gp";
+                Player.Gold = Player.Gold - 200;
+                if (counter03 >= 2)
+                {
+                    //Player.Gold = Player.Gold - 100;
+                    btnUpgradeTower3.Enabled = false;
+                    if (Player.Gold >= 600)
+                    {
+                        btnUpgradeTower3.Enabled = true;
+                        //counter01++;
+                        btnUpgradeTower3.Text = "Tier 3 Upgrade 1200gp";
+                        Player.Gold = Player.Gold - 400;
+                        if (counter03 >= 3)
+                        {
+                            //Player.Gold = Player.Gold - 200;
+                            btnUpgradeTower3.Enabled = false;
+                            if (Player.Gold >= 1200)
+                            {
+                                btnUpgradeTower3.Enabled = true;
+                                Player.Gold = Player.Gold - 600;
+                                //counter01++;
+                                btnUpgradeTower3.Text = "Tier 4 Upgrade 2000gp";
+                                if (counter03 >= 4)
+                                {
+                                    //Player.Gold = Player.Gold - 300;
+                                    btnUpgradeTower3.Enabled = false;
+                                    if (Player.Gold >= 2000)
+                                    {
+                                        btnUpgradeTower3.Enabled = false;
+                                        Player.Gold = Player.Gold - 800;
+                                        //counter01++;
+                                        btnUpgradeTower3.Text = "Fully upgraded";
+                                        if (counter03 >= 5)
+                                        {
+                                            //Player.Gold = Player.Gold - 400;
+                                            btnUpgradeTower3.Enabled = false;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
         }
 
         private void btnUpgradeTower4_Click(object sender, EventArgs e)
