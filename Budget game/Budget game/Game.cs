@@ -50,6 +50,8 @@ namespace Budget_game
 
         private void Game_Load(object sender, EventArgs e)
         {
+            //Me teeme nii, et kui klikid toweri peale, siis tekib button kust saad upgradeda.
+            /*
             cmbUpgradesTower1.Items.Add("Tier 1 Upgrade = 50gp");
             cmbUpgradesTower1.Items.Add("Tier 2 Upgrade = 100gp");
             cmbUpgradesTower1.Items.Add("Tier 3 Upgrade = 200gp");
@@ -66,6 +68,7 @@ namespace Budget_game
             cmbUpgradesTower4.Items.Add("Tier 2 Upgrade = 100gp");
             cmbUpgradesTower4.Items.Add("Tier 3 Upgrade = 200gp");
             cmbUpgradesTower4.Items.Add("Tier 4 Upgrade = 400gp");
+            */
         }
 
         private void Game_Over()
@@ -148,6 +151,10 @@ namespace Budget_game
         {
             Store.Place(this);
         }
+
+
+
+        //Experimental
         private static void DisposeMethod()
         {
             var form = new Game();
