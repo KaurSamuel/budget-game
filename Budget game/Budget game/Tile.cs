@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
+using System.Diagnostics;
 
 namespace Budget_game
 {
@@ -18,12 +19,14 @@ namespace Budget_game
 
     class Turrets : PictureBox
     {
-        public int Turret_shooting_speed;
+        public int Turret_shooting_speed = 3000;
         public string Turret_Name = "Tower";
-        public int Turret_range;        
+        public int Turret_range;
+        public Stopwatch ShootingTimer;
+        public Monster targetMonster;
         public Turrets()
         {
-
+            
         }
     }
 }
