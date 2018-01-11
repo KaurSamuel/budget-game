@@ -1,6 +1,12 @@
 sprited 32x32
 mängu resulutsioon on 1280x720
-
+[Enemies]
+(Goblin)
+HP: 15
+(Spider)
+HP: 50
+(Keskeas slime)
+HP: 200
 [balancing]
 (bomb tower)
 price: 10
