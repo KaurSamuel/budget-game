@@ -188,5 +188,9 @@ namespace Budget_game
             form3 = null;
         }
 
+        private void lblGold_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

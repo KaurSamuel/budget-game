@@ -29,8 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.lblHitpointsName = new System.Windows.Forms.Label();
-            this.lblGoldName = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Game));
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.lblEnemiesLeftName = new System.Windows.Forms.Label();
             this.lblHitpoints = new System.Windows.Forms.Label();
@@ -61,30 +60,16 @@
             this.StoreTurret1 = new System.Windows.Forms.PictureBox();
             this.BoughtTurret = new Budget_game.Turrets();
             this.directoryEntry1 = new System.DirectoryServices.DirectoryEntry();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.StoreTurret4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StoreTurret3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StoreTurret2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StoreTurret1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BoughtTurret)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lblHitpointsName
-            // 
-            this.lblHitpointsName.AutoSize = true;
-            this.lblHitpointsName.Location = new System.Drawing.Point(1044, 37);
-            this.lblHitpointsName.Name = "lblHitpointsName";
-            this.lblHitpointsName.Size = new System.Drawing.Size(25, 13);
-            this.lblHitpointsName.TabIndex = 0;
-            this.lblHitpointsName.Text = "HP:";
-            // 
-            // lblGoldName
-            // 
-            this.lblGoldName.AutoSize = true;
-            this.lblGoldName.Location = new System.Drawing.Point(1044, 62);
-            this.lblGoldName.Name = "lblGoldName";
-            this.lblGoldName.Size = new System.Drawing.Size(32, 13);
-            this.lblGoldName.TabIndex = 2;
-            this.lblGoldName.Text = "Gold:";
             // 
             // timer
             // 
@@ -93,7 +78,7 @@
             // lblEnemiesLeftName
             // 
             this.lblEnemiesLeftName.AutoSize = true;
-            this.lblEnemiesLeftName.Location = new System.Drawing.Point(1044, 87);
+            this.lblEnemiesLeftName.Location = new System.Drawing.Point(1040, 119);
             this.lblEnemiesLeftName.Name = "lblEnemiesLeftName";
             this.lblEnemiesLeftName.Size = new System.Drawing.Size(67, 13);
             this.lblEnemiesLeftName.TabIndex = 3;
@@ -102,7 +87,7 @@
             // lblHitpoints
             // 
             this.lblHitpoints.AutoSize = true;
-            this.lblHitpoints.Location = new System.Drawing.Point(1119, 37);
+            this.lblHitpoints.Location = new System.Drawing.Point(1119, 47);
             this.lblHitpoints.Name = "lblHitpoints";
             this.lblHitpoints.Size = new System.Drawing.Size(156, 13);
             this.lblHitpoints.TabIndex = 4;
@@ -111,16 +96,17 @@
             // lblGold
             // 
             this.lblGold.AutoSize = true;
-            this.lblGold.Location = new System.Drawing.Point(1119, 62);
+            this.lblGold.Location = new System.Drawing.Point(1119, 84);
             this.lblGold.Name = "lblGold";
             this.lblGold.Size = new System.Drawing.Size(156, 13);
             this.lblGold.TabIndex = 5;
             this.lblGold.Text = "only here to find the label easier";
+            this.lblGold.Click += new System.EventHandler(this.lblGold_Click);
             // 
             // lblEnemiesLeft
             // 
             this.lblEnemiesLeft.AutoSize = true;
-            this.lblEnemiesLeft.Location = new System.Drawing.Point(1117, 87);
+            this.lblEnemiesLeft.Location = new System.Drawing.Point(1119, 119);
             this.lblEnemiesLeft.Name = "lblEnemiesLeft";
             this.lblEnemiesLeft.Size = new System.Drawing.Size(156, 13);
             this.lblEnemiesLeft.TabIndex = 6;
@@ -129,7 +115,7 @@
             // lblLevelName
             // 
             this.lblLevelName.AutoSize = true;
-            this.lblLevelName.Location = new System.Drawing.Point(1044, 109);
+            this.lblLevelName.Location = new System.Drawing.Point(1041, 150);
             this.lblLevelName.Name = "lblLevelName";
             this.lblLevelName.Size = new System.Drawing.Size(36, 13);
             this.lblLevelName.TabIndex = 7;
@@ -138,7 +124,7 @@
             // lblLevel
             // 
             this.lblLevel.AutoSize = true;
-            this.lblLevel.Location = new System.Drawing.Point(1117, 109);
+            this.lblLevel.Location = new System.Drawing.Point(1119, 150);
             this.lblLevel.Name = "lblLevel";
             this.lblLevel.Size = new System.Drawing.Size(156, 13);
             this.lblLevel.TabIndex = 8;
@@ -266,15 +252,14 @@
             // lblTimerName
             // 
             this.lblTimerName.AutoSize = true;
-            this.lblTimerName.Location = new System.Drawing.Point(1044, 9);
+            this.lblTimerName.Location = new System.Drawing.Point(1040, 9);
             this.lblTimerName.Name = "lblTimerName";
             this.lblTimerName.Size = new System.Drawing.Size(36, 13);
             this.lblTimerName.TabIndex = 26;
             this.lblTimerName.Text = "Timer:";
             // 
             // btnStart
-            //
-            this.btnStart.Location = new System.Drawing.Point(1072, 143);
+            this.btnStart.Location = new System.Drawing.Point(1073, 183);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(75, 23);
             this.btnStart.TabIndex = 27;
@@ -347,12 +332,34 @@
             this.BoughtTurret.TabStop = false;
             this.BoughtTurret.Click += new System.EventHandler(this.BoughtTurret_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(1043, 75);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 32;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(1043, 37);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 33;
+            this.pictureBox2.TabStop = false;
+            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.ClientSize = new System.Drawing.Size(1318, 681);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.BoughtTurret);
             this.Controls.Add(this.lblGameOver);
             this.Controls.Add(this.lblTimer);
@@ -381,8 +388,6 @@
             this.Controls.Add(this.lblGold);
             this.Controls.Add(this.lblHitpoints);
             this.Controls.Add(this.lblEnemiesLeftName);
-            this.Controls.Add(this.lblGoldName);
-            this.Controls.Add(this.lblHitpointsName);
             this.Name = "Game";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Game_Load);
@@ -391,15 +396,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.StoreTurret2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StoreTurret1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BoughtTurret)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblHitpointsName;
-        private System.Windows.Forms.Label lblGoldName;
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.Label lblEnemiesLeftName;
         private System.Windows.Forms.Label lblHitpoints;
@@ -430,6 +434,8 @@
         private System.Windows.Forms.Label lblGameOver;
         private Budget_game.Turrets BoughtTurret;
         private System.DirectoryServices.DirectoryEntry directoryEntry1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 
