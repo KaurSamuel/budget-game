@@ -1,2 +1,27 @@
 sprited 32x32
 mängu resulutsioon on 1280x720
+
+[balancing]
+(bomb tower)
+price: 10
+shooting speed: 30
+damage : 5
+range : 3
+
+(laser tower)
+price :50
+Shooting speed: 80
+damage: 3
+range: 2
+
+(mortal)
+Price: 200
+Shooting speed: 20
+Damage: 5 (Area Of Effect)
+Range: esimesed 7 tile ei saa ülejäänud saab
+
+(Sniper tower)
+Price: 500
+shooting speed: 20
+Damage: 10
+Range: kogu map
