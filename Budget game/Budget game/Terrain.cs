@@ -40,7 +40,7 @@ namespace Budget_game
             {
                 int side = rnd.Next(0, 101);
 
-                if (side < 60) // RIGHT 
+                if (side < 7) // RIGHT 
                 {
                     if (isPrevVertical)
                     {
@@ -69,7 +69,7 @@ namespace Budget_game
                 }
 
 
-                else if (side < 80) //UP
+                else if (side < 50) //UP
                     if (curPoint.Y <= MapHeight - 3)
                     {
                         if (prevSide == 2)
