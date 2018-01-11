@@ -50,29 +50,30 @@
             this.cmbUpgradesTower2 = new System.Windows.Forms.ComboBox();
             this.cmbUpgradesTower3 = new System.Windows.Forms.ComboBox();
             this.cmbUpgradesTower4 = new System.Windows.Forms.ComboBox();
-            this.lblTimerName = new System.Windows.Forms.Label();
             this.btnStart = new System.Windows.Forms.Button();
             this.lblTimer = new System.Windows.Forms.Label();
             this.lblGameOver = new System.Windows.Forms.Label();
-            this.StoreTurret4 = new System.Windows.Forms.PictureBox();
-            this.StoreTurret3 = new System.Windows.Forms.PictureBox();
-            this.StoreTurret2 = new System.Windows.Forms.PictureBox();
-            this.StoreTurret1 = new System.Windows.Forms.PictureBox();
             this.directoryEntry1 = new System.DirectoryServices.DirectoryEntry();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BoughtTurret = new Budget_game.Turrets();
+            this.StoreTurret4 = new System.Windows.Forms.PictureBox();
+            this.StoreTurret3 = new System.Windows.Forms.PictureBox();
+            this.StoreTurret2 = new System.Windows.Forms.PictureBox();
+            this.StoreTurret1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BoughtTurret)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StoreTurret4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StoreTurret3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StoreTurret2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StoreTurret1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BoughtTurret)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // timer
@@ -82,7 +83,7 @@
             // lblEnemiesLeftName
             // 
             this.lblEnemiesLeftName.AutoSize = true;
-            this.lblEnemiesLeftName.Location = new System.Drawing.Point(1040, 119);
+            this.lblEnemiesLeftName.Location = new System.Drawing.Point(1040, 153);
             this.lblEnemiesLeftName.Name = "lblEnemiesLeftName";
             this.lblEnemiesLeftName.Size = new System.Drawing.Size(67, 13);
             this.lblEnemiesLeftName.TabIndex = 3;
@@ -91,7 +92,7 @@
             // lblHitpoints
             // 
             this.lblHitpoints.AutoSize = true;
-            this.lblHitpoints.Location = new System.Drawing.Point(1119, 47);
+            this.lblHitpoints.Location = new System.Drawing.Point(1119, 78);
             this.lblHitpoints.Name = "lblHitpoints";
             this.lblHitpoints.Size = new System.Drawing.Size(156, 13);
             this.lblHitpoints.TabIndex = 4;
@@ -100,7 +101,7 @@
             // lblGold
             // 
             this.lblGold.AutoSize = true;
-            this.lblGold.Location = new System.Drawing.Point(1119, 84);
+            this.lblGold.Location = new System.Drawing.Point(1119, 116);
             this.lblGold.Name = "lblGold";
             this.lblGold.Size = new System.Drawing.Size(156, 13);
             this.lblGold.TabIndex = 5;
@@ -110,7 +111,7 @@
             // lblEnemiesLeft
             // 
             this.lblEnemiesLeft.AutoSize = true;
-            this.lblEnemiesLeft.Location = new System.Drawing.Point(1119, 119);
+            this.lblEnemiesLeft.Location = new System.Drawing.Point(1119, 153);
             this.lblEnemiesLeft.Name = "lblEnemiesLeft";
             this.lblEnemiesLeft.Size = new System.Drawing.Size(156, 13);
             this.lblEnemiesLeft.TabIndex = 6;
@@ -119,7 +120,7 @@
             // lblLevelName
             // 
             this.lblLevelName.AutoSize = true;
-            this.lblLevelName.Location = new System.Drawing.Point(1041, 150);
+            this.lblLevelName.Location = new System.Drawing.Point(1040, 179);
             this.lblLevelName.Name = "lblLevelName";
             this.lblLevelName.Size = new System.Drawing.Size(36, 13);
             this.lblLevelName.TabIndex = 7;
@@ -128,7 +129,7 @@
             // lblLevel
             // 
             this.lblLevel.AutoSize = true;
-            this.lblLevel.Location = new System.Drawing.Point(1119, 150);
+            this.lblLevel.Location = new System.Drawing.Point(1119, 179);
             this.lblLevel.Name = "lblLevel";
             this.lblLevel.Size = new System.Drawing.Size(156, 13);
             this.lblLevel.TabIndex = 8;
@@ -253,18 +254,9 @@
             this.cmbUpgradesTower4.TabIndex = 25;
             this.cmbUpgradesTower4.SelectedIndexChanged += new System.EventHandler(this.cmbUpgradesTower4_SelectedIndexChanged);
             // 
-            // lblTimerName
-            // 
-            this.lblTimerName.AutoSize = true;
-            this.lblTimerName.Location = new System.Drawing.Point(1040, 9);
-            this.lblTimerName.Name = "lblTimerName";
-            this.lblTimerName.Size = new System.Drawing.Size(36, 13);
-            this.lblTimerName.TabIndex = 26;
-            this.lblTimerName.Text = "Timer:";
-            // 
             // btnStart
             // 
-            this.btnStart.Location = new System.Drawing.Point(1073, 183);
+            this.btnStart.Location = new System.Drawing.Point(1078, 207);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(75, 23);
             this.btnStart.TabIndex = 27;
@@ -275,7 +267,7 @@
             // lblTimer
             // 
             this.lblTimer.AutoSize = true;
-            this.lblTimer.Location = new System.Drawing.Point(1119, 9);
+            this.lblTimer.Location = new System.Drawing.Point(1119, 40);
             this.lblTimer.Name = "lblTimer";
             this.lblTimer.Size = new System.Drawing.Size(0, 13);
             this.lblTimer.TabIndex = 28;
@@ -288,65 +280,6 @@
             this.lblGameOver.Name = "lblGameOver";
             this.lblGameOver.Size = new System.Drawing.Size(0, 51);
             this.lblGameOver.TabIndex = 29;
-            // 
-            // StoreTurret4
-            // 
-            this.StoreTurret4.Location = new System.Drawing.Point(715, 527);
-            this.StoreTurret4.Name = "StoreTurret4";
-            this.StoreTurret4.Size = new System.Drawing.Size(32, 32);
-            this.StoreTurret4.TabIndex = 13;
-            this.StoreTurret4.TabStop = false;
-            this.StoreTurret4.Click += new System.EventHandler(this.StoreTurret4_Click);
-            // 
-            // StoreTurret3
-            // 
-            this.StoreTurret3.Image = global::Budget_game.Properties.Resources.Tower3;
-            this.StoreTurret3.Location = new System.Drawing.Point(509, 527);
-            this.StoreTurret3.Name = "StoreTurret3";
-            this.StoreTurret3.Size = new System.Drawing.Size(32, 32);
-            this.StoreTurret3.TabIndex = 12;
-            this.StoreTurret3.TabStop = false;
-            this.StoreTurret3.Click += new System.EventHandler(this.StoreTurret3_Click);
-            // 
-            // StoreTurret2
-            // 
-            this.StoreTurret2.Image = global::Budget_game.Properties.Resources.tower2;
-            this.StoreTurret2.Location = new System.Drawing.Point(297, 527);
-            this.StoreTurret2.Name = "StoreTurret2";
-            this.StoreTurret2.Size = new System.Drawing.Size(32, 32);
-            this.StoreTurret2.TabIndex = 11;
-            this.StoreTurret2.TabStop = false;
-            this.StoreTurret2.Click += new System.EventHandler(this.StoreTurret2_Click);
-            // 
-            // StoreTurret1
-            // 
-            this.StoreTurret1.Image = global::Budget_game.Properties.Resources.Tower1;
-            this.StoreTurret1.Location = new System.Drawing.Point(76, 527);
-            this.StoreTurret1.Name = "StoreTurret1";
-            this.StoreTurret1.Size = new System.Drawing.Size(32, 32);
-            this.StoreTurret1.TabIndex = 10;
-            this.StoreTurret1.TabStop = false;
-            this.StoreTurret1.Click += new System.EventHandler(this.StoreTurret1_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1043, 75);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 32;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1043, 37);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox2.TabIndex = 33;
-            this.pictureBox2.TabStop = false;
             // 
             // label1
             // 
@@ -385,6 +318,26 @@
             this.label4.Text = "Range";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(1043, 69);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 33;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(1043, 107);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 32;
+            this.pictureBox1.TabStop = false;
+            // 
             // BoughtTurret
             // 
             this.BoughtTurret.Location = new System.Drawing.Point(1019, 421);
@@ -394,12 +347,64 @@
             this.BoughtTurret.TabStop = false;
             this.BoughtTurret.Click += new System.EventHandler(this.BoughtTurret_Click);
             // 
+            // StoreTurret4
+            // 
+            this.StoreTurret4.Image = ((System.Drawing.Image)(resources.GetObject("StoreTurret4.Image")));
+            this.StoreTurret4.Location = new System.Drawing.Point(715, 527);
+            this.StoreTurret4.Name = "StoreTurret4";
+            this.StoreTurret4.Size = new System.Drawing.Size(32, 32);
+            this.StoreTurret4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.StoreTurret4.TabIndex = 13;
+            this.StoreTurret4.TabStop = false;
+            this.StoreTurret4.Click += new System.EventHandler(this.StoreTurret4_Click);
+            // 
+            // StoreTurret3
+            // 
+            this.StoreTurret3.Image = global::Budget_game.Properties.Resources.Tower3;
+            this.StoreTurret3.Location = new System.Drawing.Point(509, 527);
+            this.StoreTurret3.Name = "StoreTurret3";
+            this.StoreTurret3.Size = new System.Drawing.Size(32, 32);
+            this.StoreTurret3.TabIndex = 12;
+            this.StoreTurret3.TabStop = false;
+            this.StoreTurret3.Click += new System.EventHandler(this.StoreTurret3_Click);
+            // 
+            // StoreTurret2
+            // 
+            this.StoreTurret2.Image = global::Budget_game.Properties.Resources.tower2;
+            this.StoreTurret2.Location = new System.Drawing.Point(297, 527);
+            this.StoreTurret2.Name = "StoreTurret2";
+            this.StoreTurret2.Size = new System.Drawing.Size(32, 32);
+            this.StoreTurret2.TabIndex = 11;
+            this.StoreTurret2.TabStop = false;
+            this.StoreTurret2.Click += new System.EventHandler(this.StoreTurret2_Click);
+            // 
+            // StoreTurret1
+            // 
+            this.StoreTurret1.Image = global::Budget_game.Properties.Resources.Tower1;
+            this.StoreTurret1.Location = new System.Drawing.Point(76, 527);
+            this.StoreTurret1.Name = "StoreTurret1";
+            this.StoreTurret1.Size = new System.Drawing.Size(32, 32);
+            this.StoreTurret1.TabIndex = 10;
+            this.StoreTurret1.TabStop = false;
+            this.StoreTurret1.Click += new System.EventHandler(this.StoreTurret1_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(1043, 31);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox3.TabIndex = 38;
+            this.pictureBox3.TabStop = false;
+            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1318, 681);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -410,7 +415,6 @@
             this.Controls.Add(this.lblGameOver);
             this.Controls.Add(this.lblTimer);
             this.Controls.Add(this.btnStart);
-            this.Controls.Add(this.lblTimerName);
             this.Controls.Add(this.cmbUpgradesTower4);
             this.Controls.Add(this.cmbUpgradesTower3);
             this.Controls.Add(this.cmbUpgradesTower2);
@@ -437,13 +441,14 @@
             this.Name = "Game";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Game_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BoughtTurret)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StoreTurret4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StoreTurret3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StoreTurret2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StoreTurret1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BoughtTurret)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -474,7 +479,6 @@
         private System.Windows.Forms.ComboBox cmbUpgradesTower2;
         private System.Windows.Forms.ComboBox cmbUpgradesTower3;
         private System.Windows.Forms.ComboBox cmbUpgradesTower4;
-        private System.Windows.Forms.Label lblTimerName;
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Label lblTimer;
         private System.Windows.Forms.Label lblGameOver;
@@ -486,6 +490,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
 

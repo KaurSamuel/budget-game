@@ -101,5 +101,8 @@
   <ItemGroup>
     <None Include="Sprites\Tower3.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thumby-realthumby-you-i-dabbed-me-an-intellectual-dobe-29550873.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

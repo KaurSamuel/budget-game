@@ -63,6 +63,16 @@ namespace Budget_game.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap thumby_realthumby_you_i_dabbed_me_an_intellectual_dobe_29550873 {
+            get {
+                object obj = ResourceManager.GetObject("thumby-realthumby-you-i-dabbed-me-an-intellectual-dobe-29550873", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Tower1 {
             get {
                 object obj = ResourceManager.GetObject("Tower1", resourceCulture);

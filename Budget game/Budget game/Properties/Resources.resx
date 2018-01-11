@@ -118,13 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="tower2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Sprites\tower2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Tower3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Sprites\Tower3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Tower1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Sprites\Tower1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Tower3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Sprites\Tower3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tower2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Sprites\tower2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="thumby-realthumby-you-i-dabbed-me-an-intellectual-dobe-29550873" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\thumby-realthumby-you-i-dabbed-me-an-intellectual-dobe-29550873.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
