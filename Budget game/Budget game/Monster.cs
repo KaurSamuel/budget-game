@@ -31,8 +31,13 @@ namespace Budget_game
             Location = new System.Drawing.Point(0, Terrain.MapHeight * Terrain.TileSize / 2);
             BackColor = System.Drawing.Color.Transparent;
             BringToFront();
+
             TargetPos = _form.Controls.Find("road0", false)[0].Location;
             form = _form;
+
+            TargetPos = form.Controls.Find("road0", false)[0].Location;
+            //Parent = form.Controls.Find("road0", false)[0];
+
         }
 
         public static void UpdateLabel(Form form)
@@ -74,7 +79,7 @@ namespace Budget_game
         }
         protected override void OnPaint(PaintEventArgs pe)
         {
-            CurrentHealth -= 1;
+            
             SolidBrush redBrush = new SolidBrush(Color.Red);
             base.OnPaint(pe);
             pe.Graphics.FillRectangle(redBrush, 0, 27, CurrentHealth, 5);
