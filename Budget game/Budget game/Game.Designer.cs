@@ -70,8 +70,15 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.BoughtTurret = new Budget_game.Turrets();
+<<<<<<< HEAD
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+=======
+            this.directoryEntry1 = new System.DirectoryServices.DirectoryEntry();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnCredits = new System.Windows.Forms.Button();
+>>>>>>> UI
             ((System.ComponentModel.ISupportInitialize)(this.StoreTurret4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StoreTurret3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StoreTurret2)).BeginInit();
@@ -438,12 +445,46 @@
             this.BoughtTurret.TabStop = false;
             this.BoughtTurret.Click += new System.EventHandler(this.BoughtTurret_Click);
             // 
+<<<<<<< HEAD
+=======
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(1043, 75);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 32;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(1043, 37);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 33;
+            this.pictureBox2.TabStop = false;
+            // 
+            // btnCredits
+            // 
+            this.btnCredits.Location = new System.Drawing.Point(1231, 646);
+            this.btnCredits.Name = "btnCredits";
+            this.btnCredits.Size = new System.Drawing.Size(75, 23);
+            this.btnCredits.TabIndex = 34;
+            this.btnCredits.Text = "Credits";
+            this.btnCredits.UseVisualStyleBackColor = true;
+            this.btnCredits.Click += new System.EventHandler(this.btnCredits_Click);
+            // 
+>>>>>>> UI
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1318, 681);
+<<<<<<< HEAD
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -453,6 +494,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+=======
+            this.Controls.Add(this.btnCredits);
+>>>>>>> UI
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.BoughtTurret);
@@ -530,6 +574,7 @@
         private System.DirectoryServices.DirectoryEntry directoryEntry1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+<<<<<<< HEAD
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -539,6 +584,9 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+=======
+        private System.Windows.Forms.Button btnCredits;
+>>>>>>> UI
     }
 }
 

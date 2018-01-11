@@ -35,6 +35,15 @@ namespace Budget_game
 
         }
 
+        private void CheckTurrets()
+        {
+            foreach(Turrets turret in form.Controls.Find("Tower"), false)
+            {
+
+            }
+
+        }
+
         public void Update()
         {
             UpdateMonsters();
