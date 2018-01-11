@@ -65,11 +65,11 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.BoughtTurret = new Budget_game.Turrets();
             this.btnUpgradeTower1 = new System.Windows.Forms.Button();
             this.btnUpgradeTower2 = new System.Windows.Forms.Button();
             this.btnUpgradeTower3 = new System.Windows.Forms.Button();
             this.btnUpgradeTower4 = new System.Windows.Forms.Button();
+            this.BoughtTurret = new Budget_game.Turrets();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StoreTurret4)).BeginInit();
@@ -389,21 +389,13 @@
             this.label8.TabIndex = 42;
             this.label8.Text = "Sniper Tower";
             // 
-            // BoughtTurret
-            // 
-            this.BoughtTurret.Location = new System.Drawing.Point(1243, 207);
-            this.BoughtTurret.Name = "BoughtTurret";
-            this.BoughtTurret.Size = new System.Drawing.Size(32, 32);
-            this.BoughtTurret.TabIndex = 31;
-            this.BoughtTurret.TabStop = false;
-            this.BoughtTurret.Click += new System.EventHandler(this.BoughtTurret_Click);
-            // 
             // btnUpgradeTower1
             // 
             this.btnUpgradeTower1.Location = new System.Drawing.Point(44, 607);
             this.btnUpgradeTower1.Name = "btnUpgradeTower1";
             this.btnUpgradeTower1.Size = new System.Drawing.Size(106, 42);
             this.btnUpgradeTower1.TabIndex = 43;
+            this.btnUpgradeTower1.Text = "Tier 1 Upgrade 100gp";
             this.btnUpgradeTower1.UseVisualStyleBackColor = true;
             this.btnUpgradeTower1.Click += new System.EventHandler(this.btnUpgradeTower1_Click);
             // 
@@ -413,6 +405,7 @@
             this.btnUpgradeTower2.Name = "btnUpgradeTower2";
             this.btnUpgradeTower2.Size = new System.Drawing.Size(106, 42);
             this.btnUpgradeTower2.TabIndex = 44;
+            this.btnUpgradeTower2.Text = "Tier 1 Upgrade 150gp";
             this.btnUpgradeTower2.UseVisualStyleBackColor = true;
             this.btnUpgradeTower2.Click += new System.EventHandler(this.btnUpgradeTower2_Click);
             // 
@@ -422,6 +415,7 @@
             this.btnUpgradeTower3.Name = "btnUpgradeTower3";
             this.btnUpgradeTower3.Size = new System.Drawing.Size(106, 42);
             this.btnUpgradeTower3.TabIndex = 45;
+            this.btnUpgradeTower3.Text = "Tier 1 Upgrade 200gp";
             this.btnUpgradeTower3.UseVisualStyleBackColor = true;
             this.btnUpgradeTower3.Click += new System.EventHandler(this.btnUpgradeTower3_Click);
             // 
@@ -431,8 +425,18 @@
             this.btnUpgradeTower4.Name = "btnUpgradeTower4";
             this.btnUpgradeTower4.Size = new System.Drawing.Size(106, 42);
             this.btnUpgradeTower4.TabIndex = 46;
+            this.btnUpgradeTower4.Text = "Tier 1 Upgrade 250gp";
             this.btnUpgradeTower4.UseVisualStyleBackColor = true;
             this.btnUpgradeTower4.Click += new System.EventHandler(this.btnUpgradeTower4_Click);
+            // 
+            // BoughtTurret
+            // 
+            this.BoughtTurret.Location = new System.Drawing.Point(1243, 207);
+            this.BoughtTurret.Name = "BoughtTurret";
+            this.BoughtTurret.Size = new System.Drawing.Size(32, 32);
+            this.BoughtTurret.TabIndex = 31;
+            this.BoughtTurret.TabStop = false;
+            this.BoughtTurret.Click += new System.EventHandler(this.BoughtTurret_Click);
             // 
             // Game
             // 
