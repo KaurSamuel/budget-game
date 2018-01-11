@@ -439,5 +439,9 @@ namespace Budget_game
 
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
