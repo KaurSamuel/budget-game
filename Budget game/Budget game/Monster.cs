@@ -67,7 +67,7 @@ namespace Budget_game
         {
             CurrentHealth -= damage;
 
-            if (CurrentHealth <= 0)
+            if (CurrentHealth <= 0 && IsAlive)
             {
                 IsAlive = false;
                 form.Controls.Remove(this);
