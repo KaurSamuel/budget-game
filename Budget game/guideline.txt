@@ -3,31 +3,41 @@ mängu resulutsioon on 1280x720
 [Enemies]
 (Goblin)
 HP: 15
+Gold: 10
+
 (Spider)
 HP: 50
+Gold: 25
+
 (Keskeas slime)
 HP: 200
+Gold: 50
+
 [balancing]
 (bomb tower)
-price: 10
+price: 30
 shooting speed: 30
 damage : 5
 range : 3
+Upgrades: Damage +1; +2; +3; +5
 
 (laser tower)
-price :50
+price :70
 Shooting speed: 80
 damage: 3
 range: 2
+Upgrades: Shooting speed +15; +25; +40; +55
 
 (mortal)
 Price: 200
 Shooting speed: 20
 Damage: 5 (Area Of Effect)
 Range: esimesed 7 tile ei saa ülejäänud saab
+Upgrades: Damage +2; +4; +6; +8
 
 (Sniper tower)
-Price: 500
+Price: 300
 shooting speed: 20
-Damage: 10
-Range: kogu map
+Damage: 30
+Range: 7
+Upgrades: Range +3; +5; +7; +9
