@@ -44,7 +44,7 @@ namespace Budget_game
                 {
                     if (isPrevVertical)
                     {
-                        if (curPoint.X >= MapWidth - 1)
+                        if (curPoint.X >= MapWidth - 2)
                         {
                             break;
                         }
@@ -111,7 +111,8 @@ namespace Budget_game
                 {
                     PictureBox house = new PictureBox();
                     house.Image = System.Drawing.Image.FromFile("../../Sprites/castle.png");
-                    house.Location = new Point(curPoint.X * TileSize - 34, curPoint.Y * TileSize - 10);
+                    house.SizeMode = PictureBoxSizeMode.AutoSize;
+                    house.Location = new Point(curPoint.X * TileSize - 32, curPoint.Y * TileSize - 10);
                     form.Controls.Add(house);
                     house.BringToFront();
 

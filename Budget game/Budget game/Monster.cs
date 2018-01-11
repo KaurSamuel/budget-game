@@ -23,7 +23,7 @@ namespace Budget_game
         {
             Image = System.Drawing.Image.FromFile("../../Sprites/Monster1.png");
             Size = new System.Drawing.Size(32, 32);
-            curTile = 0;
+            curTile = 1;
             form.Controls.Add(this);
             Name = "monster";
             Location = new System.Drawing.Point(0, Terrain.MapHeight * Terrain.TileSize / 2);

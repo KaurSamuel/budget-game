@@ -58,17 +58,21 @@
             this.StoreTurret3 = new System.Windows.Forms.PictureBox();
             this.StoreTurret2 = new System.Windows.Forms.PictureBox();
             this.StoreTurret1 = new System.Windows.Forms.PictureBox();
-            this.BoughtTurret = new Budget_game.Turrets();
             this.directoryEntry1 = new System.DirectoryServices.DirectoryEntry();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.BoughtTurret = new Budget_game.Turrets();
             ((System.ComponentModel.ISupportInitialize)(this.StoreTurret4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StoreTurret3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StoreTurret2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StoreTurret1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BoughtTurret)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BoughtTurret)).BeginInit();
             this.SuspendLayout();
             // 
             // timer
@@ -178,7 +182,7 @@
             // lblUpgradesName1
             // 
             this.lblUpgradesName1.AutoSize = true;
-            this.lblUpgradesName1.Location = new System.Drawing.Point(61, 591);
+            this.lblUpgradesName1.Location = new System.Drawing.Point(51, 591);
             this.lblUpgradesName1.Name = "lblUpgradesName1";
             this.lblUpgradesName1.Size = new System.Drawing.Size(56, 13);
             this.lblUpgradesName1.TabIndex = 18;
@@ -187,7 +191,7 @@
             // lblUpgradesName2
             // 
             this.lblUpgradesName2.AutoSize = true;
-            this.lblUpgradesName2.Location = new System.Drawing.Point(294, 591);
+            this.lblUpgradesName2.Location = new System.Drawing.Point(278, 591);
             this.lblUpgradesName2.Name = "lblUpgradesName2";
             this.lblUpgradesName2.Size = new System.Drawing.Size(56, 13);
             this.lblUpgradesName2.TabIndex = 19;
@@ -196,7 +200,7 @@
             // lblUpgradesName3
             // 
             this.lblUpgradesName3.AutoSize = true;
-            this.lblUpgradesName3.Location = new System.Drawing.Point(497, 591);
+            this.lblUpgradesName3.Location = new System.Drawing.Point(490, 591);
             this.lblUpgradesName3.Name = "lblUpgradesName3";
             this.lblUpgradesName3.Size = new System.Drawing.Size(56, 13);
             this.lblUpgradesName3.TabIndex = 20;
@@ -205,7 +209,7 @@
             // lblUpgradesName4
             // 
             this.lblUpgradesName4.AutoSize = true;
-            this.lblUpgradesName4.Location = new System.Drawing.Point(703, 591);
+            this.lblUpgradesName4.Location = new System.Drawing.Point(691, 591);
             this.lblUpgradesName4.Name = "lblUpgradesName4";
             this.lblUpgradesName4.Size = new System.Drawing.Size(56, 13);
             this.lblUpgradesName4.TabIndex = 21;
@@ -243,7 +247,7 @@
             // 
             this.cmbUpgradesTower4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbUpgradesTower4.FormattingEnabled = true;
-            this.cmbUpgradesTower4.Location = new System.Drawing.Point(697, 607);
+            this.cmbUpgradesTower4.Location = new System.Drawing.Point(703, 607);
             this.cmbUpgradesTower4.Name = "cmbUpgradesTower4";
             this.cmbUpgradesTower4.Size = new System.Drawing.Size(72, 21);
             this.cmbUpgradesTower4.TabIndex = 25;
@@ -324,15 +328,6 @@
             this.StoreTurret1.TabStop = false;
             this.StoreTurret1.Click += new System.EventHandler(this.StoreTurret1_Click);
             // 
-            // BoughtTurret
-            // 
-            this.BoughtTurret.Location = new System.Drawing.Point(1019, 421);
-            this.BoughtTurret.Name = "BoughtTurret";
-            this.BoughtTurret.Size = new System.Drawing.Size(32, 32);
-            this.BoughtTurret.TabIndex = 31;
-            this.BoughtTurret.TabStop = false;
-            this.BoughtTurret.Click += new System.EventHandler(this.BoughtTurret_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -353,12 +348,61 @@
             this.pictureBox2.TabIndex = 33;
             this.pictureBox2.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(103, 591);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(47, 13);
+            this.label1.TabIndex = 34;
+            this.label1.Text = "Damage";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(542, 591);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(47, 13);
+            this.label2.TabIndex = 35;
+            this.label2.Text = "Damage";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(330, 591);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(81, 13);
+            this.label3.TabIndex = 36;
+            this.label3.Text = "Shooting speed";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(745, 591);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(39, 13);
+            this.label4.TabIndex = 37;
+            this.label4.Text = "Range";
+            // 
+            // BoughtTurret
+            // 
+            this.BoughtTurret.Location = new System.Drawing.Point(1019, 421);
+            this.BoughtTurret.Name = "BoughtTurret";
+            this.BoughtTurret.Size = new System.Drawing.Size(32, 32);
+            this.BoughtTurret.TabIndex = 31;
+            this.BoughtTurret.TabStop = false;
+            this.BoughtTurret.Click += new System.EventHandler(this.BoughtTurret_Click);
+            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1318, 681);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.BoughtTurret);
@@ -396,9 +440,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.StoreTurret3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StoreTurret2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StoreTurret1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BoughtTurret)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BoughtTurret)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -437,6 +481,10 @@
         private System.DirectoryServices.DirectoryEntry directoryEntry1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
 
