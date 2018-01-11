@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Drawing;
 
 namespace Budget_game
 {
@@ -18,19 +18,21 @@ namespace Budget_game
         public static int MonstersAlive { get; set; } = Engine.numMonsters;
         public int curTile { get; set; }
         public bool IsAlive { get; set; } = true;
-        
+        Form form;
 
-        public Monster(Form form)
+
+        public Monster(Form _form)
         {
             Image = System.Drawing.Image.FromFile("../../Sprites/Monster1.png");
             Size = new System.Drawing.Size(32, 32);
             curTile = 1;
-            form.Controls.Add(this);
+            _form.Controls.Add(this);
             Name = "monster";
             Location = new System.Drawing.Point(0, Terrain.MapHeight * Terrain.TileSize / 2);
             BackColor = System.Drawing.Color.Transparent;
             BringToFront();
-            TargetPos = form.Controls.Find("road0", false)[0].Location;
+            TargetPos = _form.Controls.Find("road0", false)[0].Location;
+            form = _form;
         }
 
         public static void UpdateLabel(Form form)
@@ -70,6 +72,16 @@ namespace Budget_game
             }
             
         }
+        protected override void OnPaint(PaintEventArgs pe)
+        {
+            CurrentHealth -= 1;
+            SolidBrush redBrush = new SolidBrush(Color.Red);
+            base.OnPaint(pe);
+            pe.Graphics.FillRectangle(redBrush, 0, 27, CurrentHealth, 5);
+           
+        }
+
+       
 
         public void MoveMonster(Form form)
         {

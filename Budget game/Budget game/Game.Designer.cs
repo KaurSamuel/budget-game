@@ -177,7 +177,7 @@
             // StoreTurret4Price
             // 
             this.StoreTurret4Price.AutoSize = true;
-            this.StoreTurret4Price.Location = new System.Drawing.Point(712, 562);
+            this.StoreTurret4Price.Location = new System.Drawing.Point(708, 567);
             this.StoreTurret4Price.Name = "StoreTurret4Price";
             this.StoreTurret4Price.Size = new System.Drawing.Size(40, 13);
             this.StoreTurret4Price.TabIndex = 17;
@@ -213,7 +213,7 @@
             // lblUpgradesName4
             // 
             this.lblUpgradesName4.AutoSize = true;
-            this.lblUpgradesName4.Location = new System.Drawing.Point(691, 575);
+            this.lblUpgradesName4.Location = new System.Drawing.Point(687, 580);
             this.lblUpgradesName4.Name = "lblUpgradesName4";
             this.lblUpgradesName4.Size = new System.Drawing.Size(56, 13);
             this.lblUpgradesName4.TabIndex = 21;
@@ -241,7 +241,7 @@
             // 
             this.lblGameOver.AutoSize = true;
             this.lblGameOver.Font = new System.Drawing.Font("Microsoft Sans Serif", 32F, System.Drawing.FontStyle.Bold);
-            this.lblGameOver.Location = new System.Drawing.Point(784, 527);
+            this.lblGameOver.Location = new System.Drawing.Point(1048, 489);
             this.lblGameOver.Name = "lblGameOver";
             this.lblGameOver.Size = new System.Drawing.Size(0, 51);
             this.lblGameOver.TabIndex = 29;
@@ -276,7 +276,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(753, 575);
+            this.label4.Location = new System.Drawing.Point(749, 580);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(39, 13);
             this.label4.TabIndex = 37;
@@ -305,7 +305,7 @@
             // StoreTurret4
             // 
             this.StoreTurret4.Image = ((System.Drawing.Image)(resources.GetObject("StoreTurret4.Image")));
-            this.StoreTurret4.Location = new System.Drawing.Point(715, 527);
+            this.StoreTurret4.Location = new System.Drawing.Point(711, 532);
             this.StoreTurret4.Name = "StoreTurret4";
             this.StoreTurret4.Size = new System.Drawing.Size(32, 32);
             this.StoreTurret4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -374,7 +374,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(547, 545);
+            this.label7.Location = new System.Drawing.Point(543, 550);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(69, 13);
             this.label7.TabIndex = 41;
@@ -383,7 +383,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(753, 546);
+            this.label8.Location = new System.Drawing.Point(749, 551);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(70, 13);
             this.label8.TabIndex = 42;
@@ -421,7 +421,7 @@
             // 
             // btnUpgradeTower4
             // 
-            this.btnUpgradeTower4.Location = new System.Drawing.Point(694, 607);
+            this.btnUpgradeTower4.Location = new System.Drawing.Point(690, 612);
             this.btnUpgradeTower4.Name = "btnUpgradeTower4";
             this.btnUpgradeTower4.Size = new System.Drawing.Size(106, 42);
             this.btnUpgradeTower4.TabIndex = 46;
