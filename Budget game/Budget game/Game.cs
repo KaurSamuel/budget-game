@@ -35,7 +35,7 @@ namespace Budget_game
             this.TransparencyKey = Color.Transparent;
 
             InitializeValues();
-
+            
             Terrain.GenerateTerrain(this);
 
             engine = new Engine(this);
