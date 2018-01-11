@@ -92,15 +92,24 @@ namespace Budget_game
 
                 numRoadTiles++;
 
-                if (curPoint.X == MapWidth - 1)
+                if (curPoint.X >= MapWidth - 1)
+                {
+                    PictureBox house = new PictureBox();
+                    house.Image = System.Drawing.Image.FromFile("../../Sprites/castle.png");
+                    house.Location = new Point(curPoint.X * TileSize - 34, curPoint.Y * TileSize - 10);
+
+                    form.Controls.Add(house);
+                    house.BringToFront();
+
                     break;
+                }
             }
-            int a = numRoadTiles;
+            
             //Adds first tile
             Tile firstTile = new Tile();
             firstTile.Name = "road0";
             firstTile.Size = new Size(TileSize, TileSize);
-            firstTile.Location = new Point(0, MapHeight * TileSize / 2);
+            firstTile.Location = new Point(0, (MapHeight * TileSize) / 2);
             firstTile.Image = Image.FromFile("../../Sprites/roadUP.png");
             form.Controls.Add(firstTile);
             firstTile.BringToFront();
