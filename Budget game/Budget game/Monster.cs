@@ -77,16 +77,13 @@ namespace Budget_game
             }
             
         }
+
         protected override void OnPaint(PaintEventArgs pe)
         {
-            
             SolidBrush redBrush = new SolidBrush(Color.Red);
             base.OnPaint(pe);
             pe.Graphics.FillRectangle(redBrush, 0, 27, CurrentHealth, 5);
-           
         }
-
-       
 
         public void MoveMonster(Form form)
         {
@@ -114,10 +111,6 @@ namespace Budget_game
                 Location = new System.Drawing.Point(Location.X, Location.Y + movementSpeed);
             else if (delta.Y > 0)
                 Location = new System.Drawing.Point(Location.X, Location.Y - movementSpeed);
-
-
         }
-
-
     }
 }

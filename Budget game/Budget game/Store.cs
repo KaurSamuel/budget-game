@@ -73,7 +73,7 @@ namespace Budget_game
                 if (curControl.Location.X < 32 * 32 && curControl.Location.Y < (16 * 32))
                 {
                     Turrets newTurret = new Turrets();
-                    newTurret.Damage = 1;
+                    newTurret.Damage = 10;
                     newTurret.Image = curControl.Image;
                     newTurret.Location = curControl.Location;
                     newTurret.Size = curControl.Size;

@@ -27,29 +27,7 @@ namespace Budget_game
             foreach(Projectile projectile in projectilesToRemove)
             {
                 form.Controls.Remove(projectile);
-            }
-        }
-
-        public static void Turret_spawn(Form form, Point location)
-        {
-            bool Has_spawned = false;
-            if (Has_spawned == false)
-            {
-                int Tilesize = (32);
-                Point curpoint = new Point(500, 300);
-                Turrets cannon = new Turrets();
-                cannon.Size = new Size(Tilesize, Tilesize);
-                cannon.Location = new Point(curpoint.X, curpoint.Y);
-                cannon.Image = Image.FromFile("../../Sprites/Tower1.png");
-                cannon.Turret_range = 150;
-
-
-                cannon.ShootingTimer = new Stopwatch();
-                cannon.ShootingTimer.Start();
-
-                form.Controls.Add(cannon);
-                cannon.BringToFront();
-                Has_spawned = true;
+                Projectiles.Remove(projectile);
             }
         }
 

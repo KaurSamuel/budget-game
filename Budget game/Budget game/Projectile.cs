@@ -41,9 +41,7 @@ namespace Budget_game
                 
             if (delta.X <= 300 && delta.X > 0)
             {
-                
                 newPoint.X -= speed;
-
             }
 
             if (delta.X >= -300 && delta.X < 0)
