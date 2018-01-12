@@ -24,34 +24,29 @@ namespace Budget_game
         public Stopwatch ShootingTimer;
         public Monster targetMonster;
         public int Damage;
-        public Turrets(int type)
+        public Turrets()
         {
             Turret_shooting_speed = 3000;
 
-            switch (type)
-            {
-                case 1:
-                    Turret_shooting_speed = 3000;
-                    Turret_range = 20;
-                    Damage = 30;
-                    break;
-                case 2:
-                    Turret_shooting_speed = 6000;
-                    Turret_range = 30;
-                    Damage = 20;
-                    break;
-                case 3:
-                    Turret_shooting_speed = 1500;
-                    Turret_range = 50;
-                    Damage = 45;
-                    break;
-                case 4:
-                    Turret_shooting_speed = 4500;
-                    Turret_range = 150;
-                    Damage = 150;
-                    break;
+            /*Turrets tower1 = new Turrets();
+            tower1.Turret_shooting_speed = 3000;
+            tower1.Turret_range = 20;
+            tower1.Damage = 30;
 
-            }
+            Turrets tower2 = new Turrets();
+            tower2.Turret_shooting_speed = 6000;
+            tower2.Turret_range = 30;
+            tower2.Damage = 20;
+
+            Turrets tower3 = new Turrets();
+            tower3.Turret_shooting_speed = 1500;
+            tower3.Turret_range = 50;
+            tower3.Damage = 45;
+
+            Turrets tower4 = new Turrets();
+            tower4.Turret_shooting_speed = 4500;
+            tower4.Turret_range = 150;
+            tower4.Damage = 150;*/
         }
     }
 }
