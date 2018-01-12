@@ -63,7 +63,7 @@ namespace Budget_game
             switch (type)
             {
                 case 1:
-                    Turret_shooting_speed = 3000;
+                    Turret_shooting_speed = 2000;
                     Turret_range = 90;
                     Damage = 30 + upgrade1;
                     this.Image = Image.FromFile("../../Sprites/Tower1.png");
