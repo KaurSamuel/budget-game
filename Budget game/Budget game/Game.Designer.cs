@@ -183,7 +183,7 @@
             this.StoreTurret4Price.Name = "StoreTurret4Price";
             this.StoreTurret4Price.Size = new System.Drawing.Size(40, 13);
             this.StoreTurret4Price.TabIndex = 17;
-            this.StoreTurret4Price.Text = "200 gp";
+            this.StoreTurret4Price.Text = "900 gp";
             // 
             // lblUpgradesName1
             // 
@@ -457,6 +457,15 @@
             this.BoughtTurret.TabStop = false;
             this.BoughtTurret.Click += new System.EventHandler(this.BoughtTurret_Click);
             // 
+            // BoughtTurret
+            // 
+            this.BoughtTurret.Location = new System.Drawing.Point(1243, 207);
+            this.BoughtTurret.Name = "BoughtTurret";
+            this.BoughtTurret.Size = new System.Drawing.Size(32, 32);
+            this.BoughtTurret.TabIndex = 31;
+            this.BoughtTurret.TabStop = false;
+            this.BoughtTurret.Click += new System.EventHandler(this.BoughtTurret_Click);
+            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -503,6 +512,7 @@
             this.Controls.Add(this.lblGold);
             this.Controls.Add(this.lblHitpoints);
             this.Controls.Add(this.lblEnemiesLeftName);
+            this.MaximizeBox = false;
             this.Name = "Game";
             this.Text = " ";
             this.Load += new System.EventHandler(this.Game_Load);
