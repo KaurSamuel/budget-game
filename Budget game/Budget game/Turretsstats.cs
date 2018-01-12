@@ -43,23 +43,23 @@ namespace Budget_game
                     Size = new Size(32, 32);
                     break;
                 case 2:
-                    Turret_shooting_speed = 1000 - upgrade2;
+                    Turret_shooting_speed = 200 - upgrade2;
                     Turret_range = 40;
-                    Damage = 20;
+                    Damage = 5;
                     this.Image = Image.FromFile("../../Sprites/Tower2.png");
                     Size = new Size(32, 32);
                     break;
                 case 3:
-                    Turret_shooting_speed = 1500;
-                    Turret_range = 50;
+                    Turret_shooting_speed = 2800;
+                    Turret_range = 200;
                     Damage = 45 + upgrade3;
                     this.Image = Image.FromFile("../../Sprites/Tower3.png");
                     Size = new Size(32, 32);
                     break;
                 case 4:
                     Turret_shooting_speed = 4500;
-                    Turret_range = 150 + upgrade4;
-                    Damage = 150;
+                    Turret_range = 500 + upgrade4;
+                    Damage = 100;
                     this.Image = Image.FromFile("../../Sprites/Tower4.png");
                     Size = new Size(32, 32);
                     break;
