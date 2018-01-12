@@ -445,5 +445,15 @@ namespace Budget_game
         {
 
         }
+
+        private void btnNextWave_Click(object sender, EventArgs e)
+        {
+            btnNextWave.Enabled = false;
+            if (Monster.MonstersAlive == 0)
+            {
+                btnNextWave.Enabled = true;
+                //Siia lisa ülejäänud levelid
+            }
+        }
     }
 }
