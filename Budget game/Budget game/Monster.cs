@@ -12,7 +12,7 @@ namespace Budget_game
     {
         System.Drawing.Point TargetPos { get; set; }
         public int movementSpeed { get; set; }
-        public int MaximumHealth { get; set; }
+        public int MaximumHealth { get; set; } = 50;
         public int CurrentHealth { get; set; } = 50;
         public int Gold { get; set; } = 10;
         public static int MonstersAlive { get; set; }
@@ -23,7 +23,6 @@ namespace Budget_game
 
         public Monster(Form _form)
         {
-            Image = System.Drawing.Image.FromFile("../../Sprites/Monster1.png");
             Size = new System.Drawing.Size(32, 32);
             curTile = 1;
             _form.Controls.Add(this);
@@ -34,8 +33,6 @@ namespace Budget_game
 
             TargetPos = _form.Controls.Find("road0", false)[0].Location;
             form = _form;
-
-            TargetPos = form.Controls.Find("road0", false)[0].Location;
             //Parent = form.Controls.Find("road0", false)[0];
 
         }
