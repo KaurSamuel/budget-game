@@ -42,10 +42,8 @@ namespace Budget_game
 
             engineTimer = new Timer();
             engineTimer.Enabled = true;
-            engineTimer.Interval = 1;
+            engineTimer.Interval = 30;
             engineTimer.Tick += new EventHandler(Frame);
-
-            
         }
 
         void Frame(object sender, EventArgs e)

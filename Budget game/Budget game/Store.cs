@@ -11,7 +11,8 @@ namespace Budget_game
 {
     class Store
     {
-        public static Turrets curControl = new Turrets();
+        public static int curControlCount = 0;
+        public static Turrets curControl = new Turrets(0);
 
         public Store()
         {
@@ -44,10 +45,13 @@ namespace Budget_game
                 curControl = form.Controls["BoughtTurret"] as Turrets;
 
                 Player.Gold -= Int32.Parse(money.Substring(0, 3));
-                
+
                 curControl.Image = (form.Controls[controlName] as PictureBox).Image;
                 curControl.Show();
                 curControl.Enabled = true;
+
+                curControlCount = (int)Char.GetNumericValue(controlName[11]);
+
             }
         }
 
@@ -72,13 +76,7 @@ namespace Budget_game
 
                 if (curControl.Location.X < 32 * 32 && curControl.Location.Y < (16 * 32))
                 {
-                    Turrets newTurret = new Turrets();
-                    newTurret.Damage = 10;
-                    newTurret.Image = curControl.Image;
-                    newTurret.Location = curControl.Location;
-                    newTurret.Size = curControl.Size;
-                    newTurret.Turret_range = 150;
-                    newTurret.Name = "Tower";
+                    Turrets newTurret = new Turrets(curControlCount);
                     newTurret.ShootingTimer = new Stopwatch();
                     newTurret.ShootingTimer.Start();
 
