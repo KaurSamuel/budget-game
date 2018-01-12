@@ -110,6 +110,8 @@ namespace Budget_game
 
                 MonstersToSpawn.Add(monster);
             }
+
+            Monster.MonstersAlive = MonstersToSpawn.Count;
         }
 
         public void SpawnMobs(object sender, EventArgs e)

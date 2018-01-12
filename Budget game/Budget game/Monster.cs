@@ -15,7 +15,7 @@ namespace Budget_game
         public int MaximumHealth { get; set; }
         public int CurrentHealth { get; set; } = 50;
         public int Gold { get; set; } = 10;
-        public static int MonstersAlive { get; set; } = Engine.numMonsters;
+        public static int MonstersAlive { get; set; }
         public int curTile { get; set; }
         public bool IsAlive { get; set; } = true;
         Form form;
