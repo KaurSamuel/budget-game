@@ -107,20 +107,19 @@ namespace Budget_game
 
                 numRoadTiles++;
 
-                if (curPoint.X >= MapWidth - 1)
+                if (curPoint.X >= MapWidth - 2)
                 {
-                    PictureBox house = new PictureBox();
-                    house.Image = System.Drawing.Image.FromFile("../../Sprites/castle.png");
-                    house.SizeMode = PictureBoxSizeMode.AutoSize;
-                    house.Location = new Point(curPoint.X * TileSize - 32, curPoint.Y * TileSize - 10);
-                    form.Controls.Add(house);
-                    house.BringToFront();
-
                     break;
                 }
             }
-            
-            
+
+            PictureBox house = new PictureBox();
+            house.Image = System.Drawing.Image.FromFile("../../Sprites/castle.png");
+            house.SizeMode = PictureBoxSizeMode.AutoSize;
+            house.Location = new Point(curPoint.X * TileSize - 32, curPoint.Y * TileSize);
+            form.Controls.Add(house);
+            house.BringToFront();
+
         }
 
         private static void GenerateMap(Form form)

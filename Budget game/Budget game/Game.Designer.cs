@@ -515,6 +515,7 @@
             this.Controls.Add(this.lblGold);
             this.Controls.Add(this.lblHitpoints);
             this.Controls.Add(this.lblEnemiesLeftName);
+            this.MaximizeBox = false;
             this.Name = "Game";
             this.Text = " ";
             this.Load += new System.EventHandler(this.Game_Load);
