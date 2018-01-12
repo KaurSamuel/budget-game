@@ -210,10 +210,10 @@ namespace Budget_game
 
             
 
-            if (seconds < 10)
-                lblTimer.Text = minutes.ToString() + ":0" + (seconds % 60).ToString();
-            else
+            if ((seconds % 60).ToString().Length >= 2)
                 lblTimer.Text = minutes.ToString() + ":" + (seconds % 60).ToString();
+            else
+                lblTimer.Text = minutes.ToString() + ":0" + (seconds % 60).ToString();
 
 
             //COUNT DOWN TIMER vvv
@@ -313,6 +313,11 @@ namespace Budget_game
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTimer_Click(object sender, EventArgs e)
         {
 
         }

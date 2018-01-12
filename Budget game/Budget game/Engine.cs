@@ -74,6 +74,7 @@ namespace Budget_game
         {
             string[] allLines = System.IO.File.ReadAllLines("../../levels/level" + level + ".txt");
             int monToRemove = 0;
+            Monster.MonstersAlive = 0;
 
             foreach (string line in allLines)
             {

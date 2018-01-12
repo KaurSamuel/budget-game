@@ -236,8 +236,10 @@
             this.lblTimer.AutoSize = true;
             this.lblTimer.Location = new System.Drawing.Point(1119, 40);
             this.lblTimer.Name = "lblTimer";
-            this.lblTimer.Size = new System.Drawing.Size(0, 13);
+            this.lblTimer.Size = new System.Drawing.Size(28, 13);
             this.lblTimer.TabIndex = 28;
+            this.lblTimer.Text = "0:00";
+            this.lblTimer.Click += new System.EventHandler(this.lblTimer_Click);
             // 
             // lblGameOver
             // 
@@ -447,15 +449,6 @@
             this.pictureBox4.Size = new System.Drawing.Size(32, 32);
             this.pictureBox4.TabIndex = 49;
             this.pictureBox4.TabStop = false;
-            // 
-            // BoughtTurret
-            // 
-            this.BoughtTurret.Location = new System.Drawing.Point(1243, 207);
-            this.BoughtTurret.Name = "BoughtTurret";
-            this.BoughtTurret.Size = new System.Drawing.Size(32, 32);
-            this.BoughtTurret.TabIndex = 31;
-            this.BoughtTurret.TabStop = false;
-            this.BoughtTurret.Click += new System.EventHandler(this.BoughtTurret_Click);
             // 
             // BoughtTurret
             // 
