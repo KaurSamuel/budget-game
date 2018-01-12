@@ -46,6 +46,18 @@ namespace Budget_game
             engineTimer.Tick += new EventHandler(Frame);
         }
 
+
+
+        int count1 = 2;
+        int count2 = 2;
+        int count3 = 2;
+        int count4 = 2;
+
+        int upgrade1 = 100;
+        int upgrade2 = 150;
+        int upgrade3 = 200;
+        int upgrade4 = 250;
+
         void Frame(object sender, EventArgs e)
         {
             engine.Update();
@@ -58,7 +70,95 @@ namespace Budget_game
                 var a = Engine.CurLevel;
                 this.Controls["lblLevel"].Text = Engine.CurLevel.ToString();
             }
+            if (Player.Gold >= upgrade1 && count1 <= 5)
+                btnUpgradeTower1.Enabled = true;
+            else
+                btnUpgradeTower1.Enabled = false;
+
+            if (Player.Gold >= upgrade2 && count2 <= 5)
+                btnUpgradeTower2.Enabled = true;
+            else
+                btnUpgradeTower2.Enabled = false;
+
+            if (Player.Gold >= upgrade3 && count3 <= 5)
+                btnUpgradeTower3.Enabled = true;
+            else
+                btnUpgradeTower3.Enabled = false;
+
+            if (Player.Gold >= upgrade4 && count4 <= 5)
+                btnUpgradeTower4.Enabled = true;
+            else
+                btnUpgradeTower4.Enabled = false;
         }
+
+        private void btnUpgradeTower1_Click(object sender, EventArgs e)
+        {
+            btnUpgradeTower1.Enabled = false;
+
+            Player.Gold = Player.Gold - upgrade1;
+            upgrade1 += 200;
+            this.Controls["btnUpgradeTower1"].Text = "Tier " + count1 + " Upgrade " + upgrade1 + "gp";
+            Turrets.UpdateUpgrade(this, 1, 20);
+
+            count1++;
+            if (count1 == 6)
+            {
+                btnUpgradeTower1.Text = "Fully upgraded!";
+            }
+        }
+
+        private void btnUpgradeTower2_Click(object sender, EventArgs e)
+        {
+            btnUpgradeTower2.Enabled = false;
+
+
+            Player.Gold = Player.Gold - upgrade2;
+            upgrade2 += 200;
+            this.Controls["btnUpgradeTower2"].Text = "Tier " + count2 + " Upgrade " + upgrade2 + "gp";
+            Turrets.UpdateUpgrade(this, 2, 50);
+
+            count2++;
+            if (count2 == 6)
+            {
+                btnUpgradeTower2.Text = "Fully upgraded!";
+            }
+        }
+
+        private void btnUpgradeTower3_Click(object sender, EventArgs e)
+        {
+            btnUpgradeTower3.Enabled = false;
+
+
+            Player.Gold = Player.Gold - upgrade2;
+            upgrade3 += 200;
+            this.Controls["btnUpgradeTower3"].Text = "Tier " + count3 + " Upgrade " + upgrade3 + "gp";
+            Turrets.UpdateUpgrade(this, 3, 20);
+
+            count3++;
+            if (count3 == 6)
+            {
+                btnUpgradeTower3.Text = "Fully upgraded!";
+            }
+        }
+
+        private void btnUpgradeTower4_Click(object sender, EventArgs e)
+        {
+            btnUpgradeTower4.Enabled = false;
+
+
+            Player.Gold = Player.Gold - upgrade2;
+            upgrade4 += 200;
+            this.Controls["btnUpgradeTower4"].Text = "Tier " + count4 + " Upgrade " + upgrade4 + "gp";
+            Turrets.UpdateUpgrade(this, 2, 100);
+
+            count4++;
+            if (count4 == 6)
+            {
+                btnUpgradeTower4.Text = "Fully upgraded!";
+            }
+        }
+
+
 
         private void Game_Load(object sender, EventArgs e)
         {
@@ -160,238 +260,8 @@ namespace Budget_game
                 btnStart.Enabled = false;
             }
         }
-        int counter01 = 0;
-        int counter02 = 0;
-        int counter03 = 0;
-        int counter04 = 0;
 
-        private void btnUpgradeTower1_Click(object sender, EventArgs e)
-        {
-            if (counter01 >= 1)
-                btnUpgradeTower1.Enabled = false;
-                if (Player.Gold >= 100)
-                {
-                    btnUpgradeTower1.Enabled = true;
-                    counter01++;
-                    btnUpgradeTower1.Text = "Tier 2 Upgrade 300gp";
-                    Player.Gold = Player.Gold - 100;
-                    Turrets.UpdateUpgrade(this, 1, 20);
-                if (counter01 >= 2)
-                {
-                    //Player.Gold = Player.Gold - 100;
-                    btnUpgradeTower1.Enabled = false;
-                    if (Player.Gold >= 300)
-                    {
-                        btnUpgradeTower1.Enabled = true;
-                        //counter01++;
-                        btnUpgradeTower1.Text = "Tier 3 Upgrade 600gp";
-                        Player.Gold = Player.Gold - 200;
-                        Turrets.UpdateUpgrade(this, 1, 20);
-                        if (counter01 >= 3)
-                        {
-                            //Player.Gold = Player.Gold - 200;
-                            btnUpgradeTower1.Enabled = false;
-                            if (Player.Gold >= 600)
-                            {
-                                btnUpgradeTower1.Enabled = true;
-                                Player.Gold = Player.Gold - 300;
-                                //counter01++;
-                                btnUpgradeTower1.Text = "Tier 4 Upgrade 1000gp";
-                                Turrets.UpdateUpgrade(this, 1, 20);
-                                if (counter01 >= 4)
-                                {
-                                    //Player.Gold = Player.Gold - 300;
-                                    btnUpgradeTower1.Enabled = false;
-                                    if (Player.Gold >= 1000)
-                                    {
-                                        btnUpgradeTower1.Enabled = false;
-                                        Player.Gold = Player.Gold - 400;
-                                        //counter01++;
-                                        btnUpgradeTower1.Text = "Fully upgraded";
-                                        Turrets.UpdateUpgrade(this, 1, 20);
-                                        if (counter01 >= 5)
-                                        {
-                                            //Player.Gold = Player.Gold - 400;
-                                            btnUpgradeTower1.Enabled = false;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }   
-
-        }
-
-        private void btnUpgradeTower2_Click(object sender, EventArgs e)
-        {
-
-            if (counter02 >= 1)
-                btnUpgradeTower2.Enabled = false;
-            if (Player.Gold >= 150)
-            {
-                btnUpgradeTower2.Enabled = true;
-                counter02++;
-                btnUpgradeTower2.Text = "Tier 2 Upgrade 450gp";
-                Player.Gold = Player.Gold - 150;
-                Turrets.UpdateUpgrade(this, 2, 200);
-                if (counter02 >= 2)
-                {
-                    //Player.Gold = Player.Gold - 100;
-                    btnUpgradeTower2.Enabled = false;
-                    if (Player.Gold >= 450)
-                    {
-                        btnUpgradeTower2.Enabled = true;
-                        //counter01++;
-                        btnUpgradeTower2.Text = "Tier 3 Upgrade 1100gp";
-                        Player.Gold = Player.Gold - 300;
-                        Turrets.UpdateUpgrade(this, 2, 200);
-                        if (counter02 >= 3)
-                        {
-                            //Player.Gold = Player.Gold - 200;
-                            btnUpgradeTower2.Enabled = false;
-                            if (Player.Gold >= 1100)
-                            {
-                                btnUpgradeTower2.Enabled = true;
-                                Player.Gold = Player.Gold - 450;
-                                //counter01++;
-                                btnUpgradeTower2.Text = "Tier 4 Upgrade 1500gp";
-                                Turrets.UpdateUpgrade(this, 2, 200);
-                                if (counter02 >= 4)
-                                {
-                                    //Player.Gold = Player.Gold - 300;
-                                    btnUpgradeTower2.Enabled = false;
-                                    if (Player.Gold >= 1500)
-                                    {
-                                        btnUpgradeTower2.Enabled = false;
-                                        Player.Gold = Player.Gold - 600;
-                                        //counter01++;
-                                        btnUpgradeTower2.Text = "Fully upgraded";
-                                        Turrets.UpdateUpgrade(this, 2, 200);
-                                        if (counter02 >= 5)
-                                        {
-                                            //Player.Gold = Player.Gold - 400;
-                                            btnUpgradeTower2.Enabled = false;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        private void btnUpgradeTower3_Click(object sender, EventArgs e)
-        {
-            if (counter03 >= 1)
-                btnUpgradeTower3.Enabled = false;
-            if (Player.Gold >= 200)
-            {
-                btnUpgradeTower2.Enabled = true;
-                counter03++;
-                btnUpgradeTower3.Text = "Tier 2 Upgrade 600gp";
-                Player.Gold = Player.Gold - 200;
-                if (counter03 >= 2)
-                {
-                    //Player.Gold = Player.Gold - 100;
-                    btnUpgradeTower3.Enabled = false;
-                    if (Player.Gold >= 600)
-                    {
-                        btnUpgradeTower3.Enabled = true;
-                        //counter01++;
-                        btnUpgradeTower3.Text = "Tier 3 Upgrade 1200gp";
-                        Player.Gold = Player.Gold - 400;
-                        if (counter03 >= 3)
-                        {
-                            //Player.Gold = Player.Gold - 200;
-                            btnUpgradeTower3.Enabled = false;
-                            if (Player.Gold >= 1200)
-                            {
-                                btnUpgradeTower3.Enabled = true;
-                                Player.Gold = Player.Gold - 600;
-                                //counter01++;
-                                btnUpgradeTower3.Text = "Tier 4 Upgrade 2000gp";
-                                if (counter03 >= 4)
-                                {
-                                    //Player.Gold = Player.Gold - 300;
-                                    btnUpgradeTower3.Enabled = false;
-                                    if (Player.Gold >= 2000)
-                                    {
-                                        btnUpgradeTower3.Enabled = false;
-                                        Player.Gold = Player.Gold - 800;
-                                        //counter01++;
-                                        btnUpgradeTower3.Text = "Fully upgraded";
-                                        if (counter03 >= 5)
-                                        {
-                                            //Player.Gold = Player.Gold - 400;
-                                            btnUpgradeTower3.Enabled = false;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-
-        }
-
-        private void btnUpgradeTower4_Click(object sender, EventArgs e)
-        {
-            if (counter04 >= 1)
-                btnUpgradeTower4.Enabled = false;
-            if (Player.Gold >= 250)
-            {
-                btnUpgradeTower4.Enabled = true;
-                counter04++;
-                btnUpgradeTower4.Text = "Tier 2 Upgrade 750gp";
-                Player.Gold = Player.Gold - 250;
-                if (counter04 >= 2)
-                {
-                    //Player.Gold = Player.Gold - 100;
-                    btnUpgradeTower4.Enabled = false;
-                    if (Player.Gold >= 750)
-                    {
-                        btnUpgradeTower4.Enabled = true;
-                        //counter01++;
-                        btnUpgradeTower4.Text = "Tier 3 Upgrade 1500gp";
-                        Player.Gold = Player.Gold - 500;
-                        if (counter04 >= 3)
-                        {
-                            //Player.Gold = Player.Gold - 200;
-                            btnUpgradeTower4.Enabled = false;
-                            if (Player.Gold >= 1500)
-                            {
-                                btnUpgradeTower4.Enabled = true;
-                                Player.Gold = Player.Gold - 750;
-                                //counter01++;
-                                btnUpgradeTower4.Text = "Tier 4 Upgrade 2500gp";
-                                if (counter04 >= 4)
-                                {
-                                    //Player.Gold = Player.Gold - 300;
-                                    btnUpgradeTower4.Enabled = false;
-                                    if (Player.Gold >= 2500)
-                                    {
-                                        btnUpgradeTower4.Enabled = false;
-                                        Player.Gold = Player.Gold - 1000;
-                                        //counter01++;
-                                        btnUpgradeTower4.Text = "Fully upgraded";
-                                        if (counter04 >= 5)
-                                        {
-                                            //Player.Gold = Player.Gold - 400;
-                                            btnUpgradeTower4.Enabled = false;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-
-        }
+        
 
         private void StoreTurret1_Click(object sender, EventArgs e)
         {
