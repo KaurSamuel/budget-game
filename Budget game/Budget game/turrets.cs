@@ -35,10 +35,10 @@ namespace Budget_game
         {
             Projectile projectile = new Projectile();
 
-            projectile.targetPoint = enemy.Location;
             projectile.Location = turret.Location;
             projectile.targetMonster = enemy;
             projectile.Damage = turret.Damage;
+            projectile.targetPoint = projectile.CalcTargetPoint(form);
 
             form.Controls.Add(projectile);
 
