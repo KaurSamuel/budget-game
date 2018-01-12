@@ -106,8 +106,14 @@ namespace Budget_game
         {
             seconds++;
             minutes = (int)Math.Floor(seconds / 60.0);
-            lblTimer.Text = minutes.ToString() + ":" + (seconds % 60).ToString();
 
+
+            
+
+            if (seconds < 10)
+                lblTimer.Text = minutes.ToString() + ":0" + (seconds % 60).ToString();
+            else
+                lblTimer.Text = minutes.ToString() + ":" + (seconds % 60).ToString();
 
 
             //COUNT DOWN TIMER vvv
