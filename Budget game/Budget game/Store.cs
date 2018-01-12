@@ -78,8 +78,6 @@ namespace Budget_game
                 {
                     for(int i = 0; i < Terrain.numRoadTiles - 1; i++)
                     {
-                        var b = "Road" + i.ToString();
-
                         if (i == 1)
                             continue;
 
@@ -90,6 +88,12 @@ namespace Budget_game
                             return;
                         }
                             
+                    }
+
+                    foreach (Turrets turret in form.Controls.Find("Tower", false))
+                    {
+                        if (turret.Location == curControl.Location)
+                            return;
                     }
 
                     Turrets newTurret = new Turrets(curControlCount);
