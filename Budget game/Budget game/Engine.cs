@@ -59,6 +59,9 @@ namespace Budget_game
 
         public void StartRound()
         {
+            System.Media.SoundPlayer sp = new System.Media.SoundPlayer(@"../../sound.wav");
+            sp.PlayLooping();
+
             InitMobs(CurLevel);
 
             monsterTimer = new Timer();
