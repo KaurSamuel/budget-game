@@ -69,8 +69,6 @@ namespace Budget_game
                             turret.ShootingTimer.Restart();
 
                             CreateProjectile(form, monster, turret);
-
-                           // monster.TakeDamage(form, 30);
                         }
                     }
 
