@@ -154,7 +154,7 @@ namespace Budget_game
                     counter01++;
                     btnUpgradeTower1.Text = "Tier 2 Upgrade 300gp";
                     Player.Gold = Player.Gold - 100;
-                    Turrets.upgrade1 += 20;
+                    Turrets.UpdateUpgrade(this, 1, 20);
                 if (counter01 >= 2)
                 {
                     //Player.Gold = Player.Gold - 100;
@@ -165,7 +165,7 @@ namespace Budget_game
                         //counter01++;
                         btnUpgradeTower1.Text = "Tier 3 Upgrade 600gp";
                         Player.Gold = Player.Gold - 200;
-                        Turrets.upgrade1 += 20;
+                        Turrets.UpdateUpgrade(this, 1, 20);
                         if (counter01 >= 3)
                         {
                             //Player.Gold = Player.Gold - 200;
@@ -176,7 +176,7 @@ namespace Budget_game
                                 Player.Gold = Player.Gold - 300;
                                 //counter01++;
                                 btnUpgradeTower1.Text = "Tier 4 Upgrade 1000gp";
-                                Turrets.upgrade1 += 20;
+                                Turrets.UpdateUpgrade(this, 1, 20);
                                 if (counter01 >= 4)
                                 {
                                     //Player.Gold = Player.Gold - 300;
@@ -187,7 +187,7 @@ namespace Budget_game
                                         Player.Gold = Player.Gold - 400;
                                         //counter01++;
                                         btnUpgradeTower1.Text = "Fully upgraded";
-                                        Turrets.upgrade1 += 20;
+                                        Turrets.UpdateUpgrade(this, 1, 20);
                                         if (counter01 >= 5)
                                         {
                                             //Player.Gold = Player.Gold - 400;
@@ -214,6 +214,7 @@ namespace Budget_game
                 counter02++;
                 btnUpgradeTower2.Text = "Tier 2 Upgrade 450gp";
                 Player.Gold = Player.Gold - 150;
+                Turrets.UpdateUpgrade(this, 2, 200);
                 if (counter02 >= 2)
                 {
                     //Player.Gold = Player.Gold - 100;
@@ -224,6 +225,7 @@ namespace Budget_game
                         //counter01++;
                         btnUpgradeTower2.Text = "Tier 3 Upgrade 1100gp";
                         Player.Gold = Player.Gold - 300;
+                        Turrets.UpdateUpgrade(this, 2, 200);
                         if (counter02 >= 3)
                         {
                             //Player.Gold = Player.Gold - 200;
@@ -234,6 +236,7 @@ namespace Budget_game
                                 Player.Gold = Player.Gold - 450;
                                 //counter01++;
                                 btnUpgradeTower2.Text = "Tier 4 Upgrade 1500gp";
+                                Turrets.UpdateUpgrade(this, 2, 200);
                                 if (counter02 >= 4)
                                 {
                                     //Player.Gold = Player.Gold - 300;
@@ -244,6 +247,7 @@ namespace Budget_game
                                         Player.Gold = Player.Gold - 600;
                                         //counter01++;
                                         btnUpgradeTower2.Text = "Fully upgraded";
+                                        Turrets.UpdateUpgrade(this, 2, 200);
                                         if (counter02 >= 5)
                                         {
                                             //Player.Gold = Player.Gold - 400;

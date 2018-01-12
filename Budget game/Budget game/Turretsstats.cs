@@ -25,11 +25,38 @@ namespace Budget_game
         public Stopwatch ShootingTimer;
         public Monster targetMonster;
         public int Damage;
+        public int turType;
 
         public static int upgrade1 = 0;
         public static int upgrade2 = 0;
         public static int upgrade3 = 0;
         public static int upgrade4 = 0;
+
+        public static void UpdateUpgrade(Form form, int turType, int value)
+        {
+            foreach (Turrets turret in form.Controls.Find("Tower", false))
+            {
+                switch(turret.turType)
+                {
+                    case 1:
+                        turret.Damage += value;
+                        upgrade1 += value;
+                        break;
+                    case 2:
+                        turret.Turret_shooting_speed -= value;
+                        upgrade2 += value;
+                        break;
+                    case 3:
+                        turret.Damage += value;
+                        upgrade3 += value;
+                        break;
+                    case 4:
+                        turret.Turret_range += value;
+                        upgrade4 += value;
+                        break;
+                }
+            }
+        }
 
         public Turrets(int type)
         {
@@ -65,6 +92,7 @@ namespace Budget_game
                     break;
             }
 
+            turType = type;
             Name = "Tower";
         }
     }
