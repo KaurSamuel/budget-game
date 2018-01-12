@@ -71,6 +71,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.btnNextWave = new System.Windows.Forms.Button();
+            this.BoughtTurret = new Budget_game.Turrets(0);
             ((System.ComponentModel.ISupportInitialize)(this.StoreTurret4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StoreTurret3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StoreTurret2)).BeginInit();
