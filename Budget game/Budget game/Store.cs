@@ -76,6 +76,7 @@ namespace Budget_game
 
                 if (curControl.Location.X < 32 * 32 && curControl.Location.Y < (16 * 32))
                 {
+
                     Turrets newTurret = new Turrets(curControlCount);
                     newTurret.ShootingTimer = new Stopwatch();
                     newTurret.ShootingTimer.Start();

@@ -36,7 +36,7 @@ namespace Budget_game
         {
             foreach (Turrets turret in form.Controls.Find("Tower", false))
             {
-                switch(turret.turType)
+                switch(turType)
                 {
                     case 1:
                         turret.Damage += value;
