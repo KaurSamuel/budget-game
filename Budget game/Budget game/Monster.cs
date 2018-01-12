@@ -80,9 +80,14 @@ namespace Budget_game
 
         protected override void OnPaint(PaintEventArgs pe)
         {
+            float CurrentHPprotsentides = (100*CurrentHealth/MaximumHealth);
+            CurrentHPprotsentides /= 100; 
+
+
+
             SolidBrush redBrush = new SolidBrush(Color.Red);
             base.OnPaint(pe);
-            pe.Graphics.FillRectangle(redBrush, 0, 27, CurrentHealth, 5);
+            pe.Graphics.FillRectangle(redBrush, 0, 27, (32*CurrentHPprotsentides), 5);
         }
 
         public void MoveMonster(Form form)
