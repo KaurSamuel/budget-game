@@ -80,7 +80,12 @@ namespace Budget_game
 
             foreach (string line in allLines)
             {
+                if (line == "")
+                    continue;
+
                 Monster monster = new Monster(form);
+
+                
                 
 
                 switch (line)
