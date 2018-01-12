@@ -73,8 +73,13 @@ namespace Budget_game
         public void InitMobs(int level)
         {
             string[] allLines = System.IO.File.ReadAllLines("../../levels/level" + level + ".txt");
+<<<<<<< HEAD
 
             int numRemoveMonsters = 0;
+=======
+            int monToRemove = 0;
+
+>>>>>>> 7450c0d06aeaf85a57d520a367dbd4397e816731
             foreach (string line in allLines)
             {
                 Monster monster = new Monster(form);
@@ -86,6 +91,7 @@ namespace Budget_game
                         MonstersToSpawn.Add(null);
                         numRemoveMonsters++;
                         monster.Dispose();
+                        monToRemove++;
                         continue;
 
                     case "1":
@@ -101,23 +107,23 @@ namespace Budget_game
                         monster.Image = System.Drawing.Image.FromFile("../../Sprites/monster2.png");
                         break;
                     case "3":
-                        monster.MaximumHealth = 1200;
+                        monster.MaximumHealth = 500;
                         monster.Gold = 240;
                         monster.movementSpeed = 1;
                         monster.Image = System.Drawing.Image.FromFile("../../Sprites/monster3.png");
                         break;
 
                     case "4":
-                        monster.MaximumHealth = 300;
-                        monster.Gold = 40;
-                        monster.movementSpeed = 2;
+                        monster.MaximumHealth = 500;
+                        monster.Gold = 400;
+                        monster.movementSpeed = 4;
                         monster.Image = System.Drawing.Image.FromFile("../../Sprites/monster4.png");
                         break;
 
                     case "5":
-                        monster.MaximumHealth = 150;
-                        monster.Gold = 40;
-                        monster.movementSpeed = 2;
+                        monster.MaximumHealth = 5000;
+                        monster.Gold = 650;
+                        monster.movementSpeed = 1;
                         monster.Image = System.Drawing.Image.FromFile("../../Sprites/monster5.png");
                         break;
 
@@ -131,7 +137,6 @@ namespace Budget_game
 
                 MonstersToSpawn.Add(monster);
             }
-
             Monster.MonstersAlive = MonstersToSpawn.Count - numRemoveMonsters;
         }
 
