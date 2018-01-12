@@ -70,7 +70,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.btnNextWave = new System.Windows.Forms.Button();
             this.BoughtTurret = new Budget_game.Turrets(0);
             ((System.ComponentModel.ISupportInitialize)(this.StoreTurret4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StoreTurret3)).BeginInit();
@@ -449,15 +448,14 @@
             this.pictureBox4.TabIndex = 49;
             this.pictureBox4.TabStop = false;
             // 
-            // btnNextWave
+            // BoughtTurret
             // 
-            this.btnNextWave.Location = new System.Drawing.Point(1068, 248);
-            this.btnNextWave.Name = "btnNextWave";
-            this.btnNextWave.Size = new System.Drawing.Size(96, 23);
-            this.btnNextWave.TabIndex = 50;
-            this.btnNextWave.Text = "Start next wave";
-            this.btnNextWave.UseVisualStyleBackColor = true;
-            this.btnNextWave.Click += new System.EventHandler(this.btnNextWave_Click);
+            this.BoughtTurret.Location = new System.Drawing.Point(1243, 207);
+            this.BoughtTurret.Name = "BoughtTurret";
+            this.BoughtTurret.Size = new System.Drawing.Size(32, 32);
+            this.BoughtTurret.TabIndex = 31;
+            this.BoughtTurret.TabStop = false;
+            this.BoughtTurret.Click += new System.EventHandler(this.BoughtTurret_Click);
             // 
             // BoughtTurret
             // 
@@ -474,7 +472,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1318, 681);
-            this.Controls.Add(this.btnNextWave);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -575,7 +572,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Button btnNextWave;
     }
 }
 

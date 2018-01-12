@@ -39,22 +39,22 @@ namespace Budget_game
                     
             }
                 
-            if (delta.X <= 300 && delta.X > 0)
+            if (delta.X >= 0)
             {
                 newPoint.X -= speed;
             }
 
-            else if (delta.X >= -300 && delta.X < 0)
+            else if (delta.X < 0)
             {
                 newPoint.X += speed;
             }
 
-            if (delta.Y <= 300 && delta.Y > 0)
+            if (delta.Y >= 0)
             {
                 newPoint.Y -= speed;
             }
 
-            else if (delta.Y >= -300 && delta.Y < 0)
+            else if (delta.Y < 0)
             {
                 newPoint.Y += speed;
             }
@@ -77,8 +77,6 @@ namespace Budget_game
 
             e.Graphics.FillRectangle(Brushes.Transparent, e.ClipRectangle);
             e.Graphics.FillEllipse(Brushes.Black, 0, 0, 24, 24);
-
-           // e.Graphics.FillRectangle(Brushes.Black, 0, 0, 24, 12);
         }
 
     }
