@@ -100,9 +100,18 @@ namespace Budget_game
             }
         }
 
-
+        int seconds = 0;
+        int minutes = 0;
         private void timer_Tick(object sender, EventArgs e)
         {
+            seconds++;
+            minutes = (int)Math.Floor(seconds / 60.0);
+            lblTimer.Text = minutes.ToString() + ":" + (seconds % 60).ToString();
+
+
+
+            //COUNT DOWN TIMER vvv
+            /*
             quick--;
             lblTimer.Text = quick / 60 + ":" + ((quick % 60) >= 10 ? (quick % 60).ToString() : "0" + (quick % 60));
 
@@ -119,6 +128,7 @@ namespace Budget_game
                     lblGameOver.Text = "GAME OVER";
                     }
             }
+            */
         }
 
         private void btnStart_Click(object sender, EventArgs e)

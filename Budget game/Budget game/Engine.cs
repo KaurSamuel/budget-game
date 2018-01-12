@@ -94,7 +94,7 @@ namespace Budget_game
                         monster.Image = System.Drawing.Image.FromFile("../../Sprites/monster2.png");
                         break;
                     case "3":
-                        monster.MaximumHealth = 900;
+                        monster.MaximumHealth = 1200;
                         monster.Gold = 240;
                         monster.movementSpeed = 1;
                         monster.Image = System.Drawing.Image.FromFile("../../Sprites/monster3.png");
