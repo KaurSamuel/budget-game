@@ -26,7 +26,9 @@ namespace Budget_game
         public int Damage;
         public Turrets()
         {
-            Turrets tower1 = new Turrets();
+            Turret_shooting_speed = 3000;
+
+            /*Turrets tower1 = new Turrets();
             tower1.Turret_shooting_speed = 3000;
             tower1.Turret_range = 20;
             tower1.Damage = 30;
@@ -44,7 +46,7 @@ namespace Budget_game
             Turrets tower4 = new Turrets();
             tower4.Turret_shooting_speed = 4500;
             tower4.Turret_range = 150;
-            tower4.Damage = 150;
+            tower4.Damage = 150;*/
         }
     }
 }
