@@ -24,7 +24,6 @@ namespace Budget_game
         public Stopwatch ShootingTimer;
         public Monster targetMonster;
         public int Damage;
-        /*
         public Turrets()
         {
             Turrets tower1 = new Turrets();
@@ -47,6 +46,5 @@ namespace Budget_game
             tower4.Turret_range = 150;
             tower4.Damage = 150;
         }
-        */
     }
 }
