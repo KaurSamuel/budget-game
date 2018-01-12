@@ -79,7 +79,7 @@ namespace Budget_game
                 case 3:
                     Turret_shooting_speed = 2800;
                     Turret_range = 200;
-                    Damage = 45 + upgrade3;
+                    Damage = 60 + upgrade3;
                     this.Image = Image.FromFile("../../Sprites/Tower3.png");
                     Size = new Size(32, 32);
                     break;
