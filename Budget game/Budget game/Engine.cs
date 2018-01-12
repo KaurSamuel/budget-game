@@ -81,6 +81,11 @@ namespace Budget_game
 
                 switch (line)
                 {
+                    case "0":
+                        MonstersToSpawn.Add(null);
+                        monster.Dispose();
+                        continue;
+
                     case "1":
                         monster.MaximumHealth = 50;
                         monster.Gold = 20;
@@ -99,7 +104,21 @@ namespace Budget_game
                         monster.movementSpeed = 1;
                         monster.Image = System.Drawing.Image.FromFile("../../Sprites/monster3.png");
                         break;
-                         
+
+                    case "4":
+                        monster.MaximumHealth = 300;
+                        monster.Gold = 40;
+                        monster.movementSpeed = 2;
+                        monster.Image = System.Drawing.Image.FromFile("../../Sprites/monster4.png");
+                        break;
+
+                    case "5":
+                        monster.MaximumHealth = 150;
+                        monster.Gold = 40;
+                        monster.movementSpeed = 2;
+                        monster.Image = System.Drawing.Image.FromFile("../../Sprites/monster5.png");
+                        break;
+
                     default:
                         return;
                 }
@@ -116,6 +135,12 @@ namespace Budget_game
 
         public void SpawnMobs(object sender, EventArgs e)
         {
+            if (MonstersToSpawn[0] == null)
+            {
+                MonstersToSpawn.RemoveAt(0);
+                return;
+            }
+
             MonstersToSpawn[0].Visible = true;
 
             monsters.Add(MonstersToSpawn[0]);
