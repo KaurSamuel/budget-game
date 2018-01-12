@@ -76,6 +76,21 @@ namespace Budget_game
 
                 if (curControl.Location.X < 32 * 32 && curControl.Location.Y < (16 * 32))
                 {
+                    for(int i = 0; i < Terrain.numRoadTiles - 1; i++)
+                    {
+                        var b = "Road" + i.ToString();
+
+                        if (i == 1)
+                            continue;
+
+                        var a = form.Controls.Find("Road" + i.ToString(), false)[0].Location;
+
+                        if (form.Controls.Find("Road" + i, false)[0].Location == curControl.Location)
+                        {
+                            return;
+                        }
+                            
+                    }
 
                     Turrets newTurret = new Turrets(curControlCount);
                     newTurret.ShootingTimer = new Stopwatch();
