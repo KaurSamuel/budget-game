@@ -10,7 +10,7 @@ namespace Budget_game
     static class Player
     {
         public static int MaxLives = 10;
-        public static int StartingCoins = 100000;
+        public static int StartingCoins = 500;
         public static int PlayerLivesLeft { get; set; }
         public static int Gold { get; set; } = StartingCoins;
         public static int Level { get; set; }
