@@ -106,12 +106,17 @@ namespace Budget_game
                 control.BringToFront();
 
                 numRoadTiles++;
+
+                if (curPoint.X >= MapWidth - 2)
+                {
+                    break;
+                }
             }
 
             PictureBox house = new PictureBox();
             house.Image = System.Drawing.Image.FromFile("../../Sprites/castle.png");
             house.SizeMode = PictureBoxSizeMode.AutoSize;
-            house.Location = new Point(curPoint.X * TileSize - 32, curPoint.Y * TileSize - 10);
+            house.Location = new Point(curPoint.X * TileSize - 32, curPoint.Y * TileSize);
             form.Controls.Add(house);
             house.BringToFront();
 

@@ -88,7 +88,6 @@ namespace Budget_game
                 lblHitpoints.Text = "0";
                 System.Threading.Thread.Sleep(4000);
                 Application.Exit();
-
             }
         }
 
@@ -448,6 +447,11 @@ namespace Budget_game
 
         private void btnNextWave_Click(object sender, EventArgs e)
         {
+            if(btnNextWave.Enabled)
+            {
+                engine.InitMobs(Engine.CurLevel);
+            }
+
             btnNextWave.Enabled = false;
             if (Monster.MonstersAlive == 0)
             {
