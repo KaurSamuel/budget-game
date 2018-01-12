@@ -58,10 +58,14 @@ namespace Budget_game
                 {
                     if(monster.IsAlive)
                     {
-                        if (turret.Location.X - monster.Location.X < turret.Turret_range &&
-                            monster.Location.X - turret.Location.X > -turret.Turret_range &&
-                            turret.Location.Y - monster.Location.Y < turret.Turret_range &&
-                            monster.Location.Y - turret.Location.Y > -turret.Turret_range)
+                        Point delta = new Point();
+                        delta.X = turret.Location.X - monster.Location.X;
+                        delta.Y = turret.Location.Y - monster.Location.Y;
+
+                        if (delta.X < turret.Turret_range &&
+                            delta.X > -turret.Turret_range &&
+                            delta.Y < turret.Turret_range &&
+                            delta.Y > -turret.Turret_range)
                         {
                             if(turret.ShootingTimer.ElapsedMilliseconds <= turret.Turret_shooting_speed)
                                 continue;

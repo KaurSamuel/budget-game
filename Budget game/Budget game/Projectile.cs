@@ -28,9 +28,9 @@ namespace Budget_game
             Point delta = new Point(Location.X - targetPoint.X, Location.Y - targetPoint.Y);
             Point newPoint = new Point(Location.X, Location.Y);
 
-            if (delta.X <= 3 && delta.X >= -3)
+            if (delta.X <= 4 && delta.X >= -4)
             {
-                if(delta.Y <= 3 && delta.Y >= -3)
+                if(delta.Y <= 4 && delta.Y >= -4)
                 {
                     form.Controls.Remove(this);
                     targetMonster.TakeDamage(form, Damage);
