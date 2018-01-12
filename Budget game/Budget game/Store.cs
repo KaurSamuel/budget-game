@@ -80,6 +80,8 @@ namespace Budget_game
                     newTurret.ShootingTimer = new Stopwatch();
                     newTurret.ShootingTimer.Start();
 
+                    newTurret.Location = newPos;
+
                     form.Controls.Add(newTurret);
                     newTurret.BringToFront();
 
