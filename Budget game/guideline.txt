@@ -19,7 +19,7 @@ price: 30
 shooting speed: 30
 damage : 5
 range : 3
-Upgrades: Damage +1; +2; +3; +5
+Upgrades: Damage +3; +5; +7; +10
 
 (laser tower)
 price :70
