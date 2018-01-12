@@ -380,42 +380,6 @@ namespace Budget_game
             Store.Place(this);
         }
 
-
-        //See meetod peaks tegema turreti peale clickides buttoni kust saad turretit upgradeda.
-        private void TurretUpgrade_Click(Form form, EventArgs e, object sender)
-        {
-
-            //this.BoughtTurret
-        }
-
-
-
-        //Experimental
-        private static void DisposeMethod()
-        {
-            var form = new Game();
-            form.Show();
-            form.Close();
-            // the GC calls below will do NOTHING, because you still have a reference to the form!
-            GC.Collect();
-            GC.WaitForPendingFinalizers();
-            GC.Collect();
-            GC.WaitForPendingFinalizers();
-
-            // another thing to not: calling ShowDialog will NOT get Dispose called on your form when you close it
-            var form2 = new Game();
-            DialogResult r = form2.ShowDialog();
-            // you MUST manually call dispose after calling ShowDialog! Otherwise Dispose will never get called.
-            form2.Dispose();
-
-            // as for grids, this will ALSO result in never releasing the form in memory, because the GridControl has a reference to the Form itself (look at the auto-generated designer code)
-            var form3 = new Game();
-            form3.ShowDialog();
-            // note that if you're planning on actually using your datagrid after calling dispose on the form, you're going to have problems, since calling Dipose() on the form will also call dispose on all the child controls
-            form3.Dispose();
-            form3 = null;
-        }
-
         private void lblGold_Click(object sender, EventArgs e)
         {
 
