@@ -140,10 +140,13 @@ namespace Budget_game
                     control.Image = Image.FromFile("../../Sprites/grass.png");
 
                     int chance = rnd.Next(0, 101);
-                    if (chance < 80)
+                    if (chance < 50)
                         control.Image = Image.FromFile("../../Sprites/grass.png");
-                    else
+                    else if (chance < 60)
                         control.Image = Image.FromFile("../../Sprites/water.png");
+                    else if (chance < 80)
+                        control.Image = Image.FromFile("../../Sprites/sand.png");
+                    
 
                     form.Controls.Add(control);
                     tileCount++;
