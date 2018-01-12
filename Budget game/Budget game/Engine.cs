@@ -59,6 +59,9 @@ namespace Budget_game
 
         public void StartRound()
         {
+            System.Media.SoundPlayer sp = new System.Media.SoundPlayer(@"../../sound.wav");
+            sp.PlayLooping();
+
             InitMobs(CurLevel);
 
             monsterTimer = new Timer();
@@ -80,21 +83,18 @@ namespace Budget_game
                 {
                     case "1":
                         monster.MaximumHealth = 50;
-                        monster.CurrentHealth = 50;
                         monster.Gold = 10;
                         monster.movementSpeed = 2;
                         monster.Image = System.Drawing.Image.FromFile("../../Sprites/monster1.png");
                         break;
                     case "2":
                         monster.MaximumHealth = 100;
-                        monster.CurrentHealth = 50;
                         monster.Gold = 10;
                         monster.movementSpeed = 4;
                         monster.Image = System.Drawing.Image.FromFile("../../Sprites/monster2.png");
                         break;
                     case "3":
                         monster.MaximumHealth = 100;
-                        monster.CurrentHealth = 50;
                         monster.Gold = 10;
                         monster.movementSpeed = 1;
                         monster.Image = System.Drawing.Image.FromFile("../../Sprites/monster3.png");
@@ -103,6 +103,8 @@ namespace Budget_game
                     default:
                         return;
                 }
+
+                monster.CurrentHealth = monster.MaximumHealth;
 
                 monster.Visible = false;
 

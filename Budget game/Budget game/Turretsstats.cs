@@ -17,6 +17,7 @@ namespace Budget_game
         }
     }
 
+ 
     class Turrets : PictureBox
     {
         public int Turret_shooting_speed;
@@ -24,29 +25,47 @@ namespace Budget_game
         public Stopwatch ShootingTimer;
         public Monster targetMonster;
         public int Damage;
-        public Turrets()
+
+        public static int upgrade1 = 0;
+        public static int upgrade2 = 0;
+        public static int upgrade3 = 0;
+        public static int upgrade4 = 0;
+
+        public Turrets(int type)
         {
-            Turret_shooting_speed = 3000;
+            switch (type)
+            {
+                case 1:
+                    Turret_shooting_speed = 3000;
+                    Turret_range = 90;
+                    Damage = 30 + upgrade1;
+                    this.Image = Image.FromFile("../../Sprites/Tower1.png");
+                    Size = new Size(32, 32);
+                    break;
+                case 2:
+                    Turret_shooting_speed = 6000 - upgrade2;
+                    Turret_range = 30;
+                    Damage = 20;
+                    this.Image = Image.FromFile("../../Sprites/Tower2.png");
+                    Size = new Size(32, 32);
+                    break;
+                case 3:
+                    Turret_shooting_speed = 1500;
+                    Turret_range = 50;
+                    Damage = 45 + upgrade3;
+                    this.Image = Image.FromFile("../../Sprites/Tower3.png");
+                    Size = new Size(32, 32);
+                    break;
+                case 4:
+                    Turret_shooting_speed = 4500;
+                    Turret_range = 150 + upgrade4;
+                    Damage = 150;
+                    this.Image = Image.FromFile("../../Sprites/Tower4.png");
+                    Size = new Size(32, 32);
+                    break;
+            }
 
-            /*Turrets tower1 = new Turrets();
-            tower1.Turret_shooting_speed = 3000;
-            tower1.Turret_range = 20;
-            tower1.Damage = 30;
-
-            Turrets tower2 = new Turrets();
-            tower2.Turret_shooting_speed = 6000;
-            tower2.Turret_range = 30;
-            tower2.Damage = 20;
-
-            Turrets tower3 = new Turrets();
-            tower3.Turret_shooting_speed = 1500;
-            tower3.Turret_range = 50;
-            tower3.Damage = 45;
-
-            Turrets tower4 = new Turrets();
-            tower4.Turret_shooting_speed = 4500;
-            tower4.Turret_range = 150;
-            tower4.Damage = 150;*/
+            Name = "Tower";
         }
     }
 }

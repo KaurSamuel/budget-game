@@ -11,7 +11,7 @@ namespace Budget_game
     class Projectile : Control
     {
         public Point targetPoint;
-        public int speed = 3;
+        public int speed = 5;
         public Monster targetMonster;
         public int Damage = 0;
 
@@ -44,7 +44,7 @@ namespace Budget_game
                 newPoint.X -= speed;
             }
 
-            if (delta.X >= -300 && delta.X < 0)
+            else if (delta.X >= -300 && delta.X < 0)
             {
                 newPoint.X += speed;
             }
@@ -54,7 +54,7 @@ namespace Budget_game
                 newPoint.Y -= speed;
             }
 
-            if (delta.Y >= -300 && delta.Y < 0)
+            else if (delta.Y >= -300 && delta.Y < 0)
             {
                 newPoint.Y += speed;
             }
