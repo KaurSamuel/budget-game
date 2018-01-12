@@ -59,6 +59,7 @@ namespace Budget_game
             IsAlive = false;
 
             Engine.numMonsters--;
+            MonstersAlive--;
 
             UpdateLabel(form);
         }
