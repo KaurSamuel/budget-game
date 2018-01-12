@@ -73,16 +73,18 @@ namespace Budget_game
         public void InitMobs(int level)
         {
             string[] allLines = System.IO.File.ReadAllLines("../../levels/level" + level + ".txt");
-            
 
-            foreach(string line in allLines)
+            int numRemoveMonsters = 0;
+            foreach (string line in allLines)
             {
                 Monster monster = new Monster(form);
+                
 
                 switch (line)
                 {
                     case "0":
                         MonstersToSpawn.Add(null);
+                        numRemoveMonsters++;
                         monster.Dispose();
                         continue;
 
@@ -130,7 +132,7 @@ namespace Budget_game
                 MonstersToSpawn.Add(monster);
             }
 
-            Monster.MonstersAlive = MonstersToSpawn.Count;
+            Monster.MonstersAlive = MonstersToSpawn.Count - numRemoveMonsters;
         }
 
         public void SpawnMobs(object sender, EventArgs e)
