@@ -83,7 +83,6 @@ namespace Budget_game
                 {
                     case "0":
                         MonstersToSpawn.Add(null);
-                        numRemoveMonsters++;
                         monster.Dispose();
                         numRemoveMonsters++;
                         continue;
