@@ -77,10 +77,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.StoreTurret2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StoreTurret1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BoughtTurret)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BoughtTurret)).BeginInit();
             this.SuspendLayout();
             // 
             // timer
@@ -184,7 +184,7 @@
             this.StoreTurret4Price.Name = "StoreTurret4Price";
             this.StoreTurret4Price.Size = new System.Drawing.Size(40, 13);
             this.StoreTurret4Price.TabIndex = 17;
-            this.StoreTurret4Price.Text = "200 gp";
+            this.StoreTurret4Price.Text = "900 gp";
             // 
             // lblUpgradesName1
             // 
@@ -412,15 +412,6 @@
             this.btnUpgradeTower4.UseVisualStyleBackColor = true;
             this.btnUpgradeTower4.Click += new System.EventHandler(this.btnUpgradeTower4_Click);
             // 
-            // BoughtTurret
-            // 
-            this.BoughtTurret.Location = new System.Drawing.Point(1243, 207);
-            this.BoughtTurret.Name = "BoughtTurret";
-            this.BoughtTurret.Size = new System.Drawing.Size(32, 32);
-            this.BoughtTurret.TabIndex = 31;
-            this.BoughtTurret.TabStop = false;
-            this.BoughtTurret.Click += new System.EventHandler(this.BoughtTurret_Click);
-            // 
             // btnCredits
             // 
             this.btnCredits.Location = new System.Drawing.Point(1231, 646);
@@ -467,6 +458,15 @@
             this.btnNextWave.Text = "Start next wave";
             this.btnNextWave.UseVisualStyleBackColor = true;
             this.btnNextWave.Click += new System.EventHandler(this.btnNextWave_Click);
+            // 
+            // BoughtTurret
+            // 
+            this.BoughtTurret.Location = new System.Drawing.Point(1243, 207);
+            this.BoughtTurret.Name = "BoughtTurret";
+            this.BoughtTurret.Size = new System.Drawing.Size(32, 32);
+            this.BoughtTurret.TabIndex = 31;
+            this.BoughtTurret.TabStop = false;
+            this.BoughtTurret.Click += new System.EventHandler(this.BoughtTurret_Click);
             // 
             // Game
             // 
@@ -523,10 +523,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.StoreTurret2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StoreTurret1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BoughtTurret)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BoughtTurret)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
