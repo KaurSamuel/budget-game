@@ -130,15 +130,20 @@ namespace Budget_game
             }
             */
         }
-
+        int timercounter = 0;
         private void btnStart_Click(object sender, EventArgs e)
         {
+            timercounter++;
             btnStart.Enabled = false;
             engine.StartRound();
             timer = new Timer();
             timer.Tick += (timer_Tick);
             timer.Enabled = true;
             timer.Interval = 1000;
+            if (timercounter >= 2)
+            {
+                timer.Tick -= (timer_Tick);
+            }
             if (lblEnemiesLeft.Text == "0")
             {
                 engine.Update();
