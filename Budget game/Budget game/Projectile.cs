@@ -11,7 +11,7 @@ namespace Budget_game
     class Projectile : Control
     {
         public Point targetPoint;
-        public int speed = 3;
+        public int speed = 5;
         public Monster targetMonster;
         public int Damage = 0;
 

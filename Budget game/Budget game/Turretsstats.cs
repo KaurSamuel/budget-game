@@ -17,6 +17,7 @@ namespace Budget_game
         }
     }
 
+ 
     class Turrets : PictureBox
     {
         public int Turret_shooting_speed;
@@ -24,6 +25,12 @@ namespace Budget_game
         public Stopwatch ShootingTimer;
         public Monster targetMonster;
         public int Damage;
+
+        public static int upgrade1 = 0;
+        public static int upgrade2 = 0;
+        public static int upgrade3 = 0;
+        public static int upgrade4 = 0;
+
         public Turrets(int type)
         {
             switch (type)
@@ -31,12 +38,12 @@ namespace Budget_game
                 case 1:
                     Turret_shooting_speed = 3000;
                     Turret_range = 90;
-                    Damage = 30;
+                    Damage = 30 + upgrade1;
                     this.Image = Image.FromFile("../../Sprites/Tower1.png");
                     Size = new Size(32, 32);
                     break;
                 case 2:
-                    Turret_shooting_speed = 6000;
+                    Turret_shooting_speed = 6000 - upgrade2;
                     Turret_range = 30;
                     Damage = 20;
                     this.Image = Image.FromFile("../../Sprites/Tower2.png");
@@ -45,13 +52,13 @@ namespace Budget_game
                 case 3:
                     Turret_shooting_speed = 1500;
                     Turret_range = 50;
-                    Damage = 45;
+                    Damage = 45 + upgrade3;
                     this.Image = Image.FromFile("../../Sprites/Tower3.png");
                     Size = new Size(32, 32);
                     break;
                 case 4:
                     Turret_shooting_speed = 4500;
-                    Turret_range = 150;
+                    Turret_range = 150 + upgrade4;
                     Damage = 150;
                     this.Image = Image.FromFile("../../Sprites/Tower4.png");
                     Size = new Size(32, 32);
