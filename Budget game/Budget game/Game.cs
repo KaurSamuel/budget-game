@@ -53,7 +53,7 @@ namespace Budget_game
         int count3 = 2;
         int count4 = 2;
 
-        int upgrade1 = 500;
+        int upgrade1 = 600;
         int upgrade2 = 850;
         int upgrade3 = 1200;
         int upgrade4 = 2250;
@@ -98,7 +98,7 @@ namespace Budget_game
             Player.Gold = Player.Gold - upgrade1;
             upgrade1 += 200;
             this.Controls["btnUpgradeTower1"].Text = "Tier " + count1 + " Upgrade " + upgrade1 + "gp";
-            Turrets.UpdateUpgrade(this, 1, 15);
+            Turrets.UpdateUpgrade(this, 1, 10);
 
             count1++;
             if (count1 == 6)
