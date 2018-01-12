@@ -51,9 +51,12 @@ namespace Budget_game
             engine.Update();
             Game_Over();
 
-            if (lblEnemiesLeft.Text == "0")
+            if (lblEnemiesLeft.Text == "0" && !btnStart.Enabled)
             {
                 btnStart.Enabled = true;
+                Engine.CurLevel++;
+                var a = Engine.CurLevel;
+                this.Controls["lblLevel"].Text = Engine.CurLevel.ToString();
             }
         }
 
