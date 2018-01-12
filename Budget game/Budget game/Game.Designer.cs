@@ -66,7 +66,7 @@
             this.btnUpgradeTower2 = new System.Windows.Forms.Button();
             this.btnUpgradeTower3 = new System.Windows.Forms.Button();
             this.btnUpgradeTower4 = new System.Windows.Forms.Button();
-            this.BoughtTurret = new Budget_game.Turrets(0);
+            this.BoughtTurret = new Budget_game.Turrets();
             this.btnCredits = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
