@@ -53,10 +53,10 @@ namespace Budget_game
         int count3 = 2;
         int count4 = 2;
 
-        int upgrade1 = 100;
-        int upgrade2 = 150;
-        int upgrade3 = 200;
-        int upgrade4 = 250;
+        int upgrade1 = 500;
+        int upgrade2 = 850;
+        int upgrade3 = 1200;
+        int upgrade4 = 2250;
 
         void Frame(object sender, EventArgs e)
         {
@@ -113,7 +113,7 @@ namespace Budget_game
 
 
             Player.Gold = Player.Gold - upgrade2;
-            upgrade2 += 200;
+            upgrade2 += 400;
             this.Controls["btnUpgradeTower2"].Text = "Tier " + count2 + " Upgrade " + upgrade2 + "gp";
             Turrets.UpdateUpgrade(this, 2, 50);
 
@@ -130,7 +130,7 @@ namespace Budget_game
 
 
             Player.Gold = Player.Gold - upgrade2;
-            upgrade3 += 200;
+            upgrade3 += 600;
             this.Controls["btnUpgradeTower3"].Text = "Tier " + count3 + " Upgrade " + upgrade3 + "gp";
             Turrets.UpdateUpgrade(this, 3, 64);
 
@@ -147,7 +147,7 @@ namespace Budget_game
 
 
             Player.Gold = Player.Gold - upgrade2;
-            upgrade4 += 200;
+            upgrade4 += 800;
             this.Controls["btnUpgradeTower4"].Text = "Tier " + count4 + " Upgrade " + upgrade4 + "gp";
             Turrets.UpdateUpgrade(this, 4, 30);
 
