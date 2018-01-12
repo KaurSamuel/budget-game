@@ -66,7 +66,7 @@ namespace Budget_game
 
             monsterTimer = new Timer();
             monsterTimer.Enabled = true;
-            monsterTimer.Interval = 2000;
+            monsterTimer.Interval = 600;
             monsterTimer.Tick += new EventHandler(SpawnMobs);
         }
 
