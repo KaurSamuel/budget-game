@@ -156,7 +156,7 @@
             this.StoreTurret1Price.Name = "StoreTurret1Price";
             this.StoreTurret1Price.Size = new System.Drawing.Size(40, 13);
             this.StoreTurret1Price.TabIndex = 14;
-            this.StoreTurret1Price.Text = "100 gp";
+            this.StoreTurret1Price.Text = "200 gp";
             // 
             // StoreTurret2Price
             // 
@@ -379,7 +379,7 @@
             this.btnUpgradeTower1.Name = "btnUpgradeTower1";
             this.btnUpgradeTower1.Size = new System.Drawing.Size(106, 42);
             this.btnUpgradeTower1.TabIndex = 43;
-            this.btnUpgradeTower1.Text = "Tier 1 Upgrade 100gp";
+            this.btnUpgradeTower1.Text = "Tier 1 Upgrade 500gp";
             this.btnUpgradeTower1.UseVisualStyleBackColor = true;
             this.btnUpgradeTower1.Click += new System.EventHandler(this.btnUpgradeTower1_Click);
             // 
@@ -389,7 +389,7 @@
             this.btnUpgradeTower2.Name = "btnUpgradeTower2";
             this.btnUpgradeTower2.Size = new System.Drawing.Size(106, 42);
             this.btnUpgradeTower2.TabIndex = 44;
-            this.btnUpgradeTower2.Text = "Tier 1 Upgrade 150gp";
+            this.btnUpgradeTower2.Text = "Tier 1 Upgrade 850gp";
             this.btnUpgradeTower2.UseVisualStyleBackColor = true;
             this.btnUpgradeTower2.Click += new System.EventHandler(this.btnUpgradeTower2_Click);
             // 
@@ -399,7 +399,7 @@
             this.btnUpgradeTower3.Name = "btnUpgradeTower3";
             this.btnUpgradeTower3.Size = new System.Drawing.Size(106, 42);
             this.btnUpgradeTower3.TabIndex = 45;
-            this.btnUpgradeTower3.Text = "Tier 1 Upgrade 200gp";
+            this.btnUpgradeTower3.Text = "Tier 1 Upgrade 1200gp";
             this.btnUpgradeTower3.UseVisualStyleBackColor = true;
             this.btnUpgradeTower3.Click += new System.EventHandler(this.btnUpgradeTower3_Click);
             // 
@@ -409,7 +409,7 @@
             this.btnUpgradeTower4.Name = "btnUpgradeTower4";
             this.btnUpgradeTower4.Size = new System.Drawing.Size(106, 42);
             this.btnUpgradeTower4.TabIndex = 46;
-            this.btnUpgradeTower4.Text = "Tier 1 Upgrade 250gp";
+            this.btnUpgradeTower4.Text = "Tier 1 Upgrade 2250gp";
             this.btnUpgradeTower4.UseVisualStyleBackColor = true;
             this.btnUpgradeTower4.Click += new System.EventHandler(this.btnUpgradeTower4_Click);
             // 
