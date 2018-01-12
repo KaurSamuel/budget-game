@@ -50,6 +50,11 @@ namespace Budget_game
         {
             engine.Update();
             Game_Over();
+
+            if (lblEnemiesLeft.Text == "0")
+            {
+                btnStart.Enabled = true;
+            }
         }
 
         private void Game_Load(object sender, EventArgs e)
